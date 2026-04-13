@@ -1,9 +1,4 @@
-import { doors, wallTexts, productHotspots } from '../../config/roomConfig'
-
 export default function MobileFallback() {
-  const malo = doors[0]
-  const velo = doors[1]
-
   return (
     <div className="mobile-fallback">
       {/* Hero */}
@@ -20,26 +15,22 @@ export default function MobileFallback() {
 
       {/* Doors */}
       <section className="mobile-doors">
-        <a href={malo.url} className="mobile-door mobile-door--blue">
+        <a href="https://maloprodaja.proxy1.hr" className="mobile-door mobile-door--blue">
           <div className="mobile-door__icon">
             <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M6 20L24 6l18 14v20a2 2 0 01-2 2H8a2 2 0 01-2-2V20z" />
               <path d="M18 42V28h12v14" />
             </svg>
           </div>
-          <span className="mobile-door__label">{malo.label}</span>
-          <h2 className="mobile-door__title">{malo.title}</h2>
-          <p className="mobile-door__subtitle">{malo.subtitle}</p>
-          <span className="mobile-door__cta">
-            Uđite u trgovinu →
-          </span>
+          <span className="mobile-door__label">MALOPRODAJA</span>
+          <h2 className="mobile-door__title">Za vaš dom</h2>
+          <p className="mobile-door__subtitle">Kućanski pribor, sredstva za čišćenje i sve za svakodnevni život</p>
+          <span className="mobile-door__cta">Uđite u trgovinu →</span>
         </a>
 
-        <div className="mobile-doors__divider">
-          <span>ILI</span>
-        </div>
+        <div className="mobile-doors__divider"><span>ILI</span></div>
 
-        <a href={velo.url} className="mobile-door mobile-door--yellow">
+        <a href="https://veleprodaja.proxy1.hr" className="mobile-door mobile-door--yellow">
           <div className="mobile-door__icon">
             <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <rect x="4" y="18" width="40" height="24" rx="2" />
@@ -47,12 +38,10 @@ export default function MobileFallback() {
               <path d="M16 42V30h16v12" />
             </svg>
           </div>
-          <span className="mobile-door__label">{velo.label}</span>
-          <h2 className="mobile-door__title">{velo.title}</h2>
-          <p className="mobile-door__subtitle">{velo.subtitle}</p>
-          <span className="mobile-door__cta mobile-door__cta--yellow">
-            Uđite u veleprodaju →
-          </span>
+          <span className="mobile-door__label">VELEPRODAJA</span>
+          <h2 className="mobile-door__title">Za vaš posao</h2>
+          <p className="mobile-door__subtitle">B2B narudžbe, veleprodajne cijene, brza isporuka za poslovne partnere</p>
+          <span className="mobile-door__cta mobile-door__cta--yellow">Uđite u veleprodaju →</span>
         </a>
       </section>
 
@@ -85,12 +74,22 @@ export default function MobileFallback() {
       <section className="mobile-products">
         <h2 className="mobile-products__title">Asortiman</h2>
         <div className="mobile-products__grid">
-          {productHotspots.map((p) => (
-            <div className="mobile-products__card" key={p.id}>
-              <img src={p.image} alt={p.label} className="mobile-products__img" loading="lazy" />
-              <span className="mobile-products__label">{p.label}</span>
-            </div>
-          ))}
+          <div className="mobile-products__card">
+            <img src="/images/otiraci-globo.jpg" alt="Otirači" className="mobile-products__img" loading="lazy" />
+            <span className="mobile-products__label">Otirači</span>
+          </div>
+          <div className="mobile-products__card">
+            <img src="/images/proxy-display.jpg" alt="Čišćenje" className="mobile-products__img" loading="lazy" />
+            <span className="mobile-products__label">Čišćenje</span>
+          </div>
+          <div className="mobile-products__card">
+            <img src="/images/nozevi-bonomi.jpg" alt="Noževi" className="mobile-products__img" loading="lazy" />
+            <span className="mobile-products__label">Inox noževi</span>
+          </div>
+          <div className="mobile-products__card">
+            <img src="/images/warehouse-shelves.jpg" alt="Skladište" className="mobile-products__img" loading="lazy" />
+            <span className="mobile-products__label">Skladište</span>
+          </div>
         </div>
       </section>
     </div>
