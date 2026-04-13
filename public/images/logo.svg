@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" fill="none">
+  <!-- House roof icon centered above text -->
+  <g>
+    <!-- Outer roof -->
+    <polyline points="64,22 100,4 136,22" stroke="#C9A84C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Inner roof -->
+    <polyline points="72,22 100,9 128,22" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Chimney -->
+    <rect x="124" y="8" width="4.5" height="10" fill="#C9A84C"/>
+  </g>
+  <!-- PROXY text -->
+  <text x="100" y="44" text-anchor="middle" font-family="Inter, 'Arial Black', 'Segoe UI', sans-serif" font-weight="800" font-size="28" letter-spacing="6" fill="#C9A84C">PROXY</text>
+  <!-- Tagline -->
+  <text x="100" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="6.5" letter-spacing="2.2" fill="rgba(201,168,76,0.5)">SVE STO DOM TREBA</text>
+</svg>
