@@ -5,10 +5,10 @@ export default function MobileFallback() {
       <section className="mobile-hero">
         <div className="mobile-hero__bg" />
         <div className="mobile-hero__content">
-          <p className="mobile-hero__badge">DOBRODOŠLI U PROXY</p>
+          <img src="/images/logo.svg" alt="Proxy d.o.o." style={{ width: '180px', marginBottom: '1rem' }} />
           <h1 className="mobile-hero__title">Sve što dom treba</h1>
           <p className="mobile-hero__subtitle">
-            Kvalitetni proizvodi za dom i posao — odaberite kako želite kupovati
+            Kvalitetni proizvodi za dom i posao. Odaberite kako želite kupovati.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export default function MobileFallback() {
           <span className="mobile-door__label">MALOPRODAJA</span>
           <h2 className="mobile-door__title">Za vaš dom</h2>
           <p className="mobile-door__subtitle">Kućanski pribor, sredstva za čišćenje i sve za svakodnevni život</p>
-          <span className="mobile-door__cta">Uđite u trgovinu →</span>
+          <span className="mobile-door__cta">Uđite u trgovinu</span>
         </a>
 
         <div className="mobile-doors__divider"><span>ILI</span></div>
@@ -41,7 +41,7 @@ export default function MobileFallback() {
           <span className="mobile-door__label">VELEPRODAJA</span>
           <h2 className="mobile-door__title">Za vaš posao</h2>
           <p className="mobile-door__subtitle">B2B narudžbe, veleprodajne cijene, brza isporuka za poslovne partnere</p>
-          <span className="mobile-door__cta mobile-door__cta--yellow">Uđite u veleprodaju →</span>
+          <span className="mobile-door__cta mobile-door__cta--yellow">Uđite u veleprodaju</span>
         </a>
       </section>
 
@@ -49,10 +49,10 @@ export default function MobileFallback() {
       <section className="mobile-about">
         <h2 className="mobile-about__title">O nama</h2>
         <p className="mobile-about__text">
-          Proxy d.o.o. je veleprodajna tvrtka iz Splita specijalizirana za opskrbu
-          širokim asortimanom proizvoda za domaćinstvo i ugostiteljstvo.
-          Osnovana 2016. godine, danas opslužujemo široku mrežu trgovaca
-          i poslovnih subjekata diljem Hrvatske.
+          Proxy d.o.o. je trgovina na veliko iz Splita koja se bavi prodajom
+          asortimana za domaćinstvo i ugostiteljstvo. Osnovana 2016. godine,
+          danas opslužujemo široku mrežu trgovaca i poslovnih subjekata
+          diljem Hrvatske iz našeg skladišta od 700 m².
         </p>
         <div className="mobile-about__stats">
           <div className="mobile-about__stat">

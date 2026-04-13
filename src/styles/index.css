@@ -52,19 +52,44 @@ a { color: inherit; text-decoration: none; }
 /* ── STRIP ── */
 .strip { position: absolute; top: 0; left: 0; width: 800vw; height: 100%; display: flex; will-change: transform; }
 
-.s { position: relative; width: 100vw; height: 100%; flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.s__inner { position: relative; z-index: 2; width: 100%; max-width: 460px; padding: 0 1.5rem; }
+.s { position: relative; width: 100vw; height: 100%; flex-shrink: 0; overflow: hidden; }
+
+/* Content container */
+.s__c { position: relative; z-index: 5; padding: 0 2rem; }
+.s__c--center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+/* Text positioning for parallax sections */
+.s__c--text-left { position: absolute; top: 50%; left: 5%; transform: translateY(-50%); max-width: 320px; }
+.s__c--text-right { position: absolute; top: 50%; right: 5%; transform: translateY(-50%); max-width: 320px; text-align: right; }
+
+/* Parallax floating images */
+.px-img {
+  position: absolute; z-index: 2;
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  will-change: transform, opacity;
+  transition: box-shadow 0.4s var(--ease);
+}
+.px-img:hover { box-shadow: 0 12px 50px rgba(0,0,0,0.5); }
+.px-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Parallax text */
+.px-title {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.6rem; line-height: 1.15; color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.px-desc { font-size: 0.82rem; line-height: 1.7; color: var(--text-dim); }
 
 /* ============================================
    HERO
    ============================================ */
-.s--hero { background: var(--navy); }
+.s--hero { background: var(--navy); display: flex; align-items: center; justify-content: center; }
 .s--hero::before {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(ellipse 45% 40% at 50% 44%, rgba(201,168,76,0.04), transparent);
 }
-
-.s__inner--hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; max-width: 520px; }
+.s--hero .s__c--center { position: relative; top: auto; left: auto; transform: none; max-width: 520px; }
 
 .hero-logo { width: 240px; height: auto; filter: drop-shadow(0 2px 20px rgba(201,168,76,0.1)); margin-bottom: 0.5rem; }
 
@@ -89,9 +114,8 @@ a { color: inherit; text-decoration: none; }
 /* ============================================
    DOOR PANELS
    ============================================ */
-.s--door-panel { background: var(--navy); }
-
-.s__inner--door { max-width: 600px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; }
+.s--door-panel { background: var(--navy); display: flex; align-items: center; justify-content: center; }
+.s--door-panel .s__c--center { position: relative; top: auto; left: auto; transform: none; max-width: 600px; gap: 1.2rem; }
 
 .door-heading {
   font-family: var(--font-display); font-weight: 800;
@@ -199,36 +223,19 @@ a { color: inherit; text-decoration: none; }
 .door-domain { font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 0.5rem; }
 
 /* ============================================
-   PRODUCT SECTIONS
+   PARALLAX PRODUCT SECTIONS
    ============================================ */
-.s--products { background: var(--navy); }
+.s--parallax { background: var(--navy); }
 .s--alt { background: var(--navy-light); }
-
-.s--products .s__inner { max-width: 440px; display: flex; flex-direction: column; gap: 1.2rem; }
-
-.prod-head { display: flex; flex-direction: column; gap: 0.3rem; }
-
-.prod-title {
-  font-family: var(--font-display); font-weight: 700;
-  font-size: 1.3rem; line-height: 1.15; color: var(--text); letter-spacing: 0.02em;
-}
-
-.prod-desc { font-size: 0.8rem; line-height: 1.65; color: var(--text-dim); }
-
-.mosaic { display: grid; gap: 5px; border-radius: 10px; overflow: hidden; }
-.mosaic--4 { grid-template-columns: 1fr 1fr; aspect-ratio: 1; }
-.mosaic--2 { grid-template-columns: 1fr 1fr; aspect-ratio: 16/9; }
-.mosaic__item { overflow: hidden; background: var(--navy-light); }
-.mosaic__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
-.mosaic__item:hover img { transform: scale(1.06); }
 
 /* ============================================
    STORY / O NAMA
    ============================================ */
 .s--story { background: var(--navy); }
+.s--story { display: flex; align-items: center; justify-content: center; }
 .s--story::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201,168,76,0.025), transparent); }
 
-.s__inner--story { max-width: 480px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; overflow-y: auto; max-height: 90vh; padding: 2rem 1.5rem; }
+.s__c--story { max-width: 480px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; overflow-y: auto; max-height: 88vh; padding: 2rem 1.5rem; }
 
 .story-label {
   font-family: var(--font-display); font-weight: 600; font-size: 0.6rem;
