@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8424E"/>
+      <stop offset="100%" style="stop-color:#C41E2A"/>
+    </linearGradient>
+    <linearGradient id="pShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B1520"/>
+      <stop offset="100%" style="stop-color:#6B1018"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <rect width="100" height="100" rx="12" fill="#2D2D2F"/>
+
+  <!-- P Shadow -->
+  <path d="M25 15h30c15 0 26 9 26 24s-11 24-26 24H41v22H25V15z M41 51h12c7 0 12-4 12-12s-5-12-12-12H41v24z"
+        fill="url(#pShadow)" transform="translate(2, 2)"/>
+  <!-- P Main -->
+  <path d="M25 15h30c15 0 26 9 26 24s-11 24-26 24H41v22H25V15z M41 51h12c7 0 12-4 12-12s-5-12-12-12H41v24z"
+        fill="url(#pGrad)"/>
+</svg>

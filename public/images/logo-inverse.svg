@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;display=swap');
+    </style>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8424E"/>
+      <stop offset="100%" style="stop-color:#C41E2A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White Background -->
+  <rect width="400" height="100" fill="#FFFFFF"/>
+
+  <!-- P Icon -->
+  <path d="M28 18h28c14 0 24 8 24 22s-10 22-24 22H44v20h-16V18z M44 50h10c6 0 10-3 10-10s-4-10-10-10H44v20z"
+        fill="url(#pGrad)"/>
+
+  <!-- PROXY wordmark - anthracite on white -->
+  <text x="105" y="60" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif"
+        font-weight="700" font-size="52" fill="#2D2D2F" letter-spacing="4">PROXY</text>
+
+  <!-- Tagline -->
+  <text x="105" y="80" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif"
+        font-weight="600" font-size="14" fill="#6B6B6F" letter-spacing="3">SVE ŠTO DOM TREBA</text>
+</svg>
