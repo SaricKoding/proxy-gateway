@@ -1,197 +1,208 @@
 export default function PanoramaStrip({ progress }) {
-  // 8 panels of 100vw each = 800vw strip width
-  // To show panel N (0-indexed): translateX = -(N/8 * 100)%
-  // progress 0→1 maps to panel 0→7: translateX = -(progress * 7/8 * 100)%
   const translateX = -(progress * 87.5)
+
+  // Calculate which panel is currently centered (0-7)
+  const currentPanel = Math.round(progress * 7)
 
   return (
     <div
       className="strip"
       style={{ transform: `translateX(${translateX}%)` }}
-      aria-hidden="true"
     >
-      {/* ── 1. DOBRODOŠLI ── */}
-      <div className="strip__panel strip__panel--welcome">
-        <div className="strip__panel-overlay strip__panel-overlay--dark" />
-        <div className="strip__panel-content">
-          <span className="strip__badge">PROXY D.O.O.</span>
-          <h1 className="strip__hero-title">Dobrodošli u Proxy</h1>
-          <p className="strip__hero-sub">Sve što dom treba</p>
-          <div className="strip__scroll-hint">
-            <div className="strip__scroll-mouse">
-              <div className="strip__scroll-wheel" />
-            </div>
-            <span>Scrollajte za obilazak</span>
+      {/* ── 1. HERO — Logo + Tagline ── */}
+      <section className="s s--hero">
+        <div className="s__inner">
+          <div className="hero-logo">
+            <img src="/images/logo.png" alt="Proxy d.o.o." className="hero-logo__img" />
+          </div>
+          <h1 className="hero-tagline">Sve što dom treba</h1>
+          <p className="hero-lead">
+            Od kućanskog pribora i sredstava za čišćenje do profesionalnog
+            ugostiteljskog programa — opremamo domove i poslove diljem Hrvatske od 2016.
+          </p>
+          <div className="scroll-cue">
+            <div className="scroll-cue__line" />
+            <span className="scroll-cue__label">Istražite</span>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ── 2. MALOPRODAJA VRATA ── */}
-      <div className="strip__panel strip__panel--door-malo">
-        <div className="strip__panel-overlay strip__panel-overlay--blue" />
-        <a
-          href="https://maloprodaja.proxy1.hr"
-          className="strip__door strip__door--blue"
-          onClick={(e) => { e.preventDefault(); window.location.href = 'https://maloprodaja.proxy1.hr' }}
-        >
-          <div className="strip__door-frame">
-            <div className="strip__door-surface">
-              <div className="strip__door-panel-top" />
-              <div className="strip__door-panel-bot" />
-              <div className="strip__door-handle" />
+      <section className="s s--door">
+        <div className="s__inner">
+          <a href="https://maloprodaja.proxy1.hr" className="door-card door-card--blue">
+            <div className="door-card__visual">
+              <div className="door-card__door">
+                <div className="door-card__panel-a" />
+                <div className="door-card__panel-b" />
+                <div className="door-card__knob" />
+              </div>
+              <div className="door-card__glow" />
             </div>
-          </div>
-          <div className="strip__door-text">
-            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="strip__door-icon">
-              <path d="M6 20L24 6l18 14v20a2 2 0 01-2 2H8a2 2 0 01-2-2V20z" />
-              <path d="M18 42V28h12v14" />
-            </svg>
-            <span className="strip__door-label">MALOPRODAJA</span>
-            <span className="strip__door-title">Za vaš dom</span>
-            <span className="strip__door-cta">Uđite →</span>
-            <span className="strip__door-url">maloprodaja.proxy1.hr</span>
-          </div>
-        </a>
-      </div>
+            <div className="door-card__body">
+              <span className="door-card__eyebrow">Maloprodaja</span>
+              <h2 className="door-card__title">Za vaš dom</h2>
+              <p className="door-card__desc">
+                Pronađite sve za uređenje i održavanje doma — od kvalitetnih
+                otirača i kuhinjskog pribora do sredstava za čišćenje koje
+                profesionalci preporučuju.
+              </p>
+              <span className="door-card__cta">
+                Otvori trgovinu
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
 
       {/* ── 3. OTIRAČI ── */}
-      <div className="strip__panel strip__panel--products">
-        <div className="strip__product-grid">
-          <div className="strip__product-item">
-            <img src="/images/otiraci-globo.jpg" alt="Otirači Globo" className="strip__product-img" />
+      <section className="s s--products">
+        <div className="s__inner">
+          <div className="prod-header">
+            <span className="prod-header__num">01</span>
+            <div>
+              <h2 className="prod-header__title">Otirači po narudžbi</h2>
+              <p className="prod-header__desc">
+                Personalizirani otirači za hotele, restorane i poslovne prostore.
+                Vaš logo, vaše boje — mi izrađujemo.
+              </p>
+            </div>
           </div>
-          <div className="strip__product-item">
-            <img src="/images/otiraci-kingtrade.jpg" alt="Otirači Kingtrade" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/otiraci-hotel.jpg" alt="Otirači za hotele" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/otiraci-pristav.jpg" alt="Otirači Pristav" className="strip__product-img" />
+          <div className="prod-mosaic prod-mosaic--4">
+            <div className="prod-mosaic__item"><img src="/images/otiraci-globo.jpg" alt="Otirači Globo" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/otiraci-kingtrade.jpg" alt="Otirači Kingtrade" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/otiraci-hotel.jpg" alt="Otirači za hotele" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/otiraci-pristav.jpg" alt="Otirači Pristav" loading="lazy" /></div>
           </div>
         </div>
-        <div className="strip__product-label">
-          <span className="strip__product-cat">Otirači po narudžbi</span>
-          <span className="strip__product-desc">Personalizirani otirači za hotele, ugostiteljstvo i poslovne prostore</span>
-        </div>
-      </div>
+      </section>
 
-      {/* ── 4. KRPE / MOPOVI / KUHINJA ── */}
-      <div className="strip__panel strip__panel--products">
-        <div className="strip__product-grid">
-          <div className="strip__product-item">
-            <img src="/images/proxy-display.jpg" alt="Proxy program čišćenja" className="strip__product-img" />
+      {/* ── 4. ČIŠĆENJE & KUĆANSTVO ── */}
+      <section className="s s--products">
+        <div className="s__inner">
+          <div className="prod-header">
+            <span className="prod-header__num">02</span>
+            <div>
+              <h2 className="prod-header__title">Čišćenje & Kućanstvo</h2>
+              <p className="prod-header__desc">
+                Mopovi, krpe, sredstva za čišćenje i kuhinjski program.
+                Sve što trebate za besprijekorno čist prostor — dom ili posao.
+              </p>
+            </div>
           </div>
-          <div className="strip__product-item">
-            <img src="/images/mopovi.jpg" alt="Drveni kuhinjski program" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/retail-display.jpg" alt="Maloprodajni izlog" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/doormats.jpg" alt="Asortiman otirača" className="strip__product-img" />
+          <div className="prod-mosaic prod-mosaic--4">
+            <div className="prod-mosaic__item"><img src="/images/proxy-display.jpg" alt="Proxy program čišćenja" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/mopovi.jpg" alt="Drveni kuhinjski program" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/retail-display.jpg" alt="Maloprodajni izlog" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/doormats.jpg" alt="Asortiman otirača" loading="lazy" /></div>
           </div>
         </div>
-        <div className="strip__product-label">
-          <span className="strip__product-cat">Čišćenje & Kućanstvo</span>
-          <span className="strip__product-desc">Mopovi, krpe, sredstva za čišćenje i kuhinjski pribor</span>
-        </div>
-      </div>
+      </section>
 
-      {/* ── 5. NOŽEVI INOX ── */}
-      <div className="strip__panel strip__panel--products">
-        <div className="strip__product-grid strip__product-grid--duo">
-          <div className="strip__product-item strip__product-item--wide">
-            <img src="/images/nozevi-bonomi.jpg" alt="Bonomi inox noževi" className="strip__product-img" />
+      {/* ── 5. NOŽEVI ── */}
+      <section className="s s--products s--dark">
+        <div className="s__inner">
+          <div className="prod-header">
+            <span className="prod-header__num">03</span>
+            <div>
+              <h2 className="prod-header__title">Inox noževi — Bonomi</h2>
+              <p className="prod-header__desc">
+                Made in Italy. Profesionalni inox noževi u svim bojama —
+                od kuhinje do ugostiteljstva. Čelik koji traje generacijama.
+              </p>
+            </div>
           </div>
-          <div className="strip__product-item strip__product-item--wide">
-            <img src="/images/knives-product.jpg" alt="Bonomi noževi set" className="strip__product-img" />
+          <div className="prod-mosaic prod-mosaic--2">
+            <div className="prod-mosaic__item prod-mosaic__item--tall"><img src="/images/nozevi-bonomi.jpg" alt="Bonomi inox noževi" loading="lazy" /></div>
+            <div className="prod-mosaic__item prod-mosaic__item--tall"><img src="/images/knives-product.jpg" alt="Bonomi set noževa" loading="lazy" /></div>
           </div>
         </div>
-        <div className="strip__product-label">
-          <span className="strip__product-cat">Inox noževi — Bonomi</span>
-          <span className="strip__product-desc">Made in Italy — profesionalni inox noževi u svim bojama</span>
-        </div>
-      </div>
+      </section>
 
       {/* ── 6. O NAMA ── */}
-      <div className="strip__panel strip__panel--info">
-        <div className="strip__panel-overlay strip__panel-overlay--dark" />
-        <div className="strip__info-content">
-          <span className="strip__badge">O NAMA</span>
-          <h2 className="strip__info-title">Proxy d.o.o.</h2>
-          <p className="strip__info-text">
-            Veleprodajna tvrtka iz Splita specijalizirana za opskrbu širokim asortimanom
-            proizvoda za domaćinstvo i ugostiteljstvo. Osnovana 2016. godine od strane
-            Roberta Raiča.
+      <section className="s s--story">
+        <div className="s__inner">
+          <span className="story__eyebrow">Naša priča</span>
+          <h2 className="story__title">Proxy d.o.o.</h2>
+          <p className="story__text">
+            Robert Raič je 2016. u Splitu pokrenuo tvrtku s jasnom vizijom —
+            pružiti hrvatskom tržištu vrhunske proizvode za dom i ugostiteljstvo
+            uz fer cijene i pouzdanu isporuku. Danas, s više od 792 artikla u ponudi
+            i mrežom od 200+ partnera, Proxy je sinonim za kvalitetu i povjerenje.
           </p>
-          <div className="strip__info-stats">
-            <div className="strip__info-stat">
-              <span className="strip__info-stat-num">792+</span>
-              <span className="strip__info-stat-label">Artikala</span>
+          <div className="story__stats">
+            <div className="story__stat">
+              <span className="story__stat-num">792+</span>
+              <span className="story__stat-label">Artikala u ponudi</span>
             </div>
-            <div className="strip__info-stat">
-              <span className="strip__info-stat-num">24h</span>
-              <span className="strip__info-stat-label">Isporuka</span>
+            <div className="story__stat">
+              <span className="story__stat-num">24h</span>
+              <span className="story__stat-label">Brza isporuka</span>
             </div>
-            <div className="strip__info-stat">
-              <span className="strip__info-stat-num">200+</span>
-              <span className="strip__info-stat-label">Partnera</span>
+            <div className="story__stat">
+              <span className="story__stat-num">200+</span>
+              <span className="story__stat-label">Zadovoljnih partnera</span>
             </div>
           </div>
+          <div className="story__values">
+            <div className="story__value"><strong>Kvaliteta</strong> — samo provjereni proizvodi</div>
+            <div className="story__value"><strong>Pouzdanost</strong> — dostava na vrijeme, uvijek</div>
+            <div className="story__value"><strong>Fer poslovanje</strong> — bez skrivenih troškova</div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* ── 7. SKLADIŠTE ── */}
-      <div className="strip__panel strip__panel--products">
-        <div className="strip__product-grid">
-          <div className="strip__product-item">
-            <img src="/images/warehouse-shelves.jpg" alt="Skladišne police" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/veleprodaja-police.jpg" alt="Veleprodajne role" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/veleprodaja-skladiste.jpg" alt="Otirači na policama" className="strip__product-img" />
-          </div>
-          <div className="strip__product-item">
-            <img src="/images/warehouse-rolls.jpg" alt="Skladište role tkanina" className="strip__product-img" />
-          </div>
-        </div>
-        <div className="strip__product-label">
-          <span className="strip__product-cat">Naše skladište</span>
-          <span className="strip__product-desc">Više od 792 artikala spremno za brzu isporuku</span>
-        </div>
-      </div>
-
-      {/* ── 8. VELEPRODAJA VRATA ── */}
-      <div className="strip__panel strip__panel--door-velo">
-        <div className="strip__panel-overlay strip__panel-overlay--yellow" />
-        <a
-          href="https://veleprodaja.proxy1.hr"
-          className="strip__door strip__door--yellow"
-          onClick={(e) => { e.preventDefault(); window.location.href = 'https://veleprodaja.proxy1.hr' }}
-        >
-          <div className="strip__door-frame">
-            <div className="strip__door-surface strip__door-surface--yellow">
-              <div className="strip__door-panel-top" />
-              <div className="strip__door-panel-bot" />
-              <div className="strip__door-handle" />
+      <section className="s s--products">
+        <div className="s__inner">
+          <div className="prod-header">
+            <span className="prod-header__num">04</span>
+            <div>
+              <h2 className="prod-header__title">Naše skladište</h2>
+              <p className="prod-header__desc">
+                Više od 792 artikala uvijek na stanju — spremno za isporuku
+                unutar 24 sata na području cijele Hrvatske.
+              </p>
             </div>
           </div>
-          <div className="strip__door-text">
-            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="strip__door-icon">
-              <rect x="4" y="18" width="40" height="24" rx="2" />
-              <path d="M4 18L24 6l20 12" />
-              <path d="M16 42V30h16v12" />
-            </svg>
-            <span className="strip__door-label">VELEPRODAJA</span>
-            <span className="strip__door-title">Za vaš posao</span>
-            <span className="strip__door-cta">Uđite →</span>
-            <span className="strip__door-url">veleprodaja.proxy1.hr</span>
+          <div className="prod-mosaic prod-mosaic--4">
+            <div className="prod-mosaic__item"><img src="/images/warehouse-shelves.jpg" alt="Skladišne police" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/veleprodaja-police.jpg" alt="Role na policama" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/veleprodaja-skladiste.jpg" alt="Otirači na policama" loading="lazy" /></div>
+            <div className="prod-mosaic__item"><img src="/images/warehouse-rolls.jpg" alt="Tkanine u skladištu" loading="lazy" /></div>
           </div>
-        </a>
-      </div>
+        </div>
+      </section>
+
+      {/* ── 8. VELEPRODAJA VRATA ── */}
+      <section className="s s--door">
+        <div className="s__inner">
+          <a href="https://veleprodaja.proxy1.hr" className="door-card door-card--gold">
+            <div className="door-card__visual">
+              <div className="door-card__door door-card__door--gold">
+                <div className="door-card__panel-a" />
+                <div className="door-card__panel-b" />
+                <div className="door-card__knob" />
+              </div>
+              <div className="door-card__glow door-card__glow--gold" />
+            </div>
+            <div className="door-card__body">
+              <span className="door-card__eyebrow door-card__eyebrow--gold">Veleprodaja</span>
+              <h2 className="door-card__title">Za vaš posao</h2>
+              <p className="door-card__desc">
+                B2B platforma za poslovne kupce — veleprodajne cijene,
+                brza isporuka i osobni komercijalist. Registrirajte se
+                i pristupite cijelom katalogu.
+              </p>
+              <span className="door-card__cta door-card__cta--gold">
+                Otvori veleprodaju
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
     </div>
   )
 }
