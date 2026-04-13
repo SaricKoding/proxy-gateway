@@ -5,7 +5,7 @@ export default function MobileFallback() {
       <section className="mobile-hero">
         <div className="mobile-hero__bg" />
         <div className="mobile-hero__content">
-          <img src="/images/logo.svg" alt="Proxy d.o.o." style={{ width: '180px', marginBottom: '1rem' }} />
+          <img src="/images/logo-final.png" alt="Proxy d.o.o." style={{ width: '200px', marginBottom: '1rem' }} />
           <h1 className="mobile-hero__title">Sve što dom treba</h1>
           <p className="mobile-hero__subtitle">
             Kvalitetni proizvodi za dom i posao. Odaberite kako želite kupovati.

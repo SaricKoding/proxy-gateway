@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="footer__container">
         <div className="footer__grid">
           <div className="footer__brand">
-            <img src="/images/logo.png" alt="Proxy d.o.o." width="140" style={{ height: '40px', width: 'auto' }} />
+            <img src="/images/logo-final.png" alt="Proxy d.o.o." style={{ height: '50px', width: 'auto' }} />
             <p className="footer__tagline">
               Pouzdani partner za kvalitetne proizvode za dom i posao od 2016. godine.
             </p>
