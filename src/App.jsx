@@ -1,7 +1,5 @@
 import Header from './components/Header'
-import HeroGateway from './components/HeroGateway'
-import AboutSection from './components/AboutSection'
-import ProductShowcase from './components/ProductShowcase'
+import PanoramicRoom from './components/PanoramicRoom/PanoramicRoom'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -9,9 +7,7 @@ export default function App() {
     <div className="app">
       <Header />
       <main>
-        <HeroGateway />
-        <AboutSection />
-        <ProductShowcase />
+        <PanoramicRoom />
       </main>
       <Footer />
     </div>
