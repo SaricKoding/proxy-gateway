@@ -176,12 +176,10 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
 }
 
-/* ── Placeholder Room Panels ── */
-.panorama-strip--placeholder {
-  background: var(--navy-800);
-}
-
-.panorama-panel {
+/* ============================================
+   PREMIUM CSS ROOM — Panels
+   ============================================ */
+.pan {
   position: relative;
   width: 100vw;
   height: 100%;
@@ -189,229 +187,672 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
-/* Wall base styles */
-.panorama-panel--1 {
-  background:
-    linear-gradient(180deg,
-      #1a1f2e 0%,
-      #1e2538 15%,
-      #222a3d 40%,
-      #252d42 65%,
-      #1c2436 85%,
-      #12182a 100%
-    );
-}
-
-.panorama-panel--2 {
-  background:
-    linear-gradient(180deg,
-      #1c2233 0%,
-      #202840 15%,
-      #242e48 40%,
-      #273250 60%,
-      #1e2a42 85%,
-      #141c30 100%
-    );
-}
-
-.panorama-panel--3 {
-  background:
-    linear-gradient(180deg,
-      #1e2538 0%,
-      #222d45 15%,
-      #26334e 40%,
-      #293756 60%,
-      #202c44 85%,
-      #161e32 100%
-    );
-}
-
-.panorama-panel--4 {
-  background:
-    linear-gradient(180deg,
-      #1a2030 0%,
-      #1e263c 15%,
-      #222c44 40%,
-      #25304a 60%,
-      #1c263e 85%,
-      #131a2c 100%
-    );
-}
-
-/* ── Room elements ── */
-.panorama-room-element {
+.pan__wall {
   position: absolute;
+  inset: 0;
 }
 
-/* Floor */
-.panorama-floor {
+/* Wall textures per panel */
+.pan--1 .pan__wall {
+  background:
+    linear-gradient(180deg, #1e2640 0%, #232d4a 30%, #283355 60%, #1e2a44 100%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.008) 0px, rgba(255,255,255,0.008) 1px, transparent 1px, transparent 200px);
+}
+.pan--2 .pan__wall {
+  background:
+    linear-gradient(180deg, #202946 0%, #253050 30%, #2a365a 60%, #222c48 100%);
+}
+.pan--3 .pan__wall {
+  background:
+    linear-gradient(180deg, #1c2540 0%, #222d4c 30%, #273256 60%, #1e2942 100%);
+}
+.pan--4 .pan__wall {
+  background:
+    linear-gradient(180deg, #1a2238 0%, #1f2944 30%, #242e50 60%, #1a2640 100%);
+}
+
+/* ── Floor ── */
+.pan__floor {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 28%;
+  width: 400vw;
+  height: 30%;
+  z-index: 2;
   background:
     linear-gradient(180deg,
-      rgba(30, 25, 20, 0.0) 0%,
-      rgba(30, 25, 20, 0.4) 20%,
-      rgba(45, 38, 30, 0.7) 50%,
-      rgba(55, 45, 35, 0.85) 100%
+      transparent 0%,
+      rgba(40, 32, 24, 0.3) 15%,
+      rgba(55, 44, 33, 0.55) 35%,
+      rgba(65, 52, 38, 0.7) 55%,
+      rgba(50, 40, 30, 0.85) 100%
     );
-  z-index: 1;
 }
 
-/* Ceiling */
-.panorama-ceiling {
+/* Wood grain texture on floor */
+.pan__floor::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(255,255,255,0.01) 0px,
+      rgba(255,255,255,0.015) 2px,
+      transparent 2px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(90deg,
+      rgba(0,0,0,0.03) 0px,
+      transparent 1px,
+      transparent 160px
+    );
+}
+
+/* Floor reflection */
+.pan__floor::after {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 12%;
-  background:
-    linear-gradient(180deg,
-      rgba(10, 12, 20, 0.6) 0%,
-      rgba(15, 20, 35, 0.2) 100%
-    );
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+}
+
+/* ── Ceiling ── */
+.pan__ceiling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400vw;
+  height: 8%;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(8, 12, 24, 0.7) 0%, rgba(15, 20, 38, 0.15) 100%);
+}
+
+.pan__ceiling-shadow {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  width: 400vw;
+  height: 6%;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(15, 20, 38, 0.12) 0%, transparent 100%);
+}
+
+/* ── Baseboard ── */
+.pan__baseboard {
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  z-index: 3;
+}
+
+/* ── Crown molding ── */
+.pan__crown {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: rgba(255,255,255,0.025);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index: 3;
+}
+
+/* ── Light rays ── */
+.pan__light-ray {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pan__light-ray--1 {
+  top: 10%;
+  right: 10%;
+  width: 35%;
+  height: 70%;
+  background: linear-gradient(160deg, rgba(180, 200, 240, 0.04) 0%, transparent 60%);
+  clip-path: polygon(60% 0%, 100% 0%, 30% 100%, 0% 100%);
+}
+
+.pan__light-ray--2 {
+  top: 8%;
+  right: 5%;
+  width: 25%;
+  height: 75%;
+  background: linear-gradient(165deg, rgba(200, 210, 240, 0.025) 0%, transparent 55%);
+  clip-path: polygon(70% 0%, 100% 0%, 20% 100%, 0% 100%);
+}
+
+/* ── Ambient light ── */
+.pan__ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   z-index: 1;
 }
 
-/* Door frames */
-.panorama-room-element--door-frame {
-  width: 20%;
-  height: 62%;
-  bottom: 28%;
-  border: 2px solid rgba(255,255,255,0.08);
-  border-radius: 4px 4px 0 0;
-  background: rgba(0,0,0,0.15);
+.pan__ambient--warm {
+  background: radial-gradient(ellipse 60% 50% at 50% 35%, rgba(255, 200, 120, 0.04) 0%, transparent 100%);
 }
 
-.panorama-room-element--door-frame::before {
-  content: '';
+.pan__ambient--cool {
+  background: radial-gradient(ellipse 50% 60% at 30% 60%, rgba(120, 160, 240, 0.03) 0%, transparent 100%);
+}
+
+/* ── Window ── */
+.pan__window {
   position: absolute;
-  top: -12px;
-  left: -4px;
-  right: -4px;
-  height: 12px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 4px 4px 0 0;
-}
-
-.panorama-room-element--left {
-  left: 38%;
-  border-color: rgba(59, 130, 246, 0.2);
-  box-shadow:
-    inset 0 0 60px rgba(59, 130, 246, 0.06),
-    0 0 40px rgba(59, 130, 246, 0.04);
-}
-
-.panorama-room-element--right {
-  left: 42%;
-  border-color: rgba(234, 179, 8, 0.2);
-  box-shadow:
-    inset 0 0 60px rgba(234, 179, 8, 0.06),
-    0 0 40px rgba(234, 179, 8, 0.04);
-}
-
-/* Window */
-.panorama-room-element--window {
   right: 8%;
-  top: 18%;
-  width: 22%;
-  height: 30%;
-  border: 2px solid rgba(255,255,255,0.06);
-  border-radius: 2px;
-  background:
-    linear-gradient(135deg,
-      rgba(100, 140, 200, 0.08) 0%,
-      rgba(150, 180, 220, 0.04) 100%
-    );
+  top: 14%;
+  width: 20%;
+  height: 35%;
+  z-index: 4;
 }
 
-.panorama-room-element--window::after {
-  content: '';
+.pan__window-glass {
+  position: absolute;
+  inset: 4px;
+  background:
+    linear-gradient(150deg,
+      rgba(100, 140, 200, 0.1) 0%,
+      rgba(140, 170, 220, 0.06) 40%,
+      rgba(80, 120, 180, 0.08) 100%
+    );
+  border-radius: 2px;
+}
+
+.pan__window-frame-h {
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
-  height: 2px;
-  background: rgba(255,255,255,0.04);
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-50%);
 }
 
-/* Shelves */
-.panorama-room-element--shelf {
-  height: 2px;
+.pan__window-frame-v {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
   background: rgba(255,255,255,0.06);
+  transform: translateX(-50%);
+}
+
+.pan__window-sill {
+  position: absolute;
+  bottom: -6px;
+  left: -3%;
+  right: -3%;
+  height: 8px;
+  background: rgba(255,255,255,0.04);
   border-radius: 1px;
 }
 
-.panorama-room-element--shelf::before {
+/* Outer frame */
+.pan__window::before {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: rgba(0,0,0,0.15);
+  inset: -2px;
+  border: 3px solid rgba(255,255,255,0.06);
+  border-radius: 3px;
 }
 
-.panorama-room-element--shelf-1 {
-  left: 15%;
-  width: 30%;
-  top: 35%;
-}
-
-.panorama-room-element--shelf-2 {
-  left: 12%;
-  width: 35%;
-  top: 52%;
-}
-
-.panorama-room-element--shelf-3 {
-  left: 10%;
-  width: 28%;
-  top: 40%;
-}
-
-/* Decorative frames */
-.panorama-room-element--frame {
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 2px;
-  background: rgba(255,255,255,0.015);
-}
-
-.panorama-room-element--frame-1 {
-  left: 20%;
-  top: 22%;
+/* ── Doors ── */
+.pan__door {
+  position: absolute;
+  bottom: 30%;
   width: 18%;
-  height: 24%;
+  height: 55%;
+  z-index: 4;
 }
 
-.panorama-room-element--frame-2 {
-  left: 55%;
-  top: 26%;
-  width: 14%;
+.pan__door--blue { left: 38%; }
+.pan__door--yellow { left: 50%; }
+
+/* Door outer frame */
+.pan__door::before {
+  content: '';
+  position: absolute;
+  inset: -6px -8px -0px -8px;
+  border: 3px solid rgba(255,255,255,0.05);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Door header/transom */
+.pan__door::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: -10px;
+  right: -10px;
+  height: 10px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 3px 3px 0 0;
+}
+
+.pan__door-panel {
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  right: 10%;
+  height: 38%;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 2px;
+}
+
+.pan__door-panel--bottom {
+  top: auto;
+  bottom: 6%;
+  height: 38%;
+}
+
+.pan__door--blue {
+  background: linear-gradient(180deg, rgba(30, 60, 120, 0.35), rgba(20, 40, 90, 0.5));
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  box-shadow:
+    inset 0 0 40px rgba(59, 130, 246, 0.06),
+    0 0 60px rgba(59, 130, 246, 0.05);
+}
+
+.pan__door--blue .pan__door-panel {
+  border-color: rgba(59, 130, 246, 0.08);
+  background: rgba(59, 130, 246, 0.03);
+}
+
+.pan__door--yellow {
+  background: linear-gradient(180deg, rgba(100, 80, 20, 0.3), rgba(60, 50, 15, 0.45));
+  border: 2px solid rgba(234, 179, 8, 0.2);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  box-shadow:
+    inset 0 0 40px rgba(234, 179, 8, 0.05),
+    0 0 60px rgba(234, 179, 8, 0.04);
+}
+
+.pan__door--yellow .pan__door-panel {
+  border-color: rgba(234, 179, 8, 0.08);
+  background: rgba(234, 179, 8, 0.02);
+}
+
+/* Door handle */
+.pan__door-handle {
+  position: absolute;
+  right: 14%;
+  top: 48%;
+  width: 6px;
+  height: 22px;
+  border-radius: 3px;
+  z-index: 5;
+}
+
+.pan__door--blue .pan__door-handle {
+  background: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+}
+
+.pan__door--yellow .pan__door-handle {
+  background: rgba(234, 179, 8, 0.4);
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.25);
+}
+
+/* Door light leak */
+.pan__door-light {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+}
+
+.pan__door--blue .pan__door-light {
+  background: rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 20px 8px rgba(59, 130, 246, 0.06);
+}
+
+.pan__door--yellow .pan__door-light {
+  background: rgba(234, 179, 8, 0.12);
+  box-shadow: 0 0 20px 8px rgba(234, 179, 8, 0.05);
+}
+
+/* ── Furniture: side table ── */
+.pan__furniture--side-table {
+  position: absolute;
+  left: 12%;
+  bottom: 30%;
+  width: 16%;
   height: 18%;
+  z-index: 4;
 }
 
-/* Console / furniture */
-.panorama-room-element--console {
-  left: 30%;
-  bottom: 28%;
-  width: 40%;
-  height: 12%;
-  background: rgba(30, 25, 20, 0.4);
+.pan__furniture--side-table::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 100%;
+  background: rgba(35, 28, 22, 0.5);
   border: 1px solid rgba(255,255,255,0.03);
   border-radius: 2px;
 }
 
-/* Plant */
-.panorama-room-element--plant {
+.pan__product-img--framed {
+  position: absolute;
+  top: -60%;
+  left: 15%;
+  width: 70%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* ── Shelf unit ── */
+.pan__shelf-unit {
+  position: absolute;
+  left: 10%;
+  top: 18%;
+  width: 55%;
+  height: 52%;
+  z-index: 4;
+}
+
+.pan__shelf-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 1px;
+}
+
+.pan__shelf-bar::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: rgba(0,0,0,0.1);
+}
+
+.pan__shelf-bar--1 { top: 0; }
+.pan__shelf-bar--2 { top: 38%; }
+.pan__shelf-bar--3 { top: 76%; }
+
+/* Shelf brackets */
+.pan__shelf-bar::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 15%;
+  width: 2px;
+  height: 12px;
+  background: rgba(255,255,255,0.03);
+}
+
+.pan__shelf-product {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.pan__shelf-product--1 {
+  top: 5%;
+  left: 5%;
+  width: 28%;
+  height: 30%;
+}
+
+.pan__shelf-product--2 {
+  top: 42%;
+  left: 35%;
+  width: 28%;
+  height: 30%;
+}
+
+.pan__shelf-product--3 {
+  top: 5%;
+  right: 5%;
+  width: 28%;
+  height: 30%;
+}
+
+.pan__shelf-product--ind {
+  top: 8%;
+  left: 10%;
+  width: 80%;
+  height: 28%;
+}
+
+/* ── Pendant light ── */
+.pan__pendant {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.pan__pendant-cord {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.06);
+  margin: 0 auto;
+}
+
+.pan__pendant-shade {
+  width: 60px;
+  height: 30px;
+  background: rgba(40, 35, 28, 0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 2px 2px 50% 50%;
+  margin: 0 auto;
+}
+
+.pan__pendant-glow {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255, 220, 150, 0.06) 0%, transparent 70%);
+  margin: -80px auto 0;
+}
+
+/* ── Plant ── */
+.pan__plant {
+  position: absolute;
+  right: 6%;
+  bottom: 30%;
+  z-index: 4;
+}
+
+.pan__plant-pot {
+  width: 28px;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(140, 80, 40, 0.4), rgba(100, 60, 30, 0.5));
+  border-radius: 3px 3px 2px 2px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.pan__plant-leaf {
+  position: absolute;
+  background: rgba(50, 100, 50, 0.2);
+  border-radius: 50% 0 50% 0;
+}
+
+.pan__plant-leaf--1 { width: 20px; height: 35px; top: -28px; left: 4px; transform: rotate(-15deg); }
+.pan__plant-leaf--2 { width: 18px; height: 30px; top: -32px; left: 12px; transform: rotate(10deg); }
+.pan__plant-leaf--3 { width: 16px; height: 28px; top: -24px; left: -2px; transform: rotate(-30deg); }
+
+/* ── Gallery frames ── */
+.pan__gallery {
+  position: absolute;
+  left: 8%;
+  top: 16%;
+  width: 65%;
+  height: 48%;
+  z-index: 4;
+}
+
+.pan__frame {
+  position: absolute;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 0 20px rgba(0,0,0,0.1);
+}
+
+.pan__frame--large {
+  left: 0;
+  top: 0;
+  width: 48%;
+  height: 100%;
+}
+
+.pan__frame--medium {
+  right: 0;
+  top: 0;
+  width: 42%;
+  height: 55%;
+}
+
+.pan__frame--small {
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  height: 38%;
+}
+
+.pan__frame-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  filter: brightness(0.65) contrast(1.1);
+}
+
+/* ── Console table ── */
+.pan__console {
+  position: absolute;
+  left: 20%;
+  bottom: 30%;
+  width: 40%;
+  height: 3%;
+  z-index: 4;
+}
+
+.pan__console-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(60, 48, 36, 0.5);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 1px;
+}
+
+.pan__console-leg {
+  position: absolute;
+  top: 4px;
+  width: 2px;
+  height: 50px;
+  background: rgba(60, 48, 36, 0.4);
+}
+
+.pan__console-leg--l { left: 8%; }
+.pan__console-leg--r { right: 8%; }
+
+/* ── Floor lamp ── */
+.pan__floor-lamp {
+  position: absolute;
   right: 8%;
-  bottom: 28%;
-  width: 6%;
-  height: 22%;
-  background: rgba(40, 80, 40, 0.15);
-  border-radius: 40% 40% 0 0;
+  bottom: 30%;
+  z-index: 4;
+}
+
+.pan__lamp-pole {
+  width: 3px;
+  height: 130px;
+  background: rgba(255,255,255,0.04);
+  margin: 0 auto;
+  transform: translateY(-130px);
+}
+
+.pan__lamp-head {
+  width: 35px;
+  height: 20px;
+  background: rgba(50, 42, 32, 0.5);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 50% 50% 3px 3px;
+  margin: 0 auto;
+  transform: translateY(-155px);
+}
+
+.pan__lamp-glow {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 210, 140, 0.04) 0%, transparent 70%);
+  margin: 0 auto;
+  transform: translateY(-220px);
+}
+
+/* ── Industrial shelf ── */
+.pan__industrial-shelf {
+  position: absolute;
+  left: 6%;
+  top: 18%;
+  width: 32%;
+  height: 50%;
+  z-index: 4;
+}
+
+.pan__ind-shelf-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.05);
+}
+
+.pan__ind-shelf-bar--1 { top: 0; }
+.pan__ind-shelf-bar--2 { top: 40%; }
+.pan__ind-shelf-bar--3 { top: 80%; }
+
+.pan__ind-shelf-upright {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgba(255,255,255,0.04);
+}
+
+.pan__ind-shelf-upright--l { left: 0; }
+.pan__ind-shelf-upright--r { right: 0; }
+
+/* ── Spot light (panel 4) ── */
+.pan__spot-light {
+  position: absolute;
+  top: 8%;
+  left: 55%;
+  width: 200px;
+  height: 300px;
+  background: conic-gradient(from 170deg at 50% 0%, rgba(234, 179, 8, 0.04) 0deg, transparent 30deg, transparent 330deg, rgba(234, 179, 8, 0.04) 360deg);
+  z-index: 1;
 }
 
 /* ============================================

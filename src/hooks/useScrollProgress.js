@@ -9,7 +9,7 @@ export default function useScrollProgress(spacerRef) {
   const tick = useCallback(() => {
     const diff = targetRef.current - interpolatedRef.current
     if (Math.abs(diff) > 0.0001) {
-      interpolatedRef.current += diff * 0.08
+      interpolatedRef.current += diff * 0.35
     } else {
       interpolatedRef.current = targetRef.current
     }
