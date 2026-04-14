@@ -60,10 +60,14 @@ a { color: inherit; text-decoration: none; }
 
 .px-title {
   font-family: var(--font-display); font-weight: 700;
-  font-size: 1.8rem; line-height: 1.1; color: var(--text);
-  margin-bottom: 0.5rem;
+  font-size: 2rem; line-height: 1.1; color: var(--text);
+  margin-bottom: 0.6rem;
 }
-.px-desc { font-size: 0.82rem; line-height: 1.7; color: var(--text-dim); }
+.px-title--center { text-align: center; }
+.px-desc { font-size: 0.95rem; line-height: 1.85; color: var(--text-dim); }
+.px-desc--center { text-align: center; }
+
+.s__c--warehouse-text { z-index: 10; pointer-events: none; }
 
 /* ============================================
    HERO
@@ -76,7 +80,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 0.5rem;
 }
 
-.hero-lead { font-size: 0.9rem; line-height: 1.75; color: var(--text-dim); max-width: 400px; }
+.hero-lead { font-size: 1rem; line-height: 1.9; color: var(--text-dim); max-width: 440px; }
 
 .scroll-cue { margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
 .scroll-cue__line { width: 1px; height: 40px; background: linear-gradient(180deg, var(--gold), transparent); animation: scrollL 2.5s var(--ease) infinite; }
@@ -182,7 +186,7 @@ a { color: inherit; text-decoration: none; }
 }
 .story-title { font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; line-height: 1; }
 .story-body { display: flex; flex-direction: column; gap: 0.6rem; text-align: left; }
-.story-body p { font-size: 0.82rem; line-height: 1.7; color: var(--text-dim); }
+.story-body p { font-size: 0.95rem; line-height: 1.85; color: var(--text-dim); }
 .story-facts {
   display: flex; gap: 1.5rem; padding: 1rem 1.5rem;
   background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px;
