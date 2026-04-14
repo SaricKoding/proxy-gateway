@@ -215,7 +215,8 @@ a { color: inherit; text-decoration: none; }
 .mobile-fallback { background: var(--navy); }
 .mobile-hero { position: relative; min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem 2rem; }
 .mobile-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.04), transparent 60%); }
-.mobile-hero__content { position: relative; text-align: center; }
+.mobile-hero__content { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.mobile-hero__logo { width: 200px; height: auto; margin: 0 auto 1rem; display: block; }
 .mobile-hero__title { font-family: var(--font-display); font-weight: 800; font-size: 2rem; line-height: 1.05; color: var(--text); margin-bottom: 0.6rem; }
 .mobile-hero__subtitle { font-size: 0.85rem; color: var(--text-dim); max-width: 300px; margin: 0 auto; }
 .mobile-doors { padding: 0 1rem 1.5rem; }
@@ -233,19 +234,27 @@ a { color: inherit; text-decoration: none; }
 .mobile-door__cta { display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.55rem 1.2rem; border-radius: 8px; background: var(--blue); color: #fff; }
 .mobile-door__cta--yellow { background: var(--gold); color: var(--navy); }
 .mobile-doors__divider { text-align: center; padding: 0.6rem 0; font-family: var(--font-display); font-weight: 600; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--text-muted); }
-.mobile-about { padding: 2.5rem 1.5rem; text-align: center; }
+.mobile-about { padding: 2.5rem 1.5rem; text-align: center; border-top: 1px solid var(--border); }
+.mobile-about__badge { display: inline-block; font-family: var(--font-display); font-weight: 600; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.25); padding: 0.3rem 0.8rem; border-radius: 20px; margin-bottom: 0.8rem; }
 .mobile-about__title { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; color: var(--text); margin-bottom: 0.6rem; }
 .mobile-about__text { font-size: 0.82rem; color: var(--text-dim); line-height: 1.7; max-width: 380px; margin: 0 auto 1.2rem; }
-.mobile-about__stats { display: flex; justify-content: center; gap: 1.2rem; }
-.mobile-about__stat { text-align: center; }
-.mobile-about__stat-num { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--gold); }
-.mobile-about__stat-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
-.mobile-products { padding: 1.5rem 1.5rem 2.5rem; }
+.mobile-about__image-wrap { margin: 0 -0.5rem 1.5rem; border-radius: 12px; overflow: hidden; }
+.mobile-about__image { width: 100%; height: auto; display: block; }
+.mobile-about__values { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem; text-align: left; }
+.mobile-about__value { display: flex; align-items: flex-start; gap: 0.8rem; padding: 0.8rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 10px; }
+.mobile-about__value-icon { flex-shrink: 0; color: var(--gold); margin-top: 0.1rem; }
+.mobile-about__value-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--text); margin-bottom: 0.15rem; }
+.mobile-about__value-desc { font-size: 0.75rem; color: var(--text-dim); line-height: 1.5; }
+.mobile-about__stats { display: flex; justify-content: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; }
+.mobile-about__stat { text-align: center; flex: 1; }
+.mobile-about__stat-num { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--gold); }
+.mobile-about__stat-label { font-size: 0.55rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.mobile-products { padding: 1.5rem 1.5rem 2.5rem; border-top: 1px solid var(--border); }
 .mobile-products__title { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--text); text-align: center; margin-bottom: 1rem; }
 .mobile-products__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; border-radius: 10px; overflow: hidden; }
-.mobile-products__card { overflow: hidden; background: var(--navy-light); }
-.mobile-products__img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-.mobile-products__label { display: block; font-family: var(--font-display); font-weight: 600; font-size: 0.75rem; padding: 0.5rem 0.6rem; color: var(--text); }
+.mobile-products__card { position: relative; overflow: hidden; background: var(--navy-light); }
+.mobile-products__img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.mobile-products__label { position: absolute; bottom: 0; left: 0; right: 0; display: block; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; padding: 1.2rem 0.7rem 0.6rem; color: #fff; background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 60%, transparent 100%); text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
 
 @media (max-width: 1024px) {
   .door-gate { width: 240px; height: 340px; }
