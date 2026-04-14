@@ -1,11 +1,10 @@
+import { memo } from 'react'
 import PanoramaStrip from './PanoramaStrip'
 
-export default function PanoramaViewport({ progress }) {
+function PanoramaViewport({ progress }) {
   return (
     <div className="panorama-viewport">
       <PanoramaStrip progress={progress} />
-
-      {/* Progress bar */}
       <div className="panorama-progress">
         <div
           className="panorama-progress__fill"
@@ -15,3 +14,5 @@ export default function PanoramaViewport({ progress }) {
     </div>
   )
 }
+
+export default memo(PanoramaViewport)
