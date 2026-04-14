@@ -1,18 +1,18 @@
-import { useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 
-// Uses refs + direct DOM manipulation to avoid React re-renders per frame
 export default function useScrollProgress(spacerRef) {
-  const progressRef = useRef(0)
+  const [progress, setProgress] = useState(0)
   const interpolatedRef = useRef(0)
   const targetRef = useRef(0)
   const rafRef = useRef(null)
-  const callbacksRef = useRef([])
 
-  const subscribe = useCallback((cb) => {
-    callbacksRef.current.push(cb)
-    return () => {
-      callbacksRef.current = callbacksRef.current.filter(c => c !== cb)
+  const tick = useCallback(() => {
+    const diff = targetRef.current - interpolatedRef.current
+    if (Math.abs(diff) > 0.0005) {
+      interpolatedRef.current += diff * 0.5
+      setProgress(interpolatedRef.current)
     }
+    rafRef.current = requestAnimationFrame(tick)
   }, [])
 
   useEffect(() => {
@@ -22,28 +22,9 @@ export default function useScrollProgress(spacerRef) {
       const spacerHeight = spacerRef.current.offsetHeight
       const viewportHeight = window.innerHeight
       const scrollY = window.scrollY
-
       const start = spacerTop
       const end = spacerTop + spacerHeight - viewportHeight
-      const raw = (scrollY - start) / (end - start)
-      targetRef.current = Math.max(0, Math.min(1, raw))
-    }
-
-    const tick = () => {
-      const diff = targetRef.current - interpolatedRef.current
-      if (Math.abs(diff) > 0.0001) {
-        interpolatedRef.current += diff * 0.6
-      } else {
-        interpolatedRef.current = targetRef.current
-      }
-      progressRef.current = interpolatedRef.current
-
-      // Notify all subscribers
-      for (const cb of callbacksRef.current) {
-        cb(interpolatedRef.current)
-      }
-
-      rafRef.current = requestAnimationFrame(tick)
+      targetRef.current = Math.max(0, Math.min(1, (scrollY - start) / (end - start)))
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -54,7 +35,7 @@ export default function useScrollProgress(spacerRef) {
       window.removeEventListener('scroll', handleScroll)
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
-  }, [spacerRef])
+  }, [spacerRef, tick])
 
-  return { progressRef, subscribe }
+  return progress
 }
