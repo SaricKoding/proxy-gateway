@@ -24,7 +24,7 @@ export default function MobileFallback() {
           </div>
           <span className="mobile-door__label">MALOPRODAJA</span>
           <h2 className="mobile-door__title">Za vaš dom</h2>
-          <p className="mobile-door__subtitle">Kućanski pribor, sredstva za čišćenje i sve za svakodnevni život</p>
+          <p className="mobile-door__subtitle">Kućanski pribor, oprema za čišćenje i sve za svakodnevni život</p>
           <span className="mobile-door__cta">Uđite u trgovinu</span>
         </a>
 

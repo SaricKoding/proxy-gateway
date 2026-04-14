@@ -63,7 +63,7 @@ export default function PanoramaStrip({ progress }) {
           <p className="hero-lead">
             Kvalitetni proizvodi za dom i posao.
             <br />
-            Od kućanskog pribora i sredstava za čišćenje
+            Od kućanskog pribora i opreme za čišćenje
             <br />
             do profesionalnog ugostiteljskog programa.
             <br />
@@ -119,15 +119,15 @@ export default function PanoramaStrip({ progress }) {
       {/* 4. ČIŠĆENJE */}
       <section className="s s--parallax">
         <div className="s__c s__c--text-right">
-          <h2 className="px-title">Čišćenje i kućanstvo</h2>
+          <h2 className="px-title">Oprema za čišćenje kućanstva</h2>
           <p className="px-desc">
             Kompletna ponuda za održavanje prostora.
             <br />
-            Mopovi, krpe, sredstva za čišćenje,
+            Mopovi, krpe, metle, kante,
             <br />
-            kuhinjski pribor od prirodnog drva,
+            kuhinjski pribor od prirodnog drva
             <br />
-            kante, metle i profesionalni alati.
+            i profesionalni alati za čišćenje.
             <br /><br />
             Sve što trebate za besprijekorno čist
             <br />
