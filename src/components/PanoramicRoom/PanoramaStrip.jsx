@@ -78,10 +78,10 @@ export default function PanoramaStrip({ progress }) {
           <p className="px-desc">Izrađujemo otirače s logom za hotele, restorane i poslovne prostore — vaš logo, vaše boje, vaše dimenzije. Također nudimo izradu zavjesa za vrata u svim dimenzijama prema potrebama kupaca.</p>
           <span className="px-highlight">Širok izbor uzoraka i dimenzija →</span>
         </div>
-        <Px src="/images/otiraci-globo.jpg" alt="Otirači Globo" progress={progress} panel={2} x="52%" y="6%" size={230} speed={1.2} rot={3} />
-        <Px src="/images/otiraci-kingtrade.jpg" alt="Otirači Kingtrade" progress={progress} panel={2} x="62%" y="38%" size={195} speed={0.7} rot={-2} delay={0.08} />
-        <Px src="/images/otiraci-hotel.jpg" alt="Otirači za hotele" progress={progress} panel={2} x="42%" y="56%" size={175} speed={1.4} rot={2} delay={0.14} />
-        <Px src="/images/otiraci-pristav.jpg" alt="Otirači Pristav" progress={progress} panel={2} x="72%" y="68%" size={160} speed={0.9} rot={-3} delay={0.2} />
+        <Px src="/images/otiraci-globo.jpg" alt="Otirači Globo" progress={progress} panel={2} x="50%" y="4%" size={420} speed={1.2} rot={3} />
+        <Px src="/images/otiraci-kingtrade.jpg" alt="Otirači Kingtrade" progress={progress} panel={2} x="64%" y="42%" size={360} speed={0.7} rot={-2} delay={0.08} />
+        <Px src="/images/otiraci-hotel.jpg" alt="Otirači za hotele" progress={progress} panel={2} x="38%" y="55%" size={320} speed={1.4} rot={2} delay={0.14} />
+        <Px src="/images/otiraci-pristav.jpg" alt="Otirači Pristav" progress={progress} panel={2} x="72%" y="65%" size={300} speed={0.9} rot={-3} delay={0.2} />
       </section>
 
       <section className="s s--parallax">
@@ -92,9 +92,9 @@ export default function PanoramaStrip({ progress }) {
           <p className="px-desc">Kompletna ponuda za održavanje prostora — mopovi, krpe, metle, kante, kuhinjski pribor od prirodnog drva i profesionalni alati za čišćenje. Sve što trebate za besprijekorno čist dom ili poslovni prostor.</p>
           <span className="px-highlight">Više od 300 artikala →</span>
         </div>
-        <Px src="/images/proxy-display.jpg" alt="Program čišćenja" progress={progress} panel={3} x="6%" y="8%" size={240} speed={1.0} rot={2} />
-        <Px src="/images/mopovi.jpg" alt="Kuhinjski program" progress={progress} panel={3} x="14%" y="46%" size={210} speed={1.3} rot={-2} delay={0.08} />
-        <Px src="/images/retail-display.jpg" alt="Izlog" progress={progress} panel={3} x="30%" y="64%" size={180} speed={0.6} rot={1} delay={0.16} />
+        <Px src="/images/proxy-display.jpg" alt="Program čišćenja" progress={progress} panel={3} x="4%" y="5%" size={440} speed={1.0} rot={2} />
+        <Px src="/images/mopovi.jpg" alt="Kuhinjski program" progress={progress} panel={3} x="12%" y="46%" size={380} speed={1.3} rot={-2} delay={0.08} />
+        <Px src="/images/retail-display.jpg" alt="Izlog" progress={progress} panel={3} x="30%" y="60%" size={330} speed={0.6} rot={1} delay={0.16} />
       </section>
 
       <section className="s s--parallax s--alt">
@@ -105,8 +105,8 @@ export default function PanoramaStrip({ progress }) {
           <p className="px-desc">Noževi iz Italije koji traju generacijama. Dostupni u svim bojama — od kućne kuhinje do profesionalnog ugostiteljstva. Made in Italy kvaliteta po fer cijenama.</p>
           <span className="px-highlight">Ekskluzivni zastupnik za Hrvatsku →</span>
         </div>
-        <Px src="/images/nozevi-bonomi.jpg" alt="Bonomi noževi" progress={progress} panel={4} x="48%" y="8%" size={280} speed={0.8} rot={2} />
-        <Px src="/images/knives-product.jpg" alt="Set noževa" progress={progress} panel={4} x="58%" y="48%" size={240} speed={1.2} rot={-2} delay={0.1} />
+        <Px src="/images/nozevi-bonomi.jpg" alt="Bonomi noževi" progress={progress} panel={4} x="45%" y="5%" size={500} speed={0.8} rot={2} />
+        <Px src="/images/knives-product.jpg" alt="Set noževa" progress={progress} panel={4} x="55%" y="48%" size={440} speed={1.2} rot={-2} delay={0.1} />
       </section>
 
       <section className="s s--story">
@@ -173,16 +173,16 @@ export default function PanoramaStrip({ progress }) {
           <h3 className="px-subtitle" style={{ textAlign: 'center' }}>700 m² u srcu Splita</h3>
           <p className="px-desc px-desc--center">Više od 792 artikla uvijek na stanju. Brza isporuka unutar 3 radna dana na području cijele Hrvatske. Solinska 49, Split.</p>
         </div>
-        <Orb src="/images/sklad-1.jpg" alt="Tekstil" progress={progress} panel={6} angle={0} radius={32} size={170} speed={0.8} />
-        <Orb src="/images/sklad-2.jpg" alt="Role" progress={progress} panel={6} angle={36} radius={35} size={155} speed={1.0} />
-        <Orb src="/images/sklad-3.jpg" alt="Stolnjaci" progress={progress} panel={6} angle={72} radius={30} size={145} speed={0.6} />
-        <Orb src="/images/sklad-4.jpg" alt="Otirači" progress={progress} panel={6} angle={108} radius={33} size={160} speed={0.9} />
-        <Orb src="/images/sklad-5.jpg" alt="Čišćenje" progress={progress} panel={6} angle={144} radius={28} size={140} speed={1.1} />
-        <Orb src="/images/sklad-6.jpg" alt="Proizvodi" progress={progress} panel={6} angle={180} radius={34} size={150} speed={0.7} />
-        <Orb src="/images/sklad-7.jpg" alt="Tepisi" progress={progress} panel={6} angle={216} radius={31} size={145} speed={1.0} />
-        <Orb src="/images/sklad-8.jpg" alt="Display" progress={progress} panel={6} angle={252} radius={36} size={165} speed={0.5} />
-        <Orb src="/images/sklad-9.jpg" alt="Roba" progress={progress} panel={6} angle={288} radius={29} size={140} speed={0.8} />
-        <Orb src="/images/sklad-10.jpg" alt="Tekstil" progress={progress} panel={6} angle={324} radius={33} size={150} speed={1.2} />
+        <Orb src="/images/sklad-1.jpg" alt="Tekstil" progress={progress} panel={6} angle={0} radius={32} size={310} speed={0.8} />
+        <Orb src="/images/sklad-2.jpg" alt="Role" progress={progress} panel={6} angle={36} radius={35} size={280} speed={1.0} />
+        <Orb src="/images/sklad-3.jpg" alt="Stolnjaci" progress={progress} panel={6} angle={72} radius={30} size={270} speed={0.6} />
+        <Orb src="/images/sklad-4.jpg" alt="Otirači" progress={progress} panel={6} angle={108} radius={33} size={290} speed={0.9} />
+        <Orb src="/images/sklad-5.jpg" alt="Čišćenje" progress={progress} panel={6} angle={144} radius={28} size={260} speed={1.1} />
+        <Orb src="/images/sklad-6.jpg" alt="Proizvodi" progress={progress} panel={6} angle={180} radius={34} size={280} speed={0.7} />
+        <Orb src="/images/sklad-7.jpg" alt="Tepisi" progress={progress} panel={6} angle={216} radius={31} size={270} speed={1.0} />
+        <Orb src="/images/sklad-8.jpg" alt="Display" progress={progress} panel={6} angle={252} radius={36} size={300} speed={0.5} />
+        <Orb src="/images/sklad-9.jpg" alt="Roba" progress={progress} panel={6} angle={288} radius={29} size={260} speed={0.8} />
+        <Orb src="/images/sklad-10.jpg" alt="Tekstil" progress={progress} panel={6} angle={324} radius={33} size={280} speed={1.2} />
       </section>
 
       <section className="s s--door-panel">

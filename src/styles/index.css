@@ -224,12 +224,12 @@ a { color: inherit; text-decoration: none; }
    MOBILE
    ============================================ */
 .mobile-fallback { background: var(--navy); }
-.mobile-hero { position: relative; min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem 2rem; }
-.mobile-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.04), transparent 60%); }
+.mobile-hero { position: relative; min-height: auto; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem 1.5rem; }
+.mobile-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.06), transparent 60%); }
 .mobile-hero__content { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; }
-.mobile-hero__logo { width: 200px; height: auto; margin: 0 auto 1rem; display: block; }
-.mobile-hero__title { font-family: var(--font-display); font-weight: 800; font-size: 2rem; line-height: 1.05; color: var(--text); margin-bottom: 0.6rem; }
-.mobile-hero__subtitle { font-size: 0.85rem; color: var(--text-dim); max-width: 300px; margin: 0 auto; }
+.mobile-hero__logo { width: 280px; max-width: 75vw; height: auto; margin: 0 auto 0.8rem; display: block; }
+.mobile-hero__title { font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; line-height: 1.05; color: var(--text); margin-bottom: 0.5rem; }
+.mobile-hero__subtitle { font-size: 1rem; color: var(--text-dim); max-width: 340px; margin: 0 auto; line-height: 1.6; }
 .mobile-doors { padding: 0 1rem 1.5rem; }
 .mobile-door { display: block; padding: 1.5rem 1.25rem; border-radius: 12px; text-align: center; text-decoration: none; }
 .mobile-door--blue { background: rgba(74,143,231,0.08); border: 1px solid rgba(74,143,231,0.12); }
