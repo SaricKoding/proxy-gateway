@@ -15,6 +15,7 @@ const jobs = [
   { src: 'ormar.jpg',            out: 'spremanje-ormara.jpg',   w: 1100 },
   { src: 'posude.jpg',           out: 'posudje-display.jpg',    w: 1100 },
   { src: 'izlaganje.jpg',        out: 'opremanje-display.jpg',  w: 1100 },
+  { src: 'izlaganje.jpg',        out: 'veleprodaja-izlaganje.jpg', w: 1600 },
   { src: 'ciscenje.jpeg',        out: 'ciscenje.jpg',           w: 1100 },
   { src: 'inox.png',             out: 'inox-galanterija.jpg',   w: 1100 },
   { src: 'otirac_glavni.jpeg',   out: 'otirac-hero.jpg',        w: 1600 },

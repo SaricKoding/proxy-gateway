@@ -6,7 +6,7 @@ const cards = [
     desc: 'Za ugovorne partnere — tvrtke, ugostiteljske objekte i ustanove s odobrenim veleprodajnim pristupom.',
     href: 'https://veleprodaja.proxy1.hr',
     cta: 'Otvori veleprodaju',
-    image: '/images/veleprodaja-skladiste.jpg',
+    image: '/images/veleprodaja-izlaganje.jpg',
     accent: 'blue',
     tag: 'Samo ugovorni partneri',
   },
