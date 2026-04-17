@@ -54,7 +54,12 @@ export default function Footer() {
       <div className="footer-bar">
         <div className="container footer-bar-inner">
           <span>© {year} Proxy d.o.o. Sva prava pridržana.</span>
-          <span>Fer poslovna praksa · Kvaliteta · Partnerstvo</span>
+          <span className="footer-credit">
+            Web dizajn i održavanje ·{' '}
+            <a href="https://www.klikoteka.hr" target="_blank" rel="noopener noreferrer">
+              KLIKOTEKA d.o.o.
+            </a>
+          </span>
         </div>
       </div>
     </footer>

@@ -9,10 +9,10 @@ export default function Hero() {
       <div className="container hero-inner">
         <p className="eyebrow">Proxy d.o.o. · Split, Hrvatska · od 2016.</p>
         <h1 id="hero-heading" className="hero-title">
-          Partner za <span className="gold">domaćinstvo</span> i <span className="gold">ugostiteljstvo</span>
+          Partner za <span className="gold">VELEPRODAJU</span> i <span className="gold">MALOPRODAJU</span>
         </h1>
         <p className="hero-sub">
-          Kvalitetan asortiman, pouzdana isporuka i fer poslovna praksa — za kupce na veliko i malo.
+          Asortiman za domaćinstvo i ugostiteljstvo — kvalitetna roba, pouzdana isporuka i fer poslovna praksa.
         </p>
 
         <div className="hero-cta">

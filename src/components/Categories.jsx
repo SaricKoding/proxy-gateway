@@ -17,7 +17,7 @@ export default function Categories() {
           <p className="eyebrow dark">Asortiman</p>
           <h2 id="cat-heading" className="section-title">Kategorije proizvoda</h2>
           <p className="section-sub">
-            Od sredstava za čišćenje do ugostiteljskog programa — sve pod jednim krovom.
+            Od opreme za čišćenje do ugostiteljskog programa — sve pod jednim krovom.
           </p>
         </header>
 

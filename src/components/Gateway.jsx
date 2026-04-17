@@ -3,21 +3,23 @@ const cards = [
     key: 'veleprodaja',
     kicker: 'B2B',
     title: 'Veleprodaja',
-    desc: 'Profesionalni kupci, tvrtke i ustanove. Ugovorne cijene, veleprodajni katalog, brza isporuka u cijeloj Hrvatskoj.',
+    desc: 'Za ugovorne partnere — tvrtke, ugostiteljske objekte i ustanove s odobrenim veleprodajnim pristupom.',
     href: 'https://veleprodaja.proxy1.hr',
     cta: 'Otvori veleprodaju',
     image: '/images/veleprodaja-skladiste.jpg',
     accent: 'blue',
+    tag: 'Samo ugovorni partneri',
   },
   {
     key: 'maloprodaja',
     kicker: 'B2C',
     title: 'Maloprodaja',
-    desc: 'Kupujte pojedinačno — kvalitetan asortiman za dom i ugostiteljske objekte. Pregled proizvoda, cijene i narudžba online.',
+    desc: 'Otvoreno za sve — kupujte pojedinačno, bez ugovora i bez registracije partnera.',
     href: 'https://maloprodaja.proxy1.hr',
     cta: 'Otvori maloprodaju',
     image: '/images/retail-display.jpg',
     accent: 'gold',
+    tag: 'Dostupno svima',
   },
 ]
 
@@ -45,6 +47,7 @@ export default function Gateway() {
               <div className="gw-media">
                 <img src={c.image} alt="" loading="lazy" />
                 <div className="gw-shade" />
+                <span className={`gw-tag gw-tag-${c.accent}`}>{c.tag}</span>
               </div>
               <div className="gw-body">
                 <span className="gw-kicker">{c.kicker}</span>
@@ -61,9 +64,26 @@ export default function Gateway() {
           ))}
         </div>
 
-        <p className="gateway-note">
-          Niste sigurni? <a href="#o-nama">Pročitajte o Proxyju</a> prije odabira.
-        </p>
+        <aside className="partner-notice" aria-label="Postanite partner">
+          <div className="partner-notice-inner">
+            <div className="partner-notice-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.8 6.4 19.5l1.1-6.3L3 8.9 9 8z"/>
+              </svg>
+            </div>
+            <div className="partner-notice-text">
+              <strong>Veleprodaja je dostupna samo ugovornim partnerima.</strong>
+              <span>
+                Niste partner? Kontaktirajte nas na{' '}
+                <a href="mailto:robert@proxy1.hr">robert@proxy1.hr</a>{' '}
+                i postanite registrirani partner Proxy d.o.o.
+              </span>
+            </div>
+            <a className="btn btn-blue" href="mailto:robert@proxy1.hr?subject=Zahtjev%20za%20veleprodajno%20partnerstvo">
+              Postani partner
+            </a>
+          </div>
+        </aside>
       </div>
     </section>
   )

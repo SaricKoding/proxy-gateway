@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Gateway from './components/Gateway'
 import About from './components/About'
+import WhyProxy from './components/WhyProxy'
 import Warehouse from './components/Warehouse'
 import Categories from './components/Categories'
 import Doormats from './components/Doormats'
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <Gateway />
         <About />
+        <WhyProxy />
         <Warehouse />
         <Categories />
         <Doormats />

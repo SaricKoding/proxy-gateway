@@ -17,12 +17,13 @@ export default function Header() {
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`} role="banner">
       <div className="container header-inner">
         <a href="#top" className="brand" aria-label="Proxy d.o.o. — Početna">
-          <img src="/images/proxy-logo-final.png" alt="Proxy d.o.o." width="150" height="42" />
+          <img src="/images/proxy-logo-final.png" alt="Proxy d.o.o." width="210" height="60" />
         </a>
 
         <nav className={`primary-nav ${open ? 'is-open' : ''}`} aria-label="Glavna navigacija">
           <a href="#izbor" onClick={close}>Izbor</a>
           <a href="#o-nama" onClick={close}>O nama</a>
+          <a href="#zasto-proxy" onClick={close}>Zašto Proxy</a>
           <a href="#skladiste" onClick={close}>Skladište</a>
           <a href="#kategorije" onClick={close}>Kategorije</a>
           <a href="#otiraci" onClick={close}>Otirači</a>
