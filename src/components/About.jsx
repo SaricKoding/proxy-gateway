@@ -5,7 +5,7 @@ export default function About() {
         <div className="about-copy">
           <p className="eyebrow dark">O tvrtki</p>
           <h2 id="about-heading" className="section-title">
-            Osnovano 2016. u Solinu — <span className="gold">fer partnerstvo na prvom mjestu</span>
+            Osnovano 2016. u Splitu — <span className="gold">fer partnerstvo na prvom mjestu</span>
           </h2>
 
           <p className="lead">
@@ -35,7 +35,7 @@ export default function About() {
 
           <dl className="about-stats">
             <div><dt>Godina osnutka</dt><dd>2016.</dd></div>
-            <div><dt>Sjedište</dt><dd>Solin, HR</dd></div>
+            <div><dt>Sjedište</dt><dd>Split, HR</dd></div>
             <div><dt>Fokus</dt><dd>Veleprodaja i maloprodaja</dd></div>
             <div><dt>Djelokrug</dt><dd>Hrvatska</dd></div>
           </dl>
@@ -49,7 +49,7 @@ export default function About() {
             width="900"
             height="600"
           />
-          <figcaption>Sjedište i skladište · Solin</figcaption>
+          <figcaption>Sjedište i skladište · Split</figcaption>
         </figure>
       </div>
     </section>

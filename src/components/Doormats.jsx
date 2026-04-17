@@ -30,10 +30,10 @@ export default function Doormats() {
           </ul>
 
           <div className="doormats-cta">
-            <a className="btn btn-gold btn-lg" href="https://veleproday.proxy1.hr" rel="noopener">
+            <a className="btn btn-gold btn-lg" href="https://veleprodaja.proxy1.hr" rel="noopener">
               Upit za veleprodaju
             </a>
-            <a className="btn btn-ghost-dark btn-lg" href="https://maloprodaja.proxy.hr" rel="noopener">
+            <a className="btn btn-ghost-dark btn-lg" href="https://maloprodaja.proxy1.hr" rel="noopener">
               Maloprodajna ponuda
             </a>
           </div>

@@ -7,7 +7,7 @@ export default function Hero() {
       </div>
 
       <div className="container hero-inner">
-        <p className="eyebrow">Proxy d.o.o. · Solin, Hrvatska · od 2016.</p>
+        <p className="eyebrow">Proxy d.o.o. · Split, Hrvatska · od 2016.</p>
         <h1 id="hero-heading" className="hero-title">
           Partner za <span className="gold">domaćinstvo</span> i <span className="gold">ugostiteljstvo</span>
         </h1>

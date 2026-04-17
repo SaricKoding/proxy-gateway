@@ -1,10 +1,10 @@
 # Proxy d.o.o. — Gateway (proxy1.hr)
 
-Gateway landing page for **Proxy d.o.o.** (Solin, Hrvatska). A single, SEO-optimized, mobile-first
+Gateway landing page for **Proxy d.o.o.** (Split, Hrvatska). A single, SEO-optimized, mobile-first
 corporate page whose primary job is to route visitors to one of two storefronts:
 
-- **Veleprodaja (B2B):** [veleproday.proxy1.hr](https://veleproday.proxy1.hr)
-- **Maloprodaja (B2C):** [maloprodaja.proxy.hr](https://maloprodaja.proxy.hr)
+- **Veleprodaja (B2B):** [veleprodaja.proxy1.hr](https://veleprodaja.proxy1.hr)
+- **Maloprodaja (B2C):** [maloprodaja.proxy1.hr](https://maloprodaja.proxy1.hr)
 
 ## Tech stack
 

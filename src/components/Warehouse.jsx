@@ -1,3 +1,5 @@
+import { useCallback, useEffect, useState } from 'react'
+
 const images = [
   { src: '/images/sklad-1.jpg',  alt: 'Skladište Proxy — glavna hala' },
   { src: '/images/sklad-2.jpg',  alt: 'Regalni sustav u skladištu' },
@@ -10,6 +12,38 @@ const images = [
 ]
 
 export default function Warehouse() {
+  const [activeIndex, setActiveIndex] = useState(null)
+  const isOpen = activeIndex !== null
+
+  const open = useCallback((i) => setActiveIndex(i), [])
+  const close = useCallback(() => setActiveIndex(null), [])
+  const next = useCallback(
+    (e) => { e?.stopPropagation(); setActiveIndex((i) => (i + 1) % images.length) },
+    []
+  )
+  const prev = useCallback(
+    (e) => { e?.stopPropagation(); setActiveIndex((i) => (i - 1 + images.length) % images.length) },
+    []
+  )
+
+  useEffect(() => {
+    if (!isOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') close()
+      else if (e.key === 'ArrowRight') next()
+      else if (e.key === 'ArrowLeft') prev()
+    }
+    const { overflow } = document.body.style
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = overflow
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [isOpen, close, next, prev])
+
+  const active = isOpen ? images[activeIndex] : null
+
   return (
     <section id="skladiste" className="warehouse" aria-labelledby="warehouse-heading">
       <div className="container">
@@ -17,18 +51,54 @@ export default function Warehouse() {
           <p className="eyebrow">Infrastruktura</p>
           <h2 id="warehouse-heading" className="section-title">Naše skladište</h2>
           <p className="section-sub">
-            Organizirano, uredno i spremno — garancija brze i točne isporuke.
+            Organizirano, uredno i spremno — garancija brze i točne isporuke. Kliknite sliku za pregled galerije.
           </p>
         </header>
 
-        <div className="gallery">
+        <ul className="gallery-grid">
           {images.map((img, i) => (
-            <figure key={i} className={`gallery-item ${i === 0 ? 'gi-wide' : ''}`}>
-              <img src={img.src} alt={img.alt} loading="lazy" />
-            </figure>
+            <li key={i}>
+              <button
+                type="button"
+                className="thumb"
+                onClick={() => open(i)}
+                aria-label={`Otvori sliku: ${img.alt}`}
+              >
+                <img src={img.src} alt={img.alt} loading="lazy" />
+                <span className="thumb-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
+
+      {isOpen && (
+        <div
+          className="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Galerija skladišta"
+          onClick={close}
+        >
+          <button className="lb-close" onClick={close} aria-label="Zatvori">×</button>
+          <button className="lb-nav lb-prev" onClick={prev} aria-label="Prethodna slika">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+          <figure className="lb-figure" onClick={(e) => e.stopPropagation()}>
+            <img src={active.src} alt={active.alt} />
+            <figcaption>
+              {active.alt} · <span className="lb-count">{activeIndex + 1} / {images.length}</span>
+            </figcaption>
+          </figure>
+          <button className="lb-nav lb-next" onClick={next} aria-label="Sljedeća slika">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+        </div>
+      )}
     </section>
   )
 }

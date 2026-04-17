@@ -24,7 +24,7 @@ export default function Categories() {
         <ul className="cat-grid">
           {categories.map(c => (
             <li key={c.slug} className="cat-card">
-              <a href="https://veleproday.proxy1.hr" rel="noopener" aria-label={`${c.name} — pogledaj kategoriju`}>
+              <a href="https://veleprodaja.proxy1.hr" rel="noopener" aria-label={`${c.name} — pogledaj kategoriju`}>
                 <div className="cat-media">
                   <img src={c.image} alt={c.name} loading="lazy" />
                 </div>
