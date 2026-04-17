@@ -1,21 +1,28 @@
 import { useLocale } from '../i18n/LocaleContext'
 
-// Croatian flag (šahovnica simplified as a red/white pattern)
+// Hrvatska zastava: crveno / bijelo / plavo (odozgo), sa šahovnicom u sredini
 const FlagHR = () => (
   <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true">
-    <rect width="22" height="16" fill="#171796" />
-    <rect width="22" height="5.33" fill="#FF0000" />
-    <rect y="10.66" width="22" height="5.33" fill="#FFFFFF" />
-    <g>
-      <rect x="8.5" y="5" width="5" height="5" fill="#FFFFFF" />
-      <rect x="8.5" y="5" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="11" y="5" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="9.75" y="6.25" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="12.25" y="6.25" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="8.5" y="7.5" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="11" y="7.5" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="9.75" y="8.75" width="1.25" height="1.25" fill="#FF0000" />
-      <rect x="12.25" y="8.75" width="1.25" height="1.25" fill="#FF0000" />
+    <rect y="0"     width="22" height="5.334" fill="#FF0000" />
+    <rect y="5.334" width="22" height="5.333" fill="#FFFFFF" />
+    <rect y="10.667" width="22" height="5.333" fill="#171796" />
+    {/* Šahovnica (5x5 polja), naizmjenicno crveno/bijelo, pocinje crvenim */}
+    <g transform="translate(8.2 4.5)">
+      {Array.from({ length: 25 }).map((_, i) => {
+        const col = i % 5
+        const row = Math.floor(i / 5)
+        const red = (col + row) % 2 === 0
+        return (
+          <rect
+            key={i}
+            x={col * 1.12}
+            y={row * 1.4}
+            width="1.12"
+            height="1.4"
+            fill={red ? '#FF0000' : '#FFFFFF'}
+          />
+        )
+      })}
     </g>
   </svg>
 )
