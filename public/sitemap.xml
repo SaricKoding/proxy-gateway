@@ -1,43 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://proxy1.hr/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://proxy1.hr/#izbor</loc>
+    <loc>https://proxy1.hr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://proxy1.hr/#o-nama</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://proxy1.hr/#skladiste</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://proxy1.hr/#kategorije</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://proxy1.hr/#otiraci</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://veleprodaja.proxy1.hr/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://maloprodaja.proxy1.hr/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
 </urlset>

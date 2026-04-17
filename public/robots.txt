@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://proxy1.hr/sitemap.xml
+Host: https://proxy1.hr

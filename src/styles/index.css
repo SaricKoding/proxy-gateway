@@ -236,6 +236,51 @@ section { padding: var(--sp-9) 0; }
 .site-header.is-scrolled .primary-nav > a { color: var(--ink-700); }
 .site-header.is-scrolled .primary-nav > a:hover { color: var(--blue-700); border-color: var(--gold-500); }
 
+/* Language switcher */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(6px);
+}
+.site-header.is-scrolled .lang-switch {
+  background: var(--ink-100);
+  border-color: var(--ink-200);
+}
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,.78);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+  line-height: 1;
+}
+.lang-btn svg { display: block; border-radius: 2px; }
+.site-header.is-scrolled .lang-btn { color: var(--ink-500); }
+.lang-btn:hover { color: #fff; }
+.site-header.is-scrolled .lang-btn:hover { color: var(--blue-800); }
+.lang-btn.is-active {
+  background: var(--gold-500);
+  color: var(--blue-900);
+  box-shadow: 0 2px 6px rgba(191,146,47,.4);
+}
+.site-header.is-scrolled .lang-btn.is-active { color: var(--blue-900); }
+.lang-btn:focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
+
+.lang-switch.in-drawer { display: none; }
+
 .nav-cta { display: flex; gap: 10px; margin-left: var(--sp-4); }
 .nav-cta .btn { padding: 9px 18px; font-size: 14px; }
 
@@ -935,6 +980,16 @@ section { padding: var(--sp-9) 0; }
   .nav-cta .btn { padding: 14px 18px; font-size: 15px; }
   .site-header.is-scrolled .nav-cta .btn-ghost { color: #fff; border-color: rgba(255,255,255,.4); background: transparent; }
   .nav-toggle { display: flex; }
+  .lang-switch.in-header { display: none; }
+  .lang-switch.in-drawer {
+    display: inline-flex;
+    margin-top: var(--sp-5);
+    align-self: flex-start;
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.18);
+  }
+  .lang-switch.in-drawer .lang-btn { color: rgba(255,255,255,.85); }
+  .lang-switch.in-drawer .lang-btn.is-active { color: var(--blue-900); }
 
   .hero {
     min-height: auto;

@@ -1,15 +1,20 @@
+import { useLocale } from '../i18n/LocaleContext'
+
 export default function Footer() {
+  const { t } = useLocale()
+  const f = t('footer')
   const year = new Date().getFullYear()
+
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="container footer-grid">
         <div className="footer-brand">
           <img src="/images/proxy-logo-final.png" alt="Proxy d.o.o." width="170" height="48" />
-          <p className="footer-tag">Sve što dom treba — od 2016.</p>
+          <p className="footer-tag">{f.tag}</p>
           <address className="footer-address">
             <strong>Proxy d.o.o.</strong><br />
-            Solinska 49, Dujmovača<br />
-            21000 Split, Hrvatska
+            {f.address[0]}<br />
+            {f.address[1]}
           </address>
           <dl className="footer-legal">
             <div><dt>OIB</dt><dd>79145895043</dd></div>
@@ -18,27 +23,27 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h3>Kanali prodaje</h3>
+          <h3>{f.channelsHead}</h3>
           <ul>
-            <li><a href="https://veleprodaja.proxy1.hr" rel="noopener">Veleprodaja (B2B)</a></li>
-            <li><a href="https://maloprodaja.proxy1.hr" rel="noopener">Maloprodaja (B2C)</a></li>
+            <li><a href="https://veleprodaja.proxy1.hr" rel="noopener">{f.channels.wholesale}</a></li>
+            <li><a href="https://maloprodaja.proxy1.hr" rel="noopener">{f.channels.retail}</a></li>
           </ul>
 
-          <h3 className="footer-subhead">Kontakt</h3>
+          <h3 className="footer-subhead">{f.contactHead}</h3>
           <ul className="footer-contact">
             <li>
               <span className="contact-name">Robert Raič</span>
-              <span className="contact-role">Uprava</span>
+              <span className="contact-role">{f.contactRole}</span>
               <a href="mailto:robert@proxy1.hr">robert@proxy1.hr</a>
             </li>
           </ul>
         </div>
 
         <div className="footer-map">
-          <h3>Lokacija</h3>
+          <h3>{f.locationHead}</h3>
           <div className="map-wrap">
             <iframe
-              title="Proxy d.o.o. — lokacija na karti"
+              title={f.mapTitle}
               src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d185.27541814892263!2d16.47649882708056!3d43.52654878264487!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2sus!4v1776417425471!5m2!1shr!2sus"
               width="600"
               height="450"
@@ -53,11 +58,11 @@ export default function Footer() {
 
       <div className="footer-bar">
         <div className="container footer-bar-inner">
-          <span>© {year} Proxy d.o.o. Sva prava pridržana.</span>
+          <span>© {year} Proxy d.o.o. {f.rights}</span>
           <span className="footer-credit">
-            Web dizajn i održavanje ·{' '}
+            {f.credit[0]}·{' '}
             <a href="https://www.klikoteka.hr" target="_blank" rel="noopener noreferrer">
-              KLIKOTEKA d.o.o.
+              {f.credit[1]}
             </a>
           </span>
         </div>

@@ -1,3 +1,4 @@
+import { LocaleProvider, useLocale } from './i18n/LocaleContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Gateway from './components/Gateway'
@@ -8,10 +9,12 @@ import Categories from './components/Categories'
 import Doormats from './components/Doormats'
 import Footer from './components/Footer'
 
-export default function App() {
+function AppInner() {
+  const { t } = useLocale()
+  const nav = t('nav')
   return (
     <>
-      <a href="#sadrzaj" className="skip-link">Preskoči na sadržaj</a>
+      <a href="#sadrzaj" className="skip-link">{nav.skip}</a>
       <Header />
       <main id="sadrzaj">
         <Hero />
@@ -24,5 +27,13 @@ export default function App() {
       </main>
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <LocaleProvider>
+      <AppInner />
+    </LocaleProvider>
   )
 }
