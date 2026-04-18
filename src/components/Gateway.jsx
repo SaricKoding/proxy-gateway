@@ -1,8 +1,8 @@
 import { useLocale } from '../i18n/LocaleContext'
 
 const staticCards = [
-  { key: 'veleprodaja', href: 'https://veleprodaja.proxy1.hr', image: '/images/veleprodaja-izlaganje.jpg', accent: 'blue' },
   { key: 'maloprodaja', href: 'https://maloprodaja.proxy1.hr', image: '/images/retail-display.jpg',       accent: 'gold' },
+  { key: 'veleprodaja', href: 'https://veleprodaja.proxy1.hr', image: '/images/veleprodaja-izlaganje.jpg', accent: 'blue' },
 ]
 
 export default function Gateway() {
@@ -61,11 +61,11 @@ export default function Gateway() {
               <strong>{g.notice.strong}</strong>
               <span>
                 {g.notice.text[0]}
-                <a href="mailto:robert@proxy1.hr">robert@proxy1.hr</a>
+                <a href="mailto:info@proxy1.hr">info@proxy1.hr</a>
                 {g.notice.text[1]}
               </span>
             </div>
-            <a className="btn btn-blue" href="mailto:robert@proxy1.hr?subject=Proxy%20Partnership%20Request">
+            <a className="btn btn-blue" href="mailto:info@proxy1.hr?subject=Proxy%20Partnership%20Request">
               {g.notice.cta}
             </a>
           </div>

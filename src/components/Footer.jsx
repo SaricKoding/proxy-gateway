@@ -34,7 +34,7 @@ export default function Footer() {
             <li>
               <span className="contact-name">Robert Raič</span>
               <span className="contact-role">{f.contactRole}</span>
-              <a href="mailto:robert@proxy1.hr">robert@proxy1.hr</a>
+              <a href="mailto:info@proxy1.hr">info@proxy1.hr</a>
             </li>
           </ul>
         </div>

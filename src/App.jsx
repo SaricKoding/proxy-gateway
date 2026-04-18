@@ -19,11 +19,11 @@ function AppInner() {
       <main id="sadrzaj">
         <Hero />
         <Gateway />
+        <Categories />
+        <Doormats />
         <About />
         <WhyProxy />
         <Warehouse />
-        <Categories />
-        <Doormats />
       </main>
       <Footer />
     </>

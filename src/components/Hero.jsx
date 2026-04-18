@@ -12,7 +12,15 @@ export default function Hero() {
       </div>
 
       <div className="container hero-inner">
-        <p className="eyebrow">{h.eyebrow}</p>
+        <img
+          className="hero-logo"
+          src="/images/logo-gold-transparent.png"
+          alt="Proxy d.o.o. — Sve što dom treba"
+          width="560"
+          height="374"
+          fetchpriority="high"
+        />
+
         <h1 id="hero-heading" className="hero-title">
           {h.title[0]}
           <span className="gold">{h.title[1]}</span>

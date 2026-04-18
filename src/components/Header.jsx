@@ -21,16 +21,16 @@ export default function Header() {
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`} role="banner">
       <div className="container header-inner">
         <a href="#top" className="brand" aria-label="Proxy d.o.o.">
-          <img src="/images/proxy-logo-final.png" alt="Proxy d.o.o." width="210" height="60" />
+          <span className="brand-wordmark">PROXY</span>
         </a>
 
         <nav className={`primary-nav ${open ? 'is-open' : ''}`} aria-label={nav.main}>
+          <a href="#kategorije" onClick={close}>{nav.kategorije}</a>
           <a href="#izbor" onClick={close}>{nav.izbor}</a>
+          <a href="#otiraci" onClick={close}>{nav.otiraci}</a>
           <a href="#o-nama" onClick={close}>{nav.onama}</a>
           <a href="#zasto-proxy" onClick={close}>{nav.zasto}</a>
           <a href="#skladiste" onClick={close}>{nav.skladiste}</a>
-          <a href="#kategorije" onClick={close}>{nav.kategorije}</a>
-          <a href="#otiraci" onClick={close}>{nav.otiraci}</a>
           <div className="nav-cta">
             <a className="btn btn-ghost" href="https://maloprodaja.proxy1.hr" rel="noopener" onClick={close}>{nav.maloprodaja}</a>
             <a className="btn btn-gold" href="https://veleprodaja.proxy1.hr" rel="noopener" onClick={close}>{nav.veleprodaja}</a>

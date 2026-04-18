@@ -31,11 +31,11 @@ export const messages = {
     },
 
     hero: {
-      eyebrow: 'Proxy d.o.o., Split · Osnovano 2016.',
+      eyebrow: '',
       title: ['Partner za ', 'VELEPRODAJU', ' i ', 'MALOPRODAJU'],
       sub: 'Asortiman za domaćinstvo i ugostiteljstvo. Kvalitetna roba, pouzdana isporuka i fer poslovna praksa.',
-      ctaPrimary: 'Odaberite kanal',
-      ctaSecondary: 'Saznajte više',
+      ctaPrimary: 'Odaberi način kupnje',
+      ctaSecondary: 'Više o nama',
       marks: [
         { n: '700+', l: 'artikala' },
         { n: '3 dana', l: 'isporuka u HR' },
@@ -154,6 +154,13 @@ export const messages = {
       ctaWholesale: 'Upit za veleprodaju',
       ctaRetail: 'Maloprodajna ponuda',
       imageAlt: 'Personalizirani otirač s logotipom tvrtke',
+      galleryAlts: [
+        'Personalizirani otirač s logotipom tvrtke',
+        'Personalizirani otirač za hotele i restorane',
+        'Otirač po narudžbi s natpisom',
+        'Otirač s brendiranim logotipom',
+        'Personalizirani otirač u ugostiteljskom objektu',
+      ],
     },
 
     footer: {
@@ -199,11 +206,11 @@ export const messages = {
     },
 
     hero: {
-      eyebrow: 'Proxy d.o.o., Split · Established 2016',
+      eyebrow: '',
       title: ['Partner for ', 'WHOLESALE', ' and ', 'RETAIL'],
       sub: 'Household and hospitality supplies. Quality goods, reliable delivery and fair business practice.',
-      ctaPrimary: 'Choose a channel',
-      ctaSecondary: 'Learn more',
+      ctaPrimary: 'Choose how to shop',
+      ctaSecondary: 'About us',
       marks: [
         { n: '700+', l: 'products' },
         { n: '3 days', l: 'delivery in Croatia' },
@@ -322,6 +329,13 @@ export const messages = {
       ctaWholesale: 'Wholesale inquiry',
       ctaRetail: 'Retail offer',
       imageAlt: 'Personalised doormat with company logo',
+      galleryAlts: [
+        'Personalised doormat with company logo',
+        'Personalised doormat for hotels and restaurants',
+        'Custom doormat with text',
+        'Doormat with branded logo',
+        'Personalised doormat in a hospitality venue',
+      ],
     },
 
     footer: {
