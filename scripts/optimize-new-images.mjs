@@ -28,13 +28,27 @@ const heroJobs = [
   { src: path.join(SRC_HOME, 'otirac.png'),                        out: 'otirac-hero.jpg', w: 1600, fit: 'cover', ratio: 3/2 },
 ]
 
-// Doormats gallery: cover crop so each tile shows the actual mat material, no cream padding
+// Doormats gallery: 8 curated examples covering hospitality, retail, and varied designs
+const SRC_SZ = path.resolve(ROOT, '..', 'slikezaweb')
+const SRC_PUB = path.resolve(ROOT, 'public', 'images')  // some sources already live in /public
+
 const galleryJobs = [
-  { src: path.join(SRC_OTIRACI, 'otirac_glavni.jpeg'),       out: 'otirac-1.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
-  { src: path.join(SRC_OTIRACI, 'otirac_2.jpeg'),            out: 'otirac-2.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
-  { src: path.join(SRC_OTIRACI, 'otirac_3.jpeg'),            out: 'otirac-3.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
-  { src: path.join(SRC_OTIRACI, 'otirac_4.jpeg'),            out: 'otirac-4.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
-  { src: path.join(SRC_OTIRACI, 'IMG_20190502_084829.jpg'),  out: 'otirac-5.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 1. PRISTAV - bold red+white double-mat product shot (B2B branding pair)
+  { src: path.join(SRC_OTIRACI, 'otirac_2.jpeg'),                   out: 'otirac-1.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 2. KINGTRADE installed on doorway entrance (real-world placement)
+  { src: path.join(SRC_OTIRACI, 'otirac_3.jpeg'),                   out: 'otirac-2.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 3. KINGTRADE color swatch demo (red/grey on white background)
+  { src: path.join(SRC_PUB,     'otiraci-kingtrade.jpg'),           out: 'otirac-3.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 4. HOTEL MORE with stars (hospitality)
+  { src: path.join(SRC_PUB,     'otiraci-hotel.jpg'),               out: 'otirac-4.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 5. HOTEL AS - installed at venue entrance
+  { src: path.join(SRC_SZ,      'otirac_5.jpeg'),                   out: 'otirac-5.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 6. BAZITA - restaurant brand, premium dark+lavender
+  { src: path.join(SRC_OTIRACI, 'otiracpomjeri.png'),               out: 'otirac-6.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 7. Black corridor mat - large entrance installation
+  { src: path.join(SRC_SZ,      'otirac_3 (2).jpeg'),               out: 'otirac-7.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  // 8. Display rack with assorted patterns (proof of range available)
+  { src: path.join(SRC_PUB,     'doormats.jpg'),                    out: 'otirac-8.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
 ]
 
 // New hero background: cleaning assortment shot (izlaganje3.jpg) - vibrant retail aisle

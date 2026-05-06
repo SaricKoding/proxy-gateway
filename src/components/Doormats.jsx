@@ -7,6 +7,9 @@ const gallery = [
   '/images/otirac-3.jpg',
   '/images/otirac-4.jpg',
   '/images/otirac-5.jpg',
+  '/images/otirac-6.jpg',
+  '/images/otirac-7.jpg',
+  '/images/otirac-8.jpg',
 ]
 
 export default function Doormats() {
