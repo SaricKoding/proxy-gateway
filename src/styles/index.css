@@ -346,7 +346,7 @@ section { padding: var(--sp-9) 0; }
 }
 .hero .eyebrow { color: var(--gold-400); }
 .hero-logo {
-  width: clamp(220px, 24vw, 340px);
+  width: clamp(440px, 48vw, 680px);
   height: auto;
   display: block;
   margin: 0 auto var(--sp-3);
@@ -1171,7 +1171,7 @@ section { padding: var(--sp-9) 0; }
     object-fit: contain;
     background: var(--ink-100);
   }
-  .hero-logo { width: clamp(170px, 44vw, 240px); margin: 0 auto var(--sp-3); }
+  .hero-logo { width: clamp(340px, 88vw, 480px); margin: 0 auto var(--sp-3); }
   .primary-nav {
     position: fixed;
     inset: 0 0 0 auto;
