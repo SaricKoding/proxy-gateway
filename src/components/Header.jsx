@@ -20,9 +20,8 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`} role="banner">
       <div className="container header-inner">
-        <a href="#top" className="brand" aria-label="Proxy d.o.o.">
-          <span className="brand-wordmark">PROXY</span>
-        </a>
+        <a href="#top" className="brand" aria-label="Proxy d.o.o." />
+
 
         <nav className={`primary-nav ${open ? 'is-open' : ''}`} aria-label={nav.main}>
           <a href="#kategorije" onClick={close}>{nav.kategorije}</a>
