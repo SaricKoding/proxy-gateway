@@ -55,7 +55,7 @@ export default function Doormats() {
         <ul className="doormats-gallery" aria-label={d.imageAlt}>
           {gallery.map((src, i) => (
             <li key={src}>
-              <Picture src={src} alt={alts[i] || d.imageAlt} loading="lazy" />
+              <Picture src={src} alt={alts[i] || d.imageAlt} loading="lazy" width="800" height="600" />
             </li>
           ))}
         </ul>

@@ -30,7 +30,7 @@ export default function Categories() {
             <li key={i} className="cat-card">
               <a href="#izbor" aria-label={c.linkLabel(item.name)}>
                 <div className="cat-media">
-                  <Picture src={images[i]} alt={item.name} loading="lazy" />
+                  <Picture src={images[i]} alt={item.name} loading="lazy" width="600" height="450" />
                 </div>
                 <div className="cat-body">
                   <h3 className="cat-name">{item.name}</h3>

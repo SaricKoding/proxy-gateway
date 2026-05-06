@@ -63,7 +63,7 @@ export default function Warehouse() {
           {sources.map((src, i) => (
             <li key={i}>
               <button type="button" className="thumb" onClick={() => open(i)} aria-label={`${w.openImage}: ${alts[i] || ''}`}>
-                <img src={src} alt={alts[i] || ''} loading="lazy" />
+                <img src={src} alt={alts[i] || ''} loading="lazy" width="800" height="600" decoding="async" />
                 <span className="thumb-icon" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                     <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
