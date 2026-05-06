@@ -17,7 +17,13 @@ export default function Doormats() {
     <section id="otiraci" className="doormats" aria-labelledby="doormats-heading">
       <div className="container doormats-grid">
         <figure className="doormats-media">
-          <img src={gallery[0]} alt={alts[0] || d.imageAlt} loading="lazy" width="900" height="600" />
+          <img
+            src="/images/otirac-hero.jpg"
+            alt={d.imageAlt}
+            loading="lazy"
+            width="1600"
+            height="1067"
+          />
         </figure>
 
         <div className="doormats-copy">
@@ -40,9 +46,9 @@ export default function Doormats() {
 
       <div className="container">
         <ul className="doormats-gallery" aria-label={d.imageAlt}>
-          {gallery.slice(1).map((src, i) => (
+          {gallery.map((src, i) => (
             <li key={src}>
-              <img src={src} alt={alts[i + 1] || d.imageAlt} loading="lazy" />
+              <img src={src} alt={alts[i] || d.imageAlt} loading="lazy" />
             </li>
           ))}
         </ul>

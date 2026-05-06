@@ -3,6 +3,7 @@ import { useLocale } from '../i18n/LocaleContext'
 export default function Hero() {
   const { t } = useLocale()
   const h = t('hero')
+  const dp = h.doormatPill
 
   return (
     <section id="top" className="hero" aria-labelledby="hero-heading">
@@ -33,6 +34,14 @@ export default function Hero() {
           <a className="btn btn-gold btn-xl" href="#izbor">{h.ctaPrimary}</a>
           <a className="btn btn-ghost btn-xl" href="#o-nama">{h.ctaSecondary}</a>
         </div>
+
+        {dp && (
+          <a className="hero-pill" href="#otiraci" aria-label={`${dp.label}: ${dp.text}`}>
+            <span className="hero-pill-tag">{dp.label}</span>
+            <span className="hero-pill-text">{dp.text}</span>
+            <span className="hero-pill-cta" aria-hidden="true">{dp.cta} <span className="hero-pill-arrow">&rarr;</span></span>
+          </a>
+        )}
 
         <ul className="hero-marks">
           {h.marks.map((m, i) => (

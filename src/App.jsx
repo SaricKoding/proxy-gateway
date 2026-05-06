@@ -18,9 +18,9 @@ function AppInner() {
       <Header />
       <main id="sadrzaj">
         <Hero />
+        <Doormats />
         <Gateway />
         <Categories />
-        <Doormats />
         <About />
         <WhyProxy />
         <Warehouse />

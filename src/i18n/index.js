@@ -33,9 +33,14 @@ export const messages = {
     hero: {
       eyebrow: '',
       title: ['Partner za ', 'VELEPRODAJU', ' i ', 'MALOPRODAJU'],
-      sub: 'Asortiman za domaćinstvo i ugostiteljstvo. Kvalitetna roba, pouzdana isporuka i fer poslovna praksa.',
+      sub: 'Široki asortiman artikala za domaćinstvo i ugostiteljstvo. Garancija dobre kvalitete proizvoda iz asortimana renomiranih svjetskih proizvođača. Pouzdana isporuka i fer poslovna praksa.',
       ctaPrimary: 'Odaberi način kupnje',
       ctaSecondary: 'Više o nama',
+      doormatPill: {
+        label: 'Vlastita proizvodnja',
+        text: 'Personalizirani otirači s vašim logotipom — izrada po narudžbi',
+        cta: 'Pogledajte ponudu',
+      },
       marks: [
         { n: '700+', l: 'artikala' },
         { n: '3 dana', l: 'isporuka u HR' },
@@ -208,9 +213,14 @@ export const messages = {
     hero: {
       eyebrow: '',
       title: ['Partner for ', 'WHOLESALE', ' and ', 'RETAIL'],
-      sub: 'Household and hospitality supplies. Quality goods, reliable delivery and fair business practice.',
+      sub: 'A broad range of goods for household and hospitality. Guaranteed quality from renowned international manufacturers. Reliable delivery and fair business practice.',
       ctaPrimary: 'Choose how to shop',
       ctaSecondary: 'About us',
+      doormatPill: {
+        label: 'Made in-house',
+        text: 'Personalised doormats with your logo — custom production',
+        cta: 'See the offer',
+      },
       marks: [
         { n: '700+', l: 'products' },
         { n: '3 days', l: 'delivery in Croatia' },
