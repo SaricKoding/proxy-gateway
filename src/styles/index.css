@@ -1136,7 +1136,15 @@ section { padding: var(--sp-9) 0; }
   .section-head { margin: 0 auto var(--sp-5); padding: 0 var(--sp-3); } /* 24px BM, manji gap */
   .section-title { font-size: clamp(26px, 6.8vw, 38px); margin-bottom: var(--sp-3); }
   .section-sub { font-size: 15.5px; line-height: 1.55; }
-  .header-inner { gap: var(--sp-3); }
+  /* Mobile: skroz transparentan header — vidljiv samo hamburger gore desno */
+  .site-header,
+  .site-header.is-scrolled {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  .brand { display: none; }
+  .header-inner { gap: var(--sp-3); justify-content: flex-end; }
   .brand-wordmark { font-size: 22px; letter-spacing: 0.15em; }
   /* Mobile: horizontal scroll-snap carousel so each mat reads as one product, no awkward crops */
   .doormats-gallery {

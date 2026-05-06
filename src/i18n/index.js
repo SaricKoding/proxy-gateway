@@ -34,7 +34,7 @@ export const messages = {
     hero: {
       eyebrow: '',
       title: ['Partner za ', 'VELEPRODAJU', ' i ', 'MALOPRODAJU'],
-      sub: 'Veleprodaja kućanstva i ugostiteljstva s preko 200 partnera u Hrvatskoj.',
+      sub: 'Širok asortiman proizvoda za domaćinstvo.',
       ctaPrimary: 'Odaberi način kupnje',
       ctaSecondary: 'Više o nama',
       doormatPill: {
@@ -78,7 +78,7 @@ export const messages = {
     about: {
       eyebrow: 'O tvrtki',
       title: ['Osnovano 2016. u Splitu. ', 'Fer partnerstvo na prvom mjestu.'],
-      lead: 'Veleprodaja kućanstva i ugostiteljstva sa sjedištem u Splitu. Preko 200 partnera u Hrvatskoj i vlastita izrada personaliziranih otirača s logotipima.',
+      lead: 'Širok asortiman proizvoda za domaćinstvo. Preko 200 partnera u Hrvatskoj i vlastita izrada personaliziranih otirača s logotipima.',
       p1: 'Tvrtku je 2016. osnovao Robert Raič nakon dugogodišnjeg iskustva u prodaji.',
       p2: 'Asortiman gradimo robom vrhunske kvalitete. O tome svjedoči rast baze klijenata.',
       p3: 'Vizija nam je širenje na strana tržišta, ulaganje u proizvodnju i razvoj zaposlenika.',

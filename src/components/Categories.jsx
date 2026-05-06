@@ -34,7 +34,6 @@ export default function Categories() {
                 </div>
                 <div className="cat-body">
                   <h3 className="cat-name">{item.name}</h3>
-                  {item.count !== null && <span className="cat-count">{c.itemsLabel(item.count)}</span>}
                 </div>
               </a>
             </li>
