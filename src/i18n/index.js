@@ -8,12 +8,12 @@ export const defaultLocale = 'hr'
 export const messages = {
   hr: {
     meta: {
-      title: 'Proxy d.o.o. Veleprodaja i maloprodaja za domaćinstvo i ugostiteljstvo. Split.',
+      title: 'Personalizirani otirači i veleprodaja kućanstva | Proxy d.o.o. Split',
       description:
-        'Proxy d.o.o. Split. Veleprodaja i maloprodaja asortimana za domaćinstvo i ugostiteljstvo. Kućanski pribor, oprema za čišćenje, inox galanterija, posuđe, tekstil i personalizirani otirači s logotipom.',
-      ogTitle: 'Proxy d.o.o. Sve što dom treba.',
+        'Izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore. Veleprodaja kućanskih artikala, sredstava za čišćenje i ugostiteljskog programa. Proxy d.o.o. Split, Hrvatska.',
+      ogTitle: 'Personalizirani otirači i veleprodaja - Proxy d.o.o. Split',
       ogDescription:
-        'Veleprodaja i maloprodaja asortimana za domaćinstvo i ugostiteljstvo. Personalizirani otirači s logotipom. Split, Hrvatska.',
+        'Izrada personaliziranih otirača s logotipom za poslovne prostore. Veleprodaja kućanskih artikala i ugostiteljskog programa. Proxy d.o.o. Split, Hrvatska.',
     },
 
     nav: {
@@ -23,6 +23,7 @@ export const messages = {
       skladiste: 'Skladište',
       kategorije: 'Kategorije',
       otiraci: 'Personalizirani otirači',
+      faq: 'Pitanja',
       maloprodaja: 'Maloprodaja',
       veleprodaja: 'Veleprodaja',
       openMenu: 'Otvori izbornik',
@@ -146,24 +147,25 @@ export const messages = {
     },
 
     doormats: {
-      eyebrow: 'Dodatna usluga',
-      title: ['Personalizirani otirači ', 's vašim logotipom'],
-      lead: 'Izrađujemo otirače po narudžbi za poslovne prostore, hotele, restorane i ugostiteljske objekte. Logotipi, natpisi i personalizirani dizajn. Trajno, praktično i reprezentativno.',
+      eyebrow: 'Vlastita izrada',
+      title: ['Personalizirani otirači ', 's Vašim logotipom'],
+      lead: 'Izrađujemo personalizirane otirače po narudžbi za poslovne prostore, hotele, restorane i ugostiteljske objekte. Logotipi tvrtki, natpisi i prilagođeni dizajn po Vašoj mjeri. Trajna kvaliteta, praktičnost i reprezentativan ulaz.',
       bullets: [
-        'Logotipi tvrtki i brendova',
-        'Natpisi po narudžbi, bilo koji tekst',
-        'Različite dimenzije i gustoće vlakana',
-        'Izrada za ugostiteljstvo i poslovne prostore',
+        'Logotipi tvrtki i brendova - vektorska izrada',
+        'Natpisi po narudžbi - naziv objekta ili pozdrav',
+        'Standardne i prilagođene dimenzije (60x90, 80x120, 100x150 cm i po mjeri)',
+        'Različite gustoće vlakana prema učestalosti prometa',
+        'Izrada za ugostiteljstvo, hotele i poslovne prostore',
       ],
       ctaWholesale: 'Upit za veleprodaju',
       ctaRetail: 'Maloprodajna ponuda',
-      imageAlt: 'Personalizirani otirač s logotipom tvrtke',
+      imageAlt: 'Personalizirani otirač s logotipom tvrtke - Proxy d.o.o. Split',
       galleryAlts: [
-        'Personalizirani otirač s logotipom tvrtke',
-        'Personalizirani otirač za hotele i restorane',
-        'Otirač po narudžbi s natpisom',
-        'Otirač s brendiranim logotipom',
-        'Personalizirani otirač u ugostiteljskom objektu',
+        'Personalizirani otirač s logotipom Proxy',
+        'Personalizirani otirač za hotele i restorane - PRISTAV',
+        'Otirač po narudžbi s natpisom za ugostiteljstvo',
+        'Otirač s brendiranim logotipom - Hotel AS',
+        'Personalizirani otirači u ugostiteljskom objektu',
       ],
     },
 
@@ -196,16 +198,48 @@ export const messages = {
       accept: 'Prihvati',
       reject: 'Odbij',
     },
+
+    faq: {
+      eyebrow: 'Često pitanje',
+      title: ['Personalizirani otirači i ', 'veleprodaja - česta pitanja'],
+      sub: 'Najčešća pitanja o izradi otirača s logotipom i veleprodajnom kanalu Proxy d.o.o.',
+      items: [
+        {
+          q: 'Kako naručiti personalizirani otirač s logotipom?',
+          a: 'Pošaljite upit na info@proxy1.hr s logotipom (vektorska datoteka SVG ili PDF idealno), željenom veličinom otirača i okvirnim brojem komada. Pripremamo prijedlog dizajna, potvrđujete izgled i kreće izrada. Vrijeme isporuke ovisi o količini i složenosti dizajna.',
+        },
+        {
+          q: 'Koje su veličine personaliziranih otirača dostupne?',
+          a: 'Otirači se izrađuju u standardnim i prilagođenim veličinama. Tipične dimenzije su 60x90 cm, 80x120 cm i 100x150 cm, ali dimenzije izrađujemo prema mjeri ulaza ili recepcije. Različite gustoće vlakana biramo prema učestalosti prometa na mjestu postavljanja.',
+        },
+        {
+          q: 'Postoji li minimalna količina za narudžbu personaliziranog otirača?',
+          a: 'Izrađujemo i pojedinačne otirače za poslovne prostore, hotele i restorane. Za veće količine, ugostiteljske lance i franšize dogovaramo veleprodajne uvjete i fiksne cijene po komadu.',
+        },
+        {
+          q: 'Što se sve može staviti na otirač?',
+          a: 'Logotip tvrtke, naziv objekta, slogan ili pozdravna poruka, kombinacije teksta i znaka. Boje se preuzimaju iz Vašeg vizualnog identiteta. Dizajn potvrđujete prije izrade.',
+        },
+        {
+          q: 'Tko može kupovati u Proxy veleprodaji?',
+          a: 'Proxy veleprodaja dostupna je ugovornim partnerima: tvrtkama, ugostiteljskim objektima, hotelima i ustanovama s odobrenim veleprodajnim pristupom. Maloprodajni kanal otvoren je svima i ne traži ugovor ni registraciju.',
+        },
+        {
+          q: 'U koje vrijeme isporučujete robu u Hrvatskoj?',
+          a: 'Standardno isporučujemo u roku od 3 radna dana na cijelom području Hrvatske. Za personalizirane otirače rok ovisi o složenosti dizajna i količini, a okvirni rok dogovaramo pri narudžbi.',
+        },
+      ],
+    },
   },
 
   en: {
     meta: {
-      title: 'Proxy d.o.o. Wholesale and retail for household and hospitality. Split, Croatia.',
+      title: 'Custom logo doormats and wholesale household goods | Proxy d.o.o. Split',
       description:
-        'Proxy d.o.o. Split, Croatia. Wholesale and retail for household and hospitality supplies. Kitchenware, cleaning equipment, stainless steel, tableware, textiles and personalised doormats with logo.',
-      ogTitle: 'Proxy d.o.o. Everything a home needs.',
+        'Custom-made doormats with your logo for hotels, restaurants and offices. Wholesale household goods, cleaning supplies and hospitality range. Proxy d.o.o. Split, Croatia.',
+      ogTitle: 'Custom logo doormats and wholesale household goods - Proxy d.o.o.',
       ogDescription:
-        'Wholesale and retail for household and hospitality supplies. Personalised doormats with logo. Split, Croatia.',
+        'Custom-made doormats with your logo for offices and hospitality venues. Wholesale household goods and cleaning supplies. Proxy d.o.o. Split, Croatia.',
     },
 
     nav: {
@@ -215,6 +249,7 @@ export const messages = {
       skladiste: 'Warehouse',
       kategorije: 'Categories',
       otiraci: 'Personalised doormats',
+      faq: 'FAQ',
       maloprodaja: 'Retail',
       veleprodaja: 'Wholesale',
       openMenu: 'Open menu',
@@ -338,24 +373,25 @@ export const messages = {
     },
 
     doormats: {
-      eyebrow: 'Additional service',
+      eyebrow: 'Made in-house',
       title: ['Personalised doormats ', 'with your logo'],
-      lead: 'We produce custom doormats for offices, hotels, restaurants and hospitality venues. Logos, custom text and personalised design. Durable, practical and on-brand.',
+      lead: 'We produce custom doormats for offices, hotels, restaurants and hospitality venues. Company logos, custom text and tailored design cut to your size. Durable, practical and on-brand entrance.',
       bullets: [
-        'Company and brand logos',
-        'Custom text, any wording',
-        'Various sizes and fibre densities',
-        'Made for hospitality and commercial spaces',
+        'Company and brand logos - vector-ready',
+        'Custom text - venue name or welcome message',
+        'Standard and custom sizes (60x90, 80x120, 100x150 cm and to measure)',
+        'Fibre density matched to expected foot traffic',
+        'Made for hospitality, hotels and commercial spaces',
       ],
       ctaWholesale: 'Wholesale inquiry',
       ctaRetail: 'Retail offer',
-      imageAlt: 'Personalised doormat with company logo',
+      imageAlt: 'Personalised doormat with company logo - Proxy d.o.o. Split',
       galleryAlts: [
-        'Personalised doormat with company logo',
-        'Personalised doormat for hotels and restaurants',
-        'Custom doormat with text',
-        'Doormat with branded logo',
-        'Personalised doormat in a hospitality venue',
+        'Personalised doormat with Proxy logo',
+        'Personalised doormat for hotels and restaurants - PRISTAV',
+        'Custom doormat with venue text for hospitality',
+        'Doormat with branded logo - Hotel AS',
+        'Personalised doormats in a hospitality venue',
       ],
     },
 
@@ -387,6 +423,38 @@ export const messages = {
       linkLabel: 'Cookie policy',
       accept: 'Accept',
       reject: 'Reject',
+    },
+
+    faq: {
+      eyebrow: 'FAQ',
+      title: ['Custom doormats and ', 'wholesale - frequently asked'],
+      sub: 'Common questions about custom logo doormats and the Proxy d.o.o. wholesale channel.',
+      items: [
+        {
+          q: 'How do I order a custom doormat with a logo?',
+          a: 'Email info@proxy1.hr with your logo (vector SVG or PDF preferred), desired doormat size and approximate quantity. We prepare a design proposal, you approve the look and production starts. Lead time depends on quantity and design complexity.',
+        },
+        {
+          q: 'What sizes of custom doormats are available?',
+          a: 'Doormats are produced in standard and custom sizes. Typical dimensions are 60x90 cm, 80x120 cm and 100x150 cm, but we cut to entrance or reception measurements. Fibre density is matched to expected foot traffic.',
+        },
+        {
+          q: 'Is there a minimum order quantity for a custom doormat?',
+          a: 'We produce single doormats for offices, hotels and restaurants as well as bulk runs for hospitality chains and franchises. Wholesale terms and fixed unit pricing are agreed for larger volumes.',
+        },
+        {
+          q: 'What can be printed on a doormat?',
+          a: 'Company logos, venue names, slogans or welcome messages, combinations of text and graphics. Colours follow your brand identity. The design is confirmed before production.',
+        },
+        {
+          q: 'Who can buy from Proxy wholesale?',
+          a: 'Proxy wholesale is available to contracted partners: companies, hospitality businesses, hotels and institutions with approved wholesale access. The retail channel is open to everyone, with no contract or partner registration required.',
+        },
+        {
+          q: 'How fast is delivery in Croatia?',
+          a: 'Standard delivery is within 3 business days across Croatia. For custom doormats, lead time depends on design complexity and quantity and is confirmed at order.',
+        },
+      ],
     },
   },
 }

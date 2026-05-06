@@ -24,11 +24,11 @@ export default function Header() {
 
 
         <nav className={`primary-nav ${open ? 'is-open' : ''}`} aria-label={nav.main}>
+          <a href="#otiraci" onClick={close}>{nav.otiraci}</a>
           <a href="#kategorije" onClick={close}>{nav.kategorije}</a>
           <a href="#izbor" onClick={close}>{nav.izbor}</a>
-          <a href="#otiraci" onClick={close}>{nav.otiraci}</a>
           <a href="#o-nama" onClick={close}>{nav.onama}</a>
-          <a href="#zasto-proxy" onClick={close}>{nav.zasto}</a>
+          <a href="#faq" onClick={close}>{nav.faq}</a>
           <a href="#skladiste" onClick={close}>{nav.skladiste}</a>
           <div className="nav-cta">
             <a className="btn btn-ghost" href="https://maloprodaja.proxy1.hr" rel="noopener" onClick={close}>{nav.maloprodaja}</a>

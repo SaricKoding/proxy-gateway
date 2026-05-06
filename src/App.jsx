@@ -7,6 +7,7 @@ import WhyProxy from './components/WhyProxy'
 import Warehouse from './components/Warehouse'
 import Categories from './components/Categories'
 import Doormats from './components/Doormats'
+import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
 
@@ -25,6 +26,7 @@ function AppInner() {
         <About />
         <WhyProxy />
         <Warehouse />
+        <FAQ />
       </main>
       <Footer />
       <CookieBanner />
