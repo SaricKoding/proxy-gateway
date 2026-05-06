@@ -1117,7 +1117,31 @@ section { padding: var(--sp-9) 0; }
   section { padding: var(--sp-8) 0; }
   .header-inner { gap: var(--sp-3); }
   .brand-wordmark { font-size: 22px; letter-spacing: 0.15em; }
-  .doormats-gallery { grid-template-columns: repeat(2, 1fr); }
+  /* Mobile: horizontal scroll-snap carousel so each mat reads as one product, no awkward crops */
+  .doormats-gallery {
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
+    margin: var(--sp-5) calc(-1 * var(--sp-5)) 0;
+    padding: 4px var(--sp-5) 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--sp-5);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .doormats-gallery::-webkit-scrollbar { display: none; }
+  .doormats-gallery li {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+    aspect-ratio: 4 / 3;
+    background: var(--ink-100);
+  }
+  .doormats-gallery img {
+    object-fit: contain;
+    background: var(--ink-100);
+  }
   .hero-logo { width: clamp(170px, 44vw, 240px); margin: 0 auto var(--sp-3); }
   .primary-nav {
     position: fixed;
