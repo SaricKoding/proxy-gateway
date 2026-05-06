@@ -8,12 +8,12 @@ export const defaultLocale = 'hr'
 export const messages = {
   hr: {
     meta: {
-      title: 'Personalizirani otirači i veleprodaja kućanstva | Proxy d.o.o. Split',
+      title: 'Veleprodaja kućanstva i personalizirani otirači | Proxy d.o.o. Split',
       description:
-        'Izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore. Veleprodaja kućanskih artikala, sredstava za čišćenje i ugostiteljskog programa. Proxy d.o.o. Split, Hrvatska.',
-      ogTitle: 'Personalizirani otirači i veleprodaja - Proxy d.o.o. Split',
+        'Velika veleprodajna tvrtka za asortiman kućanstva i ugostiteljstva. Više od 200 partnera u Hrvatskoj. Izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore. Proxy d.o.o. Split, Hrvatska.',
+      ogTitle: 'Veleprodaja kućanstva i personalizirani otirači. Proxy d.o.o. Split',
       ogDescription:
-        'Izrada personaliziranih otirača s logotipom za poslovne prostore. Veleprodaja kućanskih artikala i ugostiteljskog programa. Proxy d.o.o. Split, Hrvatska.',
+        'Veleprodaja kućanskih artikala i ugostiteljskog programa s više od 200 partnera u Hrvatskoj. Izrada personaliziranih otirača s logotipom. Proxy d.o.o. Split, Hrvatska.',
     },
 
     nav: {
@@ -34,7 +34,7 @@ export const messages = {
     hero: {
       eyebrow: '',
       title: ['Partner za ', 'VELEPRODAJU', ' i ', 'MALOPRODAJU'],
-      sub: 'Široki asortiman artikala za domaćinstvo i ugostiteljstvo. Garancija dobre kvalitete proizvoda iz asortimana renomiranih svjetskih proizvođača. Pouzdana isporuka i fer poslovna praksa.',
+      sub: 'Velika veleprodajna tvrtka za asortiman kućanstva i ugostiteljstva. Surađujemo s više od 200 partnera diljem Hrvatske. Renomirani svjetski proizvođači, pouzdana isporuka i fer poslovni odnos.',
       ctaPrimary: 'Odaberi način kupnje',
       ctaSecondary: 'Više o nama',
       doormatPill: {
@@ -43,7 +43,7 @@ export const messages = {
       },
       marks: [
         { n: '700+', l: 'artikala' },
-        { n: '3 dana', l: 'isporuka u HR' },
+        { n: '200+', l: 'partnera u HR' },
         { n: 'A+', l: 'bonitet' },
       ],
     },
@@ -78,24 +78,24 @@ export const messages = {
     about: {
       eyebrow: 'O tvrtki',
       title: ['Osnovano 2016. u Splitu. ', 'Fer partnerstvo na prvom mjestu.'],
-      lead: 'Proxy d.o.o. je trgovina na veliko asortimanom za domaćinstvo i ugostiteljstvo. Uz široki katalog roba, nudimo i izradu personaliziranih otirača s logotipima i natpisima tvrtki.',
+      lead: 'Proxy d.o.o. je velika veleprodajna tvrtka za asortiman kućanstva i ugostiteljstva. Surađujemo s više od 200 partnera diljem Hrvatske. Uz široki katalog roba, izrađujemo i personalizirane otirače s logotipima i natpisima tvrtki.',
       p1: 'Tvrtku je 11. svibnja 2016. osnovao Robert Raič nakon dugogodišnjeg iskustva u prodaji. Cilj je bio kvalitetan proizvod i usluga za klijente, uz brigu o zaposlenicima i lokalnoj zajednici.',
-      p2: 'Ozbiljnim pristupom i jasnom vizijom, naš je prodajni asortiman popunjen robom vrhunske kvalitete. O tome svjedoči rast baze klijenata kojima pružamo najbolju uslugu.',
+      p2: 'Ozbiljnim pristupom i jasnom vizijom, naš prodajni asortiman popunjen je robom vrhunske kvalitete. O tome svjedoči rast baze klijenata kojima pružamo najbolju uslugu.',
       p3: 'Fer poslovna praksa i partnerstvo ostaju na prvom mjestu. Naša vizija je širenje na strana tržišta, ulaganje u proizvodnju i razvoj zaposlenika kroz kontinuiranu edukaciju.',
       stats: [
         { t: 'Godina osnutka', v: '2016.' },
         { t: 'Sjedište', v: 'Split, HR' },
-        { t: 'Fokus', v: 'Veleprodaja i maloprodaja' },
-        { t: 'Djelokrug', v: 'Hrvatska' },
+        { t: 'Partneri', v: '200+ u HR' },
+        { t: 'Bonitet', v: 'A+' },
       ],
-      caption: 'Sjedište i skladište · Split',
+      caption: 'Sjedište i skladište u Splitu',
       imageAlt: 'Proxy skladište u Splitu, profesionalno opremljeno za distribuciju',
     },
 
     why: {
       eyebrow: 'Zašto Proxy',
       title: ['Sedam razloga zašto nam ', 'kupci vjeruju'],
-      sub: 'Ono što nas razlikuje nije katalog, nego način na koji poslujemo sa svojim partnerima.',
+      sub: 'Ono što nas razlikuje nije katalog, nego način na koji poslujemo s više od 200 partnera diljem Hrvatske.',
       reasons: [
         { t: 'Bonitet A+', d: 'Financijska stabilnost i pouzdanost, potvrđena službenim bonitetnim ocjenama.' },
         { t: 'Fleksibilnost', d: 'Naručivanje, dostave i povrate robe prilagođavamo stvarnim potrebama kupaca.' },
@@ -151,19 +151,19 @@ export const messages = {
       title: ['Personalizirani otirači ', 's Vašim logotipom'],
       lead: 'Izrađujemo personalizirane otirače po narudžbi za poslovne prostore, hotele, restorane i ugostiteljske objekte. Logotipi tvrtki, natpisi i prilagođeni dizajn po Vašoj mjeri. Trajna kvaliteta, praktičnost i reprezentativan ulaz.',
       bullets: [
-        'Logotipi tvrtki i brendova - vektorska izrada',
-        'Natpisi po narudžbi - naziv objekta ili pozdrav',
-        'Standardne i prilagođene dimenzije (60x90, 80x120, 100x150 cm i po mjeri)',
+        'Logotipi tvrtki i brendova u vektorskoj izradi',
+        'Natpisi po narudžbi s nazivom objekta ili pozdravom',
+        'Standardne dimenzije 60×90, 80×120 i 100×150 cm te izrada po mjeri',
         'Različite gustoće vlakana prema učestalosti prometa',
         'Izrada za ugostiteljstvo, hotele i poslovne prostore',
       ],
       ctaWholesale: 'Upit za veleprodaju',
       ctaRetail: 'Maloprodajna ponuda',
-      imageAlt: 'Personalizirani otirač s logotipom tvrtke - Proxy d.o.o. Split',
+      imageAlt: 'Personalizirani otirač s logotipom tvrtke za Proxy d.o.o. Split',
       galleryAlts: [
-        'Personalizirani otirač PRISTAV - dvije varijante boja',
-        'Personalizirani otirač KINGTRADE postavljen na ulaz',
-        'Personalizirani otirač KINGTRADE - prikaz boja',
+        'Personalizirani otirač PRISTAV u dvije varijante boja',
+        'Personalizirani otirač KINGTRADE postavljen na ulazu',
+        'Personalizirani otirač KINGTRADE, prikaz boja',
         'Personalizirani otirač HOTEL MORE s pet zvjezdica',
         'Personalizirani otirač HOTEL AS na ulazu objekta',
         'Personalizirani otirač BAZITA za restoran',
@@ -203,17 +203,17 @@ export const messages = {
     },
 
     faq: {
-      eyebrow: 'Često pitanje',
-      title: ['Personalizirani otirači i ', 'veleprodaja - česta pitanja'],
+      eyebrow: 'Česta pitanja',
+      title: ['Personalizirani otirači i veleprodaja', 'Česta pitanja'],
       sub: 'Najčešća pitanja o izradi otirača s logotipom i veleprodajnom kanalu Proxy d.o.o.',
       items: [
         {
           q: 'Kako naručiti personalizirani otirač s logotipom?',
-          a: 'Pošaljite upit na info@proxy1.hr s logotipom (vektorska datoteka SVG ili PDF idealno), željenom veličinom otirača i okvirnim brojem komada. Pripremamo prijedlog dizajna, potvrđujete izgled i kreće izrada. Vrijeme isporuke ovisi o količini i složenosti dizajna.',
+          a: 'Pošaljite upit na info@proxy1.hr s logotipom (idealno vektorska datoteka SVG ili PDF), željenom veličinom otirača i okvirnim brojem komada. Pripremamo prijedlog dizajna, potvrđujete izgled i kreće izrada. Vrijeme isporuke ovisi o količini i složenosti dizajna.',
         },
         {
           q: 'Koje su veličine personaliziranih otirača dostupne?',
-          a: 'Otirači se izrađuju u standardnim i prilagođenim veličinama. Tipične dimenzije su 60x90 cm, 80x120 cm i 100x150 cm, ali dimenzije izrađujemo prema mjeri ulaza ili recepcije. Različite gustoće vlakana biramo prema učestalosti prometa na mjestu postavljanja.',
+          a: 'Otirači se izrađuju u standardnim i prilagođenim veličinama. Tipične dimenzije su 60×90 cm, 80×120 cm i 100×150 cm, no izrađujemo i prema mjeri ulaza ili recepcije. Gustoću vlakana biramo prema učestalosti prometa na mjestu postavljanja.',
         },
         {
           q: 'Postoji li minimalna količina za narudžbu personaliziranog otirača?',
@@ -221,14 +221,14 @@ export const messages = {
         },
         {
           q: 'Što se sve može staviti na otirač?',
-          a: 'Logotip tvrtke, naziv objekta, slogan ili pozdravna poruka, kombinacije teksta i znaka. Boje se preuzimaju iz Vašeg vizualnog identiteta. Dizajn potvrđujete prije izrade.',
+          a: 'Logotip tvrtke, naziv objekta, slogan ili pozdravnu poruku te kombinacije teksta i znaka. Boje preuzimamo iz Vašeg vizualnog identiteta. Dizajn potvrđujete prije izrade.',
         },
         {
           q: 'Tko može kupovati u Proxy veleprodaji?',
           a: 'Proxy veleprodaja dostupna je ugovornim partnerima: tvrtkama, ugostiteljskim objektima, hotelima i ustanovama s odobrenim veleprodajnim pristupom. Maloprodajni kanal otvoren je svima i ne traži ugovor ni registraciju.',
         },
         {
-          q: 'U koje vrijeme isporučujete robu u Hrvatskoj?',
+          q: 'U kojem roku isporučujete robu u Hrvatskoj?',
           a: 'Standardno isporučujemo u roku od 3 radna dana na cijelom području Hrvatske. Za personalizirane otirače rok ovisi o složenosti dizajna i količini, a okvirni rok dogovaramo pri narudžbi.',
         },
       ],
@@ -237,12 +237,12 @@ export const messages = {
 
   en: {
     meta: {
-      title: 'Custom logo doormats and wholesale household goods | Proxy d.o.o. Split',
+      title: 'Wholesale household goods and custom logo doormats | Proxy d.o.o. Split',
       description:
-        'Custom-made doormats with your logo for hotels, restaurants and offices. Wholesale household goods, cleaning supplies and hospitality range. Proxy d.o.o. Split, Croatia.',
-      ogTitle: 'Custom logo doormats and wholesale household goods - Proxy d.o.o.',
+        'A large wholesale company for household and hospitality goods. Over 200 partners across Croatia. Custom-made doormats with your logo for hotels, restaurants and offices. Proxy d.o.o. Split, Croatia.',
+      ogTitle: 'Wholesale household goods and custom logo doormats. Proxy d.o.o. Split',
       ogDescription:
-        'Custom-made doormats with your logo for offices and hospitality venues. Wholesale household goods and cleaning supplies. Proxy d.o.o. Split, Croatia.',
+        'Wholesale household goods and hospitality range with over 200 partners across Croatia. Custom-made doormats with your logo. Proxy d.o.o. Split, Croatia.',
     },
 
     nav: {
@@ -263,7 +263,7 @@ export const messages = {
     hero: {
       eyebrow: '',
       title: ['Partner for ', 'WHOLESALE', ' and ', 'RETAIL'],
-      sub: 'A broad range of goods for household and hospitality. Guaranteed quality from renowned international manufacturers. Reliable delivery and fair business practice.',
+      sub: 'A large wholesale company for household and hospitality goods. We work with more than 200 partners across Croatia. Renowned international manufacturers, reliable delivery and a fair business relationship.',
       ctaPrimary: 'Choose how to shop',
       ctaSecondary: 'About us',
       doormatPill: {
@@ -272,7 +272,7 @@ export const messages = {
       },
       marks: [
         { n: '700+', l: 'products' },
-        { n: '3 days', l: 'delivery in Croatia' },
+        { n: '200+', l: 'partners in Croatia' },
         { n: 'A+', l: 'credit rating' },
       ],
     },
@@ -307,24 +307,24 @@ export const messages = {
     about: {
       eyebrow: 'About the company',
       title: ['Founded in 2016 in Split. ', 'Fair partnership above all.'],
-      lead: 'Proxy d.o.o. is a wholesale company supplying household and hospitality goods. Alongside a broad catalogue, we also produce personalised doormats with company logos and custom text.',
+      lead: 'Proxy d.o.o. is a large wholesale company supplying household and hospitality goods. We work with more than 200 partners across Croatia. Alongside a broad catalogue, we also produce personalised doormats with company logos and custom text.',
       p1: 'The company was founded on 11 May 2016 by Robert Raič after many years of sales experience. The goal was quality products and service for clients, combined with care for employees and the local community.',
       p2: 'A serious approach and a clear vision quickly built an assortment of top-quality goods. A growing client base confirms the quality of our service.',
       p3: 'Fair business practice and partnership remain our top priority. Our vision is to expand into foreign markets, invest in production and develop our employees through continuous education.',
       stats: [
         { t: 'Established', v: '2016' },
         { t: 'Headquarters', v: 'Split, HR' },
-        { t: 'Focus', v: 'Wholesale and retail' },
-        { t: 'Coverage', v: 'Croatia' },
+        { t: 'Partners', v: '200+ in Croatia' },
+        { t: 'Credit rating', v: 'A+' },
       ],
-      caption: 'Headquarters and warehouse · Split',
+      caption: 'Headquarters and warehouse in Split',
       imageAlt: 'Proxy warehouse in Split, professionally equipped for distribution',
     },
 
     why: {
       eyebrow: 'Why Proxy',
       title: ['Seven reasons our ', 'customers trust us'],
-      sub: 'What sets us apart is not the catalogue. It is how we work with our partners.',
+      sub: 'What sets us apart is not the catalogue. It is how we work with more than 200 partners across Croatia.',
       reasons: [
         { t: 'A+ credit rating', d: 'Financial stability and reliability, confirmed by official credit ratings.' },
         { t: 'Flexibility', d: 'We adapt orders, deliveries and returns to real customer needs.' },
@@ -380,19 +380,19 @@ export const messages = {
       title: ['Personalised doormats ', 'with your logo'],
       lead: 'We produce custom doormats for offices, hotels, restaurants and hospitality venues. Company logos, custom text and tailored design cut to your size. Durable, practical and on-brand entrance.',
       bullets: [
-        'Company and brand logos - vector-ready',
-        'Custom text - venue name or welcome message',
-        'Standard and custom sizes (60x90, 80x120, 100x150 cm and to measure)',
+        'Company and brand logos in vector-ready production',
+        'Custom text with venue name or welcome message',
+        'Standard sizes 60×90, 80×120 and 100×150 cm plus made to measure',
         'Fibre density matched to expected foot traffic',
         'Made for hospitality, hotels and commercial spaces',
       ],
       ctaWholesale: 'Wholesale inquiry',
       ctaRetail: 'Retail offer',
-      imageAlt: 'Personalised doormat with company logo - Proxy d.o.o. Split',
+      imageAlt: 'Personalised doormat with company logo by Proxy d.o.o. Split',
       galleryAlts: [
-        'Custom doormat PRISTAV - two colour variants',
+        'Custom doormat PRISTAV in two colour variants',
         'Custom doormat KINGTRADE installed at entrance',
-        'Custom doormat KINGTRADE - colour swatch demo',
+        'Custom doormat KINGTRADE, colour swatch demo',
         'Custom doormat HOTEL MORE with five stars',
         'Custom doormat HOTEL AS at venue entrance',
         'Custom doormat BAZITA for restaurant',
@@ -433,7 +433,7 @@ export const messages = {
 
     faq: {
       eyebrow: 'FAQ',
-      title: ['Custom doormats and ', 'wholesale - frequently asked'],
+      title: ['Custom doormats and wholesale', 'Frequently asked'],
       sub: 'Common questions about custom logo doormats and the Proxy d.o.o. wholesale channel.',
       items: [
         {
@@ -442,7 +442,7 @@ export const messages = {
         },
         {
           q: 'What sizes of custom doormats are available?',
-          a: 'Doormats are produced in standard and custom sizes. Typical dimensions are 60x90 cm, 80x120 cm and 100x150 cm, but we cut to entrance or reception measurements. Fibre density is matched to expected foot traffic.',
+          a: 'Doormats are produced in standard and custom sizes. Typical dimensions are 60×90 cm, 80×120 cm and 100×150 cm, and we cut to entrance or reception measurements. Fibre density is matched to expected foot traffic.',
         },
         {
           q: 'Is there a minimum order quantity for a custom doormat?',
