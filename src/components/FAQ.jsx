@@ -9,11 +9,11 @@ export default function FAQ() {
       <div className="container">
         <header className="section-head">
           <p className="eyebrow dark">{f.eyebrow}</p>
-          <h2 id="faq-heading" className="section-title faq-title">
+          <h2 id="faq-heading" className="section-title">
             <span className="gold">{f.title[0]}</span>
-            <span className="faq-title-sub">{f.title[1]}</span>
+            {f.title[1]}
           </h2>
-          <p className="section-sub">{f.sub}</p>
+          {f.sub ? <p className="section-sub">{f.sub}</p> : null}
         </header>
 
         <ul className="faq-list">

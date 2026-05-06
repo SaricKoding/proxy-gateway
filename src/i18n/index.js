@@ -204,8 +204,8 @@ export const messages = {
 
     faq: {
       eyebrow: 'Česta pitanja',
-      title: ['Personalizirani otirači i veleprodaja', 'Česta pitanja'],
-      sub: 'Najčešća pitanja o izradi otirača s logotipom i veleprodajnom kanalu Proxy d.o.o.',
+      title: ['Veleprodaja kućanstva ', 'i ugostiteljstva u Hrvatskoj'],
+      sub: '',
       items: [
         {
           q: 'Kako naručiti personalizirani otirač s logotipom?',
@@ -433,8 +433,8 @@ export const messages = {
 
     faq: {
       eyebrow: 'FAQ',
-      title: ['Custom doormats and wholesale', 'Frequently asked'],
-      sub: 'Common questions about custom logo doormats and the Proxy d.o.o. wholesale channel.',
+      title: ['Wholesale household ', 'and hospitality supplies in Croatia'],
+      sub: '',
       items: [
         {
           q: 'How do I order a custom doormat with a logo?',
