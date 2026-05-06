@@ -96,11 +96,11 @@ app.use(
   })
 )
 
-// Images: long cache, revalidate
+// Images: 7-day public cache so re-processed photos roll out without manual cache-bust
 app.use(
   '/images',
   express.static(path.join(DIST, 'images'), {
-    maxAge: '30d',
+    maxAge: '7d',
     index: false,
   })
 )

@@ -335,7 +335,7 @@ section { padding: var(--sp-9) 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(11,30,58,.78) 0%, rgba(11,30,58,.86) 100%);
+  background: linear-gradient(180deg, rgba(11,30,58,.84) 0%, rgba(11,30,58,.92) 100%);
 }
 .hero-inner {
   max-width: 920px;
@@ -354,8 +354,9 @@ section { padding: var(--sp-9) 0; }
 .hero-title {
   font-size: clamp(36px, 5.4vw, 64px);
   line-height: 1.04;
-  margin: 0 0 var(--sp-3);
+  margin: 0 auto var(--sp-3);
   color: #fff;
+  text-wrap: balance;
 }
 .hero-sub {
   font-size: clamp(16px, 1.4vw, 19px);
@@ -406,6 +407,52 @@ section { padding: var(--sp-9) 0; }
   flex: 1 1 auto;
   line-height: 1.4;
   color: rgba(255,255,255,.92);
+}
+
+/* Auto-scrolling marquee of personalised doormat photos.
+   Visual proof of the doormat service line, hidden on small screens. */
+.hero-marquee {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto var(--sp-5);
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.marquee-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+  will-change: transform;
+}
+.hero-marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track li {
+  flex-shrink: 0;
+  width: 200px;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.marquee-track li:hover {
+  border-color: rgba(212,167,74,.55);
+  transform: translateY(-2px);
+}
+.marquee-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(calc(-50% - 7px), 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
 }
 
 .hero-marks {
@@ -873,15 +920,16 @@ section { padding: var(--sp-9) 0; }
   margin: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #EDE7DA;
   border: 1px solid var(--ink-200);
   box-shadow: var(--shadow-md);
   aspect-ratio: 3 / 2;
   position: relative;
+  background: var(--ink-100);
 }
 .doormats-media img {
   width: 100%; height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 .doormats-copy .section-title { text-align: left; }
@@ -908,18 +956,20 @@ section { padding: var(--sp-9) 0; }
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  background: #EDE7DA;
+  background: var(--ink-100);
   border: 1px solid var(--ink-200);
-  transition: transform .2s ease, border-color .2s ease;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .doormats-gallery li:hover {
   transform: translateY(-2px);
   border-color: var(--gold-400);
+  box-shadow: var(--shadow-md);
 }
 .doormats-gallery img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1112,6 +1162,7 @@ section { padding: var(--sp-9) 0; }
     margin-bottom: var(--sp-4);
   }
   .hero-pill-cta { font-size: 14px; }
+  .hero-marquee { display: none; }
   .hero-marks {
     gap: 10px;
     flex-direction: column;

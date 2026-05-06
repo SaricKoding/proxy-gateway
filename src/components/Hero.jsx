@@ -1,5 +1,14 @@
 import { useLocale } from '../i18n/LocaleContext'
 
+const marqueeSlides = [
+  '/images/otirac-1.jpg',
+  '/images/otirac-2.jpg',
+  '/images/otirac-3.jpg',
+  '/images/otirac-4.jpg',
+  '/images/otirac-5.jpg',
+  '/images/otirac-hero.jpg',
+]
+
 export default function Hero() {
   const { t } = useLocale()
   const h = t('hero')
@@ -8,7 +17,7 @@ export default function Hero() {
   return (
     <section id="top" className="hero" aria-labelledby="hero-heading">
       <div className="hero-bg" aria-hidden="true">
-        <img src="/images/hero-warehouse.jpg" alt="" loading="eager" fetchpriority="high" />
+        <img src="/images/hero-cleaning.jpg" alt="" loading="eager" fetchpriority="high" />
         <div className="hero-overlay" />
       </div>
 
@@ -41,6 +50,16 @@ export default function Hero() {
             <span className="hero-pill-text">{dp.text}</span>
           </a>
         )}
+
+        <div className="hero-marquee" aria-hidden="true">
+          <ul className="marquee-track">
+            {[...marqueeSlides, ...marqueeSlides].map((src, i) => (
+              <li key={i}>
+                <img src={src} alt="" loading="lazy" />
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <ul className="hero-marks">
           {h.marks.map((m, i) => (

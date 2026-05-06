@@ -23,21 +23,26 @@ const categoryJobs = [
   { src: path.join(SRC_HOME, 'krpa.jpg'),      out: 'wholesale-fabric.jpg',   w: 1100, fit: 'cover', ratio: 4/3 },
 ]
 
-// Doormats hero: large feature image, contain on neutral linen tone so the mat is fully visible
+// Doormats hero: large feature image filling the frame (cover), focal-aware crop
 const heroJobs = [
-  { src: path.join(SRC_HOME, 'otirac.png'),                        out: 'otirac-hero.jpg', w: 1600, fit: 'contain', ratio: 3/2, bg: '#EDE7DA' },
+  { src: path.join(SRC_HOME, 'otirac.png'),                        out: 'otirac-hero.jpg', w: 1600, fit: 'cover', ratio: 3/2 },
 ]
 
-// Doormats gallery: contain on warm-neutral background so each piece reads as a product shot, not a stock crop
+// Doormats gallery: cover crop so each tile shows the actual mat material, no cream padding
 const galleryJobs = [
-  { src: path.join(SRC_OTIRACI, 'otirac_glavni.jpeg'),       out: 'otirac-1.jpg', w: 1100, fit: 'contain', ratio: 4/3, bg: '#EDE7DA' },
-  { src: path.join(SRC_OTIRACI, 'otirac_2.jpeg'),            out: 'otirac-2.jpg', w: 1100, fit: 'contain', ratio: 4/3, bg: '#EDE7DA' },
-  { src: path.join(SRC_OTIRACI, 'otirac_3.jpeg'),            out: 'otirac-3.jpg', w: 1100, fit: 'contain', ratio: 4/3, bg: '#EDE7DA' },
-  { src: path.join(SRC_OTIRACI, 'otirac_4.jpeg'),            out: 'otirac-4.jpg', w: 1100, fit: 'contain', ratio: 4/3, bg: '#EDE7DA' },
-  { src: path.join(SRC_OTIRACI, 'IMG_20190502_084829.jpg'),  out: 'otirac-5.jpg', w: 1100, fit: 'contain', ratio: 4/3, bg: '#EDE7DA' },
+  { src: path.join(SRC_OTIRACI, 'otirac_glavni.jpeg'),       out: 'otirac-1.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  { src: path.join(SRC_OTIRACI, 'otirac_2.jpeg'),            out: 'otirac-2.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  { src: path.join(SRC_OTIRACI, 'otirac_3.jpeg'),            out: 'otirac-3.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  { src: path.join(SRC_OTIRACI, 'otirac_4.jpeg'),            out: 'otirac-4.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
+  { src: path.join(SRC_OTIRACI, 'IMG_20190502_084829.jpg'),  out: 'otirac-5.jpg', w: 1100, fit: 'cover', ratio: 4/3 },
 ]
 
-const allJobs = [...categoryJobs, ...heroJobs, ...galleryJobs]
+// New hero background: cleaning assortment shot (izlaganje3.jpg) - vibrant retail aisle
+const heroBgJobs = [
+  { src: path.resolve(ROOT, '..', 'slikezaweb', 'izlaganje3.jpg'), out: 'hero-cleaning.jpg', w: 1920, fit: 'cover', ratio: 16/9 },
+]
+
+const allJobs = [...categoryJobs, ...heroJobs, ...galleryJobs, ...heroBgJobs]
 
 for (const job of allJobs) {
   const { src, out, w, fit, ratio, bg } = job
