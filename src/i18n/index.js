@@ -37,9 +37,8 @@ export const messages = {
       ctaPrimary: 'Odaberi način kupnje',
       ctaSecondary: 'Više o nama',
       doormatPill: {
-        label: 'Vlastita proizvodnja',
-        text: 'Personalizirani otirači s vašim logotipom — izrada po narudžbi',
-        cta: 'Pogledajte ponudu',
+        label: 'Personalizirani otirači',
+        text: 'Otirači s Vašim logotipom za Vaš poslovni prostor.',
       },
       marks: [
         { n: '700+', l: 'artikala' },
@@ -173,16 +172,29 @@ export const messages = {
       channelsHead: 'Kanali prodaje',
       contactHead: 'Kontakt',
       locationHead: 'Lokacija',
-      legalHead: '',
+      legalHead: 'Pravne informacije',
       contactRole: 'Uprava',
       channels: {
         wholesale: 'Veleprodaja (B2B)',
         retail: 'Maloprodaja (B2C)',
       },
+      legal: {
+        privacy: 'Politika privatnosti',
+        cookies: 'Politika kolačića',
+        cookiePrefs: 'Postavke kolačića',
+      },
       address: ['Solinska 49, Dujmovača', '21000 Split, Hrvatska'],
       rights: 'Sva prava pridržana.',
       credit: ['Web dizajn i održavanje ', 'KLIKOTEKA d.o.o.'],
       mapTitle: 'Proxy d.o.o. lokacija na karti',
+    },
+
+    cookies: {
+      title: 'Kolačići na proxy1.hr',
+      text: 'Koristimo nužne kolačiće za rad stranice. Statistika i analitika koriste se isključivo uz Vaš pristanak. Više u',
+      linkLabel: 'Politici kolačića',
+      accept: 'Prihvati',
+      reject: 'Odbij',
     },
   },
 
@@ -217,9 +229,8 @@ export const messages = {
       ctaPrimary: 'Choose how to shop',
       ctaSecondary: 'About us',
       doormatPill: {
-        label: 'Made in-house',
-        text: 'Personalised doormats with your logo — custom production',
-        cta: 'See the offer',
+        label: 'Personalised doormats',
+        text: 'Doormats with your logo for your business premises.',
       },
       marks: [
         { n: '700+', l: 'products' },
@@ -353,16 +364,29 @@ export const messages = {
       channelsHead: 'Sales channels',
       contactHead: 'Contact',
       locationHead: 'Location',
-      legalHead: '',
+      legalHead: 'Legal',
       contactRole: 'Management',
       channels: {
         wholesale: 'Wholesale (B2B)',
         retail: 'Retail (B2C)',
       },
+      legal: {
+        privacy: 'Privacy policy',
+        cookies: 'Cookie policy',
+        cookiePrefs: 'Cookie settings',
+      },
       address: ['Solinska 49, Dujmovača', '21000 Split, Croatia'],
       rights: 'All rights reserved.',
       credit: ['Web design and maintenance ', 'KLIKOTEKA d.o.o.'],
       mapTitle: 'Proxy d.o.o. location on the map',
+    },
+
+    cookies: {
+      title: 'Cookies on proxy1.hr',
+      text: 'We use essential cookies to run the site. Analytics and statistics are used only with your consent. Read our',
+      linkLabel: 'Cookie policy',
+      accept: 'Accept',
+      reject: 'Reject',
     },
   },
 }

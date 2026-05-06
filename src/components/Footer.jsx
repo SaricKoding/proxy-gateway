@@ -37,6 +37,23 @@ export default function Footer() {
               <a href="mailto:info@proxy1.hr">info@proxy1.hr</a>
             </li>
           </ul>
+
+          <h3 className="footer-subhead">{f.legalHead}</h3>
+          <ul className="footer-legal-links">
+            <li><a href="/politika-privatnosti">{f.legal.privacy}</a></li>
+            <li><a href="/politika-kolacica">{f.legal.cookies}</a></li>
+            <li>
+              <button
+                type="button"
+                onClick={() => {
+                  try { window.localStorage.removeItem('proxy_cookie_consent') } catch {}
+                  window.dispatchEvent(new CustomEvent('proxy:open-cookie-banner'))
+                }}
+              >
+                {f.legal.cookiePrefs}
+              </button>
+            </li>
+          </ul>
         </div>
 
         <div className="footer-map">

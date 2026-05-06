@@ -16,7 +16,7 @@ export default function Hero() {
         <img
           className="hero-logo"
           src="/images/logo-gold-transparent.png"
-          alt="Proxy d.o.o. — Sve što dom treba"
+          alt="Proxy d.o.o. - Sve što dom treba"
           width="560"
           height="374"
           fetchpriority="high"
@@ -39,7 +39,6 @@ export default function Hero() {
           <a className="hero-pill" href="#otiraci" aria-label={`${dp.label}: ${dp.text}`}>
             <span className="hero-pill-tag">{dp.label}</span>
             <span className="hero-pill-text">{dp.text}</span>
-            <span className="hero-pill-cta" aria-hidden="true">{dp.cta} <span className="hero-pill-arrow">&rarr;</span></span>
           </a>
         )}
 

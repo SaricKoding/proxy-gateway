@@ -8,6 +8,7 @@ import Warehouse from './components/Warehouse'
 import Categories from './components/Categories'
 import Doormats from './components/Doormats'
 import Footer from './components/Footer'
+import CookieBanner from './components/CookieBanner'
 
 function AppInner() {
   const { t } = useLocale()
@@ -26,6 +27,7 @@ function AppInner() {
         <Warehouse />
       </main>
       <Footer />
+      <CookieBanner />
     </>
   )
 }

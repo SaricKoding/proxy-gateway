@@ -16,6 +16,7 @@
 import express from 'express'
 import compression from 'compression'
 import helmet from 'helmet'
+import rateLimit from 'express-rate-limit'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -25,33 +26,58 @@ const DIST = path.resolve(__dirname, '..', 'dist')
 const app = express()
 const PORT = process.env.PORT || 3000
 
-// Security headers — CSP kept permissive for self-hosted + Google Fonts.
+app.disable('x-powered-by')
+app.set('trust proxy', 1)
+
+// Security headers. Google Maps embed needs frameSrc; CSP is otherwise tight.
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
         baseUri: ["'self'"],
-        imgSrc: ["'self'", 'data:'],
+        imgSrc: ["'self'", 'data:', 'https:'],
         styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
         fontSrc: ["'self'", 'https://fonts.gstatic.com', 'data:'],
-        scriptSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
         connectSrc: ["'self'"],
+        frameSrc: ["'self'", 'https://www.google.com'],
         frameAncestors: ["'self'"],
         formAction: ["'self'"],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
       },
     },
     crossOriginEmbedderPolicy: false,
+    referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
   })
 )
 
 app.use(compression())
 
-app.disable('x-powered-by')
-app.set('trust proxy', 1)
+// Basic anti-abuse rate limit (per IP). Real DDoS protection should sit at the
+// edge (Cloudflare or similar); this only blunts trivial floods.
+const generalLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 200,
+  standardHeaders: true,
+  legacyHeaders: false,
+  skip: (req) => req.path === '/healthz',
+})
+app.use(generalLimiter)
 
 // Health check
 app.get('/healthz', (_req, res) => res.json({ ok: true, ts: Date.now() }))
+
+// Clean URLs for legal pages (HTML lives in /public/*.html, copied to /dist).
+app.get(['/politika-privatnosti', '/politika-privatnosti/'], (_req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=3600')
+  res.sendFile(path.join(DIST, 'politika-privatnosti.html'))
+})
+app.get(['/politika-kolacica', '/politika-kolacica/'], (_req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=3600')
+  res.sendFile(path.join(DIST, 'politika-kolacica.html'))
+})
 
 // Hashed assets (Vite puts them under /assets): cache aggressively
 app.use(
