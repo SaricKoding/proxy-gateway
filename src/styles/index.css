@@ -332,7 +332,7 @@ section { padding: var(--sp-9) 0; }
   isolation: isolate;
 }
 .hero-bg { position: absolute; inset: 0; z-index: -1; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 80%; }
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(11,30,58,.84) 0%, rgba(11,30,58,.92) 100%);
@@ -353,10 +353,12 @@ section { padding: var(--sp-9) 0; }
 }
 .hero-title {
   font-size: clamp(36px, 5.4vw, 64px);
-  line-height: 1.04;
+  line-height: 1.06;
   margin: 0 auto var(--sp-3);
   color: #fff;
-  text-wrap: balance;
+}
+.hero-title-line {
+  display: block;
 }
 .hero-sub {
   font-size: clamp(16px, 1.4vw, 19px);
@@ -984,7 +986,13 @@ section { padding: var(--sp-9) 0; }
   padding: var(--sp-8) var(--sp-5);
   align-items: flex-start;
 }
-.footer-brand img { height: 48px; width: auto; margin-bottom: var(--sp-4); display: block; }
+.footer-logo {
+  width: clamp(180px, 14vw, 220px);
+  height: auto;
+  margin: 0 0 var(--sp-4);
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
 .footer-tag {
   font-family: var(--font-display);
   font-size: 18px;
@@ -1189,7 +1197,37 @@ section { padding: var(--sp-9) 0; }
 
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr; }
+
+  /* Compact, centered mobile footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+    padding: var(--sp-7) var(--sp-5);
+    text-align: center;
+  }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; }
+  .footer-logo { width: clamp(160px, 50vw, 220px); margin: 0 0 var(--sp-3); }
+  .footer-tag { margin-bottom: var(--sp-3); }
+  .footer-address { margin-bottom: var(--sp-3); }
+  .footer-legal {
+    justify-content: center;
+    gap: var(--sp-5);
+    padding-top: var(--sp-3);
+  }
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-col h3, .footer-map h3 { margin-bottom: var(--sp-3); }
+  .footer-col ul { align-items: center; justify-items: center; }
+  .footer-contact li { text-align: center; grid-template-columns: 1fr; }
+  .footer-contact .contact-name,
+  .footer-contact .contact-role,
+  .footer-contact a { grid-column: 1; text-align: center; }
+  .footer-legal-links { justify-items: center; }
+  .footer-legal-links li { text-align: center; }
+  .footer-bar-inner { justify-content: center; text-align: center; }
 }
 
 @media (max-width: 500px) {

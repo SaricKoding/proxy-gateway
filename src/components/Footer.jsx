@@ -9,7 +9,13 @@ export default function Footer() {
     <footer className="site-footer" role="contentinfo">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <img src="/images/proxy-logo-final.png" alt="Proxy d.o.o." width="170" height="48" />
+          <img
+            src="/images/logo-gold-transparent.png"
+            alt="Proxy d.o.o."
+            width="200"
+            height="134"
+            className="footer-logo"
+          />
           <p className="footer-tag">{f.tag}</p>
           <address className="footer-address">
             <strong>Proxy d.o.o.</strong><br />

@@ -46,24 +46,30 @@ const allJobs = [...categoryJobs, ...heroJobs, ...galleryJobs, ...heroBgJobs]
 
 for (const job of allJobs) {
   const { src, out, w, fit, ratio, bg } = job
-  const target = path.join(OUT, out)
+  const targetJpg = path.join(OUT, out)
+  const targetWebp = path.join(OUT, out.replace(/\.jpg$/, '.webp'))
   try {
     const width = w
     const height = Math.round(w / ratio)
 
-    let pipeline = sharp(src).rotate()
-
-    if (fit === 'cover') {
-      pipeline = pipeline.resize(width, height, { fit: 'cover', position: 'attention' })
-    } else {
-      pipeline = pipeline
-        .resize(width, height, { fit: 'contain', background: bg || '#FFFFFF' })
-        .flatten({ background: bg || '#FFFFFF' })
+    const buildBase = () => {
+      let p = sharp(src).rotate()
+      if (fit === 'cover') {
+        p = p.resize(width, height, { fit: 'cover', position: 'attention' })
+      } else {
+        p = p
+          .resize(width, height, { fit: 'contain', background: bg || '#FFFFFF' })
+          .flatten({ background: bg || '#FFFFFF' })
+      }
+      return p
     }
 
-    await pipeline.jpeg({ quality: 80, progressive: true, mozjpeg: true }).toFile(target)
-    const stat = await fs.stat(target)
-    console.log(`OK  ${out}  ${(stat.size/1024).toFixed(0)} KB  (${width}x${height} ${fit})`)
+    await buildBase().jpeg({ quality: 80, progressive: true, mozjpeg: true }).toFile(targetJpg)
+    await buildBase().webp({ quality: 78, effort: 4 }).toFile(targetWebp)
+
+    const sJpg = await fs.stat(targetJpg)
+    const sWebp = await fs.stat(targetWebp)
+    console.log(`OK  ${out}  ${(sJpg.size/1024).toFixed(0)} KB jpg / ${(sWebp.size/1024).toFixed(0)} KB webp  (${width}x${height} ${fit})`)
   } catch (e) {
     console.log(`FAIL ${out}: ${e.message}`)
   }

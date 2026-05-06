@@ -1,4 +1,5 @@
 import { useLocale } from '../i18n/LocaleContext'
+import Picture from './Picture'
 
 const gallery = [
   '/images/otirac-1.jpg',
@@ -17,7 +18,7 @@ export default function Doormats() {
     <section id="otiraci" className="doormats" aria-labelledby="doormats-heading">
       <div className="container doormats-grid">
         <figure className="doormats-media">
-          <img
+          <Picture
             src="/images/otirac-hero.jpg"
             alt={d.imageAlt}
             loading="lazy"
@@ -48,7 +49,7 @@ export default function Doormats() {
         <ul className="doormats-gallery" aria-label={d.imageAlt}>
           {gallery.map((src, i) => (
             <li key={src}>
-              <img src={src} alt={alts[i] || d.imageAlt} loading="lazy" />
+              <Picture src={src} alt={alts[i] || d.imageAlt} loading="lazy" />
             </li>
           ))}
         </ul>

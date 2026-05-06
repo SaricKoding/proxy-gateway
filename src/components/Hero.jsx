@@ -1,4 +1,5 @@
 import { useLocale } from '../i18n/LocaleContext'
+import Picture from './Picture'
 
 const marqueeSlides = [
   '/images/otirac-1.jpg',
@@ -17,7 +18,10 @@ export default function Hero() {
   return (
     <section id="top" className="hero" aria-labelledby="hero-heading">
       <div className="hero-bg" aria-hidden="true">
-        <img src="/images/hero-cleaning.jpg" alt="" loading="eager" fetchpriority="high" />
+        <picture>
+          <source srcSet="/images/hero-cleaning.webp" type="image/webp" />
+          <img src="/images/hero-cleaning.jpg" alt="" loading="eager" fetchPriority="high" decoding="async" />
+        </picture>
         <div className="hero-overlay" />
       </div>
 
@@ -32,10 +36,12 @@ export default function Hero() {
         />
 
         <h1 id="hero-heading" className="hero-title">
-          {h.title[0]}
-          <span className="gold">{h.title[1]}</span>
-          {h.title[2]}
-          <span className="gold">{h.title[3]}</span>
+          <span className="hero-title-line">
+            {h.title[0]}
+            <span className="gold">{h.title[1]}</span>
+            {h.title[2]}
+          </span>
+          <span className="gold hero-title-line">{h.title[3]}</span>
         </h1>
         <p className="hero-sub">{h.sub}</p>
 
@@ -55,7 +61,7 @@ export default function Hero() {
           <ul className="marquee-track">
             {[...marqueeSlides, ...marqueeSlides].map((src, i) => (
               <li key={i}>
-                <img src={src} alt="" loading="lazy" />
+                <Picture src={src} alt="" loading="lazy" />
               </li>
             ))}
           </ul>

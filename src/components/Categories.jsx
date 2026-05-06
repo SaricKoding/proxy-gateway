@@ -1,4 +1,5 @@
 import { useLocale } from '../i18n/LocaleContext'
+import Picture from './Picture'
 
 const images = [
   '/images/ciscenje.jpg',
@@ -29,7 +30,7 @@ export default function Categories() {
             <li key={i} className="cat-card">
               <a href="https://veleprodaja.proxy1.hr" rel="noopener" aria-label={c.linkLabel(item.name)}>
                 <div className="cat-media">
-                  <img src={images[i]} alt={item.name} loading="lazy" />
+                  <Picture src={images[i]} alt={item.name} loading="lazy" />
                 </div>
                 <div className="cat-body">
                   <h3 className="cat-name">{item.name}</h3>
