@@ -28,7 +28,7 @@ export default function Categories() {
         <ul className="cat-grid">
           {c.list.map((item, i) => (
             <li key={i} className="cat-card">
-              <a href="https://veleprodaja.proxy1.hr" rel="noopener" aria-label={c.linkLabel(item.name)}>
+              <a href="#izbor" aria-label={c.linkLabel(item.name)}>
                 <div className="cat-media">
                   <Picture src={images[i]} alt={item.name} loading="lazy" />
                 </div>

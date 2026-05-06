@@ -19,7 +19,16 @@ export default function Doormats() {
 
   return (
     <section id="otiraci" className="doormats" aria-labelledby="doormats-heading">
-      <div className="container doormats-grid">
+      <div className="container doormats-stack">
+        <header className="section-head doormats-head">
+          <p className="eyebrow">{d.eyebrow}</p>
+          <h2 id="doormats-heading" className="section-title">
+            {d.title[0]}
+            <span className="gold">{d.title[1]}</span>
+          </h2>
+          <p className="lead">{d.lead}</p>
+        </header>
+
         <figure className="doormats-media">
           <Picture
             src="/images/otirac-hero.jpg"
@@ -31,12 +40,6 @@ export default function Doormats() {
         </figure>
 
         <div className="doormats-copy">
-          <p className="eyebrow">{d.eyebrow}</p>
-          <h2 id="doormats-heading" className="section-title">
-            {d.title[0]}
-            <span className="gold">{d.title[1]}</span>
-          </h2>
-          <p className="lead">{d.lead}</p>
           <ul className="doormats-list">
             {d.bullets.map((b, i) => <li key={i}>{b}</li>)}
           </ul>
