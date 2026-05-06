@@ -204,12 +204,12 @@ export const messages = {
 
     faq: {
       eyebrow: 'Česta pitanja',
-      title: ['Veleprodaja kućanstva ', 'i ugostiteljstva u Hrvatskoj'],
+      title: ['Veleprodaja asortimana ', 'za kućanstvo u Hrvatskoj'],
       sub: '',
       items: [
         {
           q: 'Kako naručiti personalizirani otirač s logotipom?',
-          a: 'Pošaljite upit na info@proxy1.hr s logotipom (idealno vektorska datoteka SVG ili PDF), željenom veličinom otirača i okvirnim brojem komada. Pripremamo prijedlog dizajna, potvrđujete izgled i kreće izrada. Vrijeme isporuke ovisi o količini i složenosti dizajna.',
+          a: 'Najbrži način je direktno kroz naš veleprodajni ili maloprodajni webshop. Uploadate svoj dizajn ili logotip, odaberete tip otirača i željenu količinu, a naši radnici izrađuju otirač prema vašim željama i dizajnu. Alternativno, pošaljite upit na info@proxy1.hr s logotipom (idealno vektorska datoteka SVG ili PDF), željenom veličinom otirača i okvirnim brojem komada. Pripremamo prijedlog dizajna, potvrđujete izgled i kreće izrada.',
         },
         {
           q: 'Koje su veličine personaliziranih otirača dostupne?',
@@ -433,12 +433,12 @@ export const messages = {
 
     faq: {
       eyebrow: 'FAQ',
-      title: ['Wholesale household ', 'and hospitality supplies in Croatia'],
+      title: ['Wholesale household goods ', 'in Croatia'],
       sub: '',
       items: [
         {
           q: 'How do I order a custom doormat with a logo?',
-          a: 'Email info@proxy1.hr with your logo (vector SVG or PDF preferred), desired doormat size and approximate quantity. We prepare a design proposal, you approve the look and production starts. Lead time depends on quantity and design complexity.',
+          a: 'The fastest way is directly through our wholesale or retail webshop. Upload your design or logo, pick the doormat type and quantity, and our team produces the doormat to your specifications. Alternatively, email info@proxy1.hr with your logo (vector SVG or PDF preferred), desired doormat size and approximate quantity. We prepare a design proposal, you approve the look and production starts.',
         },
         {
           q: 'What sizes of custom doormats are available?',

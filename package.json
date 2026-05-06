@@ -1,7 +1,7 @@
 {
   "name": "proxy-gateway",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "PROXY d.o.o. — Gateway landing page (proxy1.hr) — React + Vite frontend, Node/Express server",
   "type": "module",
   "scripts": {
