@@ -11,7 +11,8 @@ export default function Footer() {
         <div className="footer-brand">
           <img
             src="/images/logo-gold-transparent.png"
-            alt="Proxy d.o.o."
+            alt={f.logoAlt || 'Proxy d.o.o.'}
+            title={f.logoTitle || f.logoAlt || 'Proxy d.o.o.'}
             width="200"
             height="134"
             className="footer-logo"

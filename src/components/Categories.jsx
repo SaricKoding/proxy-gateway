@@ -26,18 +26,22 @@ export default function Categories() {
         </header>
 
         <ul className="cat-grid">
-          {c.list.map((item, i) => (
-            <li key={i} className="cat-card">
-              <a href="#izbor" aria-label={c.linkLabel(item.name)}>
-                <div className="cat-media">
-                  <Picture src={images[i]} alt={item.name} loading="lazy" width="600" height="450" />
-                </div>
-                <div className="cat-body">
-                  <h3 className="cat-name">{item.name}</h3>
-                </div>
-              </a>
-            </li>
-          ))}
+          {c.list.map((item, i) => {
+            const altText = (c.alts && c.alts[i]) || item.name
+            const titleText = (c.titles && c.titles[i]) || item.name
+            return (
+              <li key={i} className="cat-card">
+                <a href="#izbor" aria-label={c.linkLabel(item.name)}>
+                  <div className="cat-media">
+                    <Picture src={images[i]} alt={altText} title={titleText} loading="lazy" width="600" height="450" />
+                  </div>
+                  <div className="cat-body">
+                    <h3 className="cat-name">{item.name}</h3>
+                  </div>
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </section>

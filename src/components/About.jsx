@@ -17,7 +17,14 @@ export default function About() {
         </header>
 
         <figure className="about-media">
-          <img src="/images/warehouse-wide.jpg" alt={a.imageAlt} loading="lazy" width="1200" height="800" />
+          <img
+            src="/images/warehouse-wide.jpg"
+            alt={a.imageAlt}
+            title={a.imageTitle || a.imageAlt}
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
           <figcaption>{a.caption}</figcaption>
         </figure>
 

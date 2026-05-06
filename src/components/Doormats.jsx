@@ -16,6 +16,7 @@ export default function Doormats() {
   const { t } = useLocale()
   const d = t('doormats')
   const alts = d.galleryAlts || []
+  const titles = d.galleryTitles || []
 
   return (
     <section id="otiraci" className="doormats" aria-labelledby="doormats-heading">
@@ -33,6 +34,7 @@ export default function Doormats() {
           <Picture
             src="/images/otirac-hero.jpg"
             alt={d.imageAlt}
+            title={d.imageTitle || d.imageAlt}
             loading="lazy"
             width="1600"
             height="1067"
@@ -55,7 +57,14 @@ export default function Doormats() {
         <ul className="doormats-gallery" aria-label={d.imageAlt}>
           {gallery.map((src, i) => (
             <li key={src}>
-              <Picture src={src} alt={alts[i] || d.imageAlt} loading="lazy" width="800" height="600" />
+              <Picture
+                src={src}
+                alt={alts[i] || d.imageAlt}
+                title={titles[i] || alts[i] || d.imageTitle || d.imageAlt}
+                loading="lazy"
+                width="800"
+                height="600"
+              />
             </li>
           ))}
         </ul>

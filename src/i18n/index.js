@@ -46,6 +46,17 @@ export const messages = {
         { n: '200+', l: 'partnera u HR' },
         { n: 'A+', l: 'bonitet' },
       ],
+      logoAlt: 'Proxy d.o.o. Split — Sve što dom treba',
+      logoTitle: 'Proxy d.o.o. Split — veleprodaja i maloprodaja kućanstva',
+      bgAlt: 'Asortiman Proxy proizvoda za čišćenje i domaćinstvo',
+      marqueeAlts: [
+        'Personalizirani otirač PRISTAV s logotipom',
+        'Personalizirani otirač KINGTRADE u poslovnom prostoru',
+        'Personalizirani otirač KINGTRADE — prikaz boja',
+        'Personalizirani otirač HOTEL MORE 5*',
+        'Personalizirani otirač HOTEL AS na ulazu',
+        'Personalizirani otirač s logotipom — Proxy izrada',
+      ],
     },
 
     gateway: {
@@ -59,6 +70,8 @@ export const messages = {
           title: 'Veleprodaja',
           desc: 'Za tvrtke, ugostiteljske objekte i ustanove s ugovorom.',
           cta: 'Otvorite veleprodaju',
+          imageAlt: 'Proxy veleprodaja — izlaganje asortimana za poslovne partnere',
+          imageTitle: 'Proxy Veleprodaja (B2B) — Split, Hrvatska',
         },
         maloprodaja: {
           kicker: 'B2C',
@@ -66,6 +79,8 @@ export const messages = {
           title: 'Maloprodaja',
           desc: 'Otvoreno svima. Bez ugovora i registracije.',
           cta: 'Otvorite maloprodaju',
+          imageAlt: 'Proxy maloprodaja — prodajni prostor s asortimanom za domaćinstvo',
+          imageTitle: 'Proxy Maloprodaja (B2C) — Split, Hrvatska',
         },
       },
       notice: {
@@ -89,7 +104,8 @@ export const messages = {
         { t: 'Bonitet', v: 'A+' },
       ],
       caption: 'Skladište u Splitu',
-      imageAlt: 'Proxy skladište u Splitu',
+      imageAlt: 'Proxy skladište u Splitu — police s asortimanom za domaćinstvo',
+      imageTitle: 'Proxy skladište u Splitu — veleprodaja kućanstva',
     },
 
     why: {
@@ -126,6 +142,16 @@ export const messages = {
         'Police s asortimanom',
         'Skladišne police, detalj',
       ],
+      titles: [
+        'Skladište Proxy d.o.o. Split — glavna hala',
+        'Regalni sustav u skladištu Proxy Split',
+        'Organizirane zone skladištenja — Proxy veleprodaja',
+        'Spremljena roba po kategorijama — Proxy skladište',
+        'Priprema narudžbi za otpremu — Proxy d.o.o.',
+        'Radni prostor skladišta Proxy u Splitu',
+        'Police s asortimanom — Proxy skladište Split',
+        'Detalj skladišnih polica — Proxy d.o.o. Split',
+      ],
     },
 
     categories: {
@@ -144,6 +170,26 @@ export const messages = {
         { name: 'Spremanje ormara',    count: 20 },
         { name: 'Tekstil domaćinstvo', count: null },
       ],
+      alts: [
+        'Sredstva i oprema za čišćenje — Proxy veleprodaja',
+        'Drvena galanterija za domaćinstvo — Proxy asortiman',
+        'Inox galanterija i posuđe — Proxy veleprodaja',
+        'Opremanje ugostiteljskih i poslovnih prostora — Proxy',
+        'Personalizirani otirači s logotipom — Proxy izrada',
+        'Posuđe za domaćinstvo i ugostiteljstvo — Proxy',
+        'Proizvodi za spremanje ormara — Proxy asortiman',
+        'Tekstil za domaćinstvo — Proxy veleprodaja',
+      ],
+      titles: [
+        'Čišćenje — Proxy veleprodaja Split',
+        'Drvena galanterija — Proxy veleprodaja Split',
+        'Inox galanterija — Proxy veleprodaja Split',
+        'Opremanje prostora — Proxy veleprodaja Split',
+        'Personalizirani otirači — Proxy izrada s logotipom',
+        'Posuđe — Proxy veleprodaja Split',
+        'Spremanje ormara — Proxy asortiman',
+        'Tekstil za domaćinstvo — Proxy veleprodaja',
+      ],
     },
 
     doormats: {
@@ -159,7 +205,8 @@ export const messages = {
       ],
       ctaWholesale: 'Upit za veleprodaju',
       ctaRetail: 'Maloprodajna ponuda',
-      imageAlt: 'Personalizirani otirač s logotipom tvrtke za Proxy d.o.o. Split',
+      imageAlt: 'Personalizirani otirač s logotipom tvrtke — Proxy d.o.o. Split',
+      imageTitle: 'Personalizirani otirač s logotipom — izrada Proxy d.o.o. Split',
       galleryAlts: [
         'Personalizirani otirač PRISTAV u dvije varijante boja',
         'Personalizirani otirač KINGTRADE postavljen na ulazu',
@@ -170,10 +217,22 @@ export const messages = {
         'Veliki otirač u poslovnom prostoru',
         'Asortiman otirača u Proxy maloprodajnom prostoru',
       ],
+      galleryTitles: [
+        'Otirač PRISTAV — Proxy izrada s logotipom',
+        'Otirač KINGTRADE — postavljen na ulazu',
+        'Otirač KINGTRADE — prikaz dostupnih boja',
+        'Otirač HOTEL MORE 5* — Proxy izrada',
+        'Otirač HOTEL AS — Proxy izrada s logotipom',
+        'Otirač BAZITA — Proxy izrada za restoran',
+        'Veliki otirač u poslovnom prostoru — Proxy',
+        'Otirači u maloprodaji Proxy d.o.o. Split',
+      ],
     },
 
     footer: {
       tag: 'Sve što dom treba, od 2016.',
+      logoAlt: 'Proxy d.o.o. Split — logotip',
+      logoTitle: 'Proxy d.o.o. — veleprodaja i maloprodaja kućanstva, Split',
       channelsHead: 'Kanali prodaje',
       contactHead: 'Kontakt',
       locationHead: 'Lokacija',
@@ -275,6 +334,17 @@ export const messages = {
         { n: '200+', l: 'partners in Croatia' },
         { n: 'A+', l: 'credit rating' },
       ],
+      logoAlt: 'Proxy d.o.o. Split — Everything a home needs',
+      logoTitle: 'Proxy d.o.o. Split — wholesale and retail household goods',
+      bgAlt: 'Proxy product range — cleaning and household goods',
+      marqueeAlts: [
+        'Custom doormat PRISTAV with company logo',
+        'Custom doormat KINGTRADE in commercial space',
+        'Custom doormat KINGTRADE — colour swatches',
+        'Custom doormat HOTEL MORE 5*',
+        'Custom doormat HOTEL AS at venue entrance',
+        'Custom doormat with company logo — Proxy production',
+      ],
     },
 
     gateway: {
@@ -288,6 +358,8 @@ export const messages = {
           title: 'Wholesale',
           desc: 'For companies, hospitality and institutions with a contract.',
           cta: 'Open wholesale',
+          imageAlt: 'Proxy wholesale — product display for business partners',
+          imageTitle: 'Proxy Wholesale (B2B) — Split, Croatia',
         },
         maloprodaja: {
           kicker: 'B2C',
@@ -295,6 +367,8 @@ export const messages = {
           title: 'Retail',
           desc: 'Open to all. No contract, no registration.',
           cta: 'Open retail',
+          imageAlt: 'Proxy retail store — household goods showroom',
+          imageTitle: 'Proxy Retail (B2C) — Split, Croatia',
         },
       },
       notice: {
@@ -318,7 +392,8 @@ export const messages = {
         { t: 'Credit rating', v: 'A+' },
       ],
       caption: 'Warehouse in Split',
-      imageAlt: 'Proxy warehouse in Split',
+      imageAlt: 'Proxy warehouse in Split — shelves with household goods',
+      imageTitle: 'Proxy warehouse in Split — wholesale household goods',
     },
 
     why: {
@@ -355,6 +430,16 @@ export const messages = {
         'Shelves with products',
         'Warehouse shelving, detail',
       ],
+      titles: [
+        'Proxy warehouse Split — main hall',
+        'Shelving system — Proxy warehouse Split',
+        'Organised storage zones — Proxy wholesale',
+        'Goods stored by category — Proxy warehouse',
+        'Preparing orders for shipping — Proxy d.o.o.',
+        'Warehouse working area — Proxy Split',
+        'Shelves with products — Proxy warehouse',
+        'Warehouse shelving detail — Proxy d.o.o. Split',
+      ],
     },
 
     categories: {
@@ -373,6 +458,26 @@ export const messages = {
         { name: 'Wardrobe storage',      count: 20 },
         { name: 'Home textiles',         count: null },
       ],
+      alts: [
+        'Cleaning supplies — Proxy wholesale',
+        'Wooden household accessories — Proxy range',
+        'Stainless steel and tableware — Proxy wholesale',
+        'Equipment for hospitality and offices — Proxy',
+        'Personalised doormats with logo — Proxy production',
+        'Tableware for home and hospitality — Proxy',
+        'Wardrobe storage products — Proxy range',
+        'Home textiles — Proxy wholesale',
+      ],
+      titles: [
+        'Cleaning — Proxy wholesale Split',
+        'Wooden accessories — Proxy wholesale Split',
+        'Stainless steel — Proxy wholesale Split',
+        'Equipment — Proxy wholesale Split',
+        'Personalised doormats — Proxy custom production',
+        'Tableware — Proxy wholesale Split',
+        'Wardrobe storage — Proxy range',
+        'Home textiles — Proxy wholesale',
+      ],
     },
 
     doormats: {
@@ -388,7 +493,8 @@ export const messages = {
       ],
       ctaWholesale: 'Wholesale inquiry',
       ctaRetail: 'Retail offer',
-      imageAlt: 'Personalised doormat with company logo by Proxy d.o.o. Split',
+      imageAlt: 'Personalised doormat with company logo — Proxy d.o.o. Split',
+      imageTitle: 'Personalised doormat with logo — made by Proxy d.o.o. Split',
       galleryAlts: [
         'Custom doormat PRISTAV in two colour variants',
         'Custom doormat KINGTRADE installed at entrance',
@@ -399,10 +505,22 @@ export const messages = {
         'Large entrance mat in commercial space',
         'Doormat assortment in Proxy retail showroom',
       ],
+      galleryTitles: [
+        'Doormat PRISTAV — Proxy custom logo production',
+        'Doormat KINGTRADE — installed at entrance',
+        'Doormat KINGTRADE — colour swatches',
+        'Doormat HOTEL MORE 5* — Proxy production',
+        'Doormat HOTEL AS — Proxy custom logo',
+        'Doormat BAZITA — Proxy production for restaurant',
+        'Large entrance mat in commercial space — Proxy',
+        'Doormats at Proxy retail showroom — Split',
+      ],
     },
 
     footer: {
       tag: 'Everything a home needs, since 2016.',
+      logoAlt: 'Proxy d.o.o. Split — logo',
+      logoTitle: 'Proxy d.o.o. — wholesale and retail household goods, Split',
       channelsHead: 'Sales channels',
       contactHead: 'Contact',
       locationHead: 'Location',

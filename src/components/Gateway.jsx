@@ -30,7 +30,12 @@ export default function Gateway() {
                 aria-label={`${c.title}, ${c.cta}`}
               >
                 <div className="gw-media">
-                  <img src={s.image} alt="" loading="lazy" />
+                  <img
+                    src={s.image}
+                    alt={c.imageAlt || c.title}
+                    title={c.imageTitle || c.imageAlt || c.title}
+                    loading="lazy"
+                  />
                   <div className="gw-shade" />
                   <span className={`gw-tag gw-tag-${s.accent}`}>{c.tag}</span>
                 </div>

@@ -16,6 +16,7 @@ export default function Warehouse() {
   const { t } = useLocale()
   const w = t('warehouse')
   const alts = w.images || []
+  const titles = w.titles || []
 
   const [activeIndex, setActiveIndex] = useState(null)
   const isOpen = activeIndex !== null
@@ -49,6 +50,7 @@ export default function Warehouse() {
 
   const activeSrc = isOpen ? sources[activeIndex] : null
   const activeAlt = isOpen ? alts[activeIndex] : ''
+  const activeTitle = isOpen ? (titles[activeIndex] || alts[activeIndex]) : ''
 
   return (
     <section id="skladiste" className="warehouse" aria-labelledby="warehouse-heading">
@@ -63,7 +65,7 @@ export default function Warehouse() {
           {sources.map((src, i) => (
             <li key={i}>
               <button type="button" className="thumb" onClick={() => open(i)} aria-label={`${w.openImage}: ${alts[i] || ''}`}>
-                <img src={src} alt={alts[i] || ''} loading="lazy" width="800" height="600" decoding="async" />
+                <img src={src} alt={alts[i] || ''} title={titles[i] || alts[i] || undefined} loading="lazy" width="800" height="600" decoding="async" />
                 <span className="thumb-icon" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                     <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -82,7 +84,7 @@ export default function Warehouse() {
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
           <figure className="lb-figure" onClick={(e) => e.stopPropagation()}>
-            <img src={activeSrc} alt={activeAlt} />
+            <img src={activeSrc} alt={activeAlt} title={activeTitle || undefined} />
             <figcaption>
               {activeAlt} <span className="lb-count">{activeIndex + 1} / {sources.length}</span>
             </figcaption>

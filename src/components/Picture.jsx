@@ -2,14 +2,16 @@
  * Renders a <picture> with a WebP source and a JPG fallback.
  * Pass the .jpg path; the WebP twin is assumed to share the same stem.
  */
-export default function Picture({ src, alt = '', className, width, height, loading = 'lazy', fetchpriority, sizes }) {
+export default function Picture({ src, alt = '', title, className, width, height, loading = 'lazy', fetchpriority, sizes }) {
   const webp = src.replace(/\.jpg(\?.*)?$/, '.webp$1')
+  const resolvedTitle = title || alt || undefined
   return (
     <picture>
       <source srcSet={webp} type="image/webp" sizes={sizes} />
       <img
         src={src}
         alt={alt}
+        title={resolvedTitle}
         className={className}
         width={width}
         height={height}

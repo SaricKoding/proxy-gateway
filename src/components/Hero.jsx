@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="hero-bg" aria-hidden="true">
         <picture>
           <source srcSet="/images/hero-cleaning.webp" type="image/webp" />
-          <img src="/images/hero-cleaning.jpg" alt="" loading="eager" fetchPriority="high" decoding="async" />
+          <img src="/images/hero-cleaning.jpg" alt={h.bgAlt || ''} title={h.bgAlt || undefined} loading="eager" fetchPriority="high" decoding="async" />
         </picture>
         <div className="hero-overlay" />
       </div>
@@ -29,7 +29,8 @@ export default function Hero() {
         <img
           className="hero-logo"
           src="/images/logo-gold-transparent.png"
-          alt="Proxy d.o.o. - Sve što dom treba"
+          alt={h.logoAlt || 'Proxy d.o.o. - Sve što dom treba'}
+          title={h.logoTitle || h.logoAlt || 'Proxy d.o.o.'}
           width="560"
           height="374"
           fetchpriority="high"
@@ -59,11 +60,15 @@ export default function Hero() {
 
         <div className="hero-marquee" aria-hidden="true">
           <ul className="marquee-track">
-            {[...marqueeSlides, ...marqueeSlides].map((src, i) => (
-              <li key={i}>
-                <Picture src={src} alt="" loading="lazy" />
-              </li>
-            ))}
+            {[...marqueeSlides, ...marqueeSlides].map((src, i) => {
+              const alts = h.marqueeAlts || []
+              const altText = alts[i % marqueeSlides.length] || ''
+              return (
+                <li key={i}>
+                  <Picture src={src} alt={altText} title={altText || undefined} loading="lazy" />
+                </li>
+              )
+            })}
           </ul>
         </div>
 
