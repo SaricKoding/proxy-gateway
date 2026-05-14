@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="hr">
 <head>
+<!-- Cookie consent + Google Analytics (Consent Mode v2). See /consent.js. -->
+<script src="/consent.js"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Politika kolačića | Proxy d.o.o.</title>
@@ -150,11 +152,41 @@
     </tbody>
   </table>
 
-  <h3 style="font-family:'Inter';font-weight:600;font-size:17px;margin:20px 0 6px">2.3. Analitički i marketinški kolačići</h3>
+  <h3 style="font-family:'Inter';font-weight:600;font-size:17px;margin:20px 0 6px">2.3. Analitički kolačići (uz pristanak)</h3>
   <p>
-    Trenutno <strong>ne koristimo</strong> kolačiće za analitiku, oglašavanje ili
-    praćenje korisnika. Ako budu uvedeni u budućnosti, postavit ćemo ih isključivo
-    nakon Vašeg pristanka.
+    Za razumijevanje načina korištenja stranice koristimo <strong>Google Analytics 4</strong>.
+    Ovi kolačići postavljaju se <strong>isključivo</strong> ako kliknete "Prihvati" na
+    traci za kolačiće. Ako odbijete, Google Analytics ne sprema kolačiće niti šalje
+    podatke koji vas identificiraju.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Naziv</th><th>Pružatelj</th><th>Svrha</th><th>Trajanje</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>_ga</code></td>
+        <td>Google Ireland Limited</td>
+        <td>Razlikovanje jedinstvenih posjetitelja stranice.</td>
+        <td>24 mjeseca</td>
+      </tr>
+      <tr>
+        <td><code>_ga_Q8GQ6GBK77</code></td>
+        <td>Google Ireland Limited</td>
+        <td>Pohrana stanja sesije u Google Analyticsu 4.</td>
+        <td>24 mjeseca</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Koristimo Google Consent Mode v2 — do trenutka Vašeg pristanka Google ne postavlja
+    kolačiće i ne prima identifikacijske podatke. IP adrese su anonimizirane.
+  </p>
+
+  <h3 style="font-family:'Inter';font-weight:600;font-size:17px;margin:20px 0 6px">2.4. Marketinški kolačići</h3>
+  <p>
+    Trenutno <strong>ne koristimo</strong> marketinške i oglašivačke kolačiće.
+    Ako budu uvedeni u budućnosti, postavit ćemo ih isključivo nakon Vašeg pristanka.
   </p>
 
   <h2>3. Upravljanje pristankom</h2>
@@ -163,7 +195,7 @@
     prihvatiti kolačiće. Vaš odabir možete promijeniti u svako doba.
   </p>
   <div class="actions">
-    <button type="button" class="btn btn-blue" onclick="resetConsent()">Otvori postavke kolačića</button>
+    <button type="button" class="btn btn-blue" onclick="window.proxyOpenConsent && window.proxyOpenConsent()">Otvori postavke kolačića</button>
     <a class="btn btn-ghost" href="/">Natrag na početnu</a>
   </div>
   <p>
@@ -188,13 +220,6 @@
     &copy; 2026 Proxy d.o.o. &middot; <a href="/">Početna</a> &middot; <a href="/politika-privatnosti">Politika privatnosti</a>
   </div>
 </main>
-
-<script>
-  function resetConsent() {
-    try { localStorage.removeItem('proxy_cookie_consent'); } catch (e) {}
-    location.href = '/';
-  }
-</script>
 
 </body>
 </html>

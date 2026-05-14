@@ -9,7 +9,6 @@ import Categories from './components/Categories'
 import Doormats from './components/Doormats'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
-import CookieBanner from './components/CookieBanner'
 
 function AppInner() {
   const { t } = useLocale()
@@ -29,7 +28,7 @@ function AppInner() {
         <FAQ />
       </main>
       <Footer />
-      <CookieBanner />
+      {/* Cookie banner is rendered globally by /public/consent.js (works on static pages too) */}
     </>
   )
 }
