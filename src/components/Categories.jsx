@@ -12,6 +12,18 @@ const images = [
   '/images/wholesale-fabric.jpg',
 ]
 
+// SEO stranice kategorija (isti redoslijed kao c.list u i18n)
+const links = [
+  '/veleprodaja-sredstava-za-ciscenje/',
+  '/veleprodaja-drvene-galanterije/',
+  '/veleprodaja-inox-galanterije/',
+  '/veleprodaja-opremanja/',
+  '/veleprodaja-otiraca/',
+  '/veleprodaja-posuda/',
+  '/veleprodaja-spremanja-ormara/',
+  '/veleprodaja-tekstila-za-domacinstvo/',
+]
+
 export default function Categories() {
   const { t } = useLocale()
   const c = t('categories')
@@ -31,7 +43,7 @@ export default function Categories() {
             const titleText = (c.titles && c.titles[i]) || item.name
             return (
               <li key={i} className="cat-card">
-                <a href="#izbor" aria-label={c.linkLabel(item.name)}>
+                <a href={links[i] || '#izbor'} aria-label={c.linkLabel(item.name)}>
                   <div className="cat-media">
                     <Picture src={images[i]} alt={altText} title={titleText} loading="lazy" width="600" height="450" />
                   </div>

@@ -57,3 +57,21 @@ Maloprodajni kanal otvoren je svima. Pojedinačna kupovina bez ugovora i bez reg
 
 - [Sitemap](https://proxy1.hr/sitemap.xml)
 - [Robots](https://proxy1.hr/robots.txt)
+
+## Veleprodajni program (stranice)
+
+- Postanite partner: https://proxy1.hr/postanite-partner/
+- Sredstva i oprema za čišćenje: https://proxy1.hr/veleprodaja-sredstava-za-ciscenje/
+- Posuđe i kuhinjski program: https://proxy1.hr/veleprodaja-posuda/
+- Inox galanterija: https://proxy1.hr/veleprodaja-inox-galanterije/
+- Drvena galanterija: https://proxy1.hr/veleprodaja-drvene-galanterije/
+- Tekstil za domaćinstvo: https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/
+- Otirači (standardni i personalizirani): https://proxy1.hr/veleprodaja-otiraca/
+- Spremanje ormara: https://proxy1.hr/veleprodaja-spremanja-ormara/
+- Oprema za dom: https://proxy1.hr/veleprodaja-opremanja/
+
+## Vodiči za trgovce
+
+- Kako otvoriti trgovinu kućanskim potrepštinama: https://proxy1.hr/vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama/
+- Kako odabrati veleprodajnog dobavljača: https://proxy1.hr/vodic-kako-odabrati-veleprodajnog-dobavljaca/
+- Marže u maloprodaji kućanstva: https://proxy1.hr/vodic-marze-u-maloprodaji-kucanstva/

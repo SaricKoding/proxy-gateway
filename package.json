@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/build-en-index.mjs",
+    "build": "vite build && node scripts/build-en-index.mjs && node scripts/build-seo-pages.mjs",
     "preview": "vite preview",
     "start": "node server/index.js",
     "serve": "npm run build && npm start",

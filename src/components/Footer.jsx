@@ -36,6 +36,14 @@ export default function Footer() {
             <li><a href="https://maloprodaja.proxy1.hr" rel="noopener">{f.channels.retail}</a></li>
           </ul>
 
+          <h3 className="footer-subhead">{f.tradeHead || 'Za trgovce'}</h3>
+          <ul>
+            <li><a href="/postanite-partner/">{f.trade?.partner || 'Postanite partner'}</a></li>
+            <li><a href="/vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama/">{f.trade?.guide1 || 'Kako otvoriti trgovinu'}</a></li>
+            <li><a href="/vodic-kako-odabrati-veleprodajnog-dobavljaca/">{f.trade?.guide2 || 'Kako odabrati dobavljača'}</a></li>
+            <li><a href="/vodic-marze-u-maloprodaji-kucanstva/">{f.trade?.guide3 || 'Marže u maloprodaji'}</a></li>
+          </ul>
+
           <h3 className="footer-subhead">{f.contactHead}</h3>
           <ul className="footer-contact">
             <li>
