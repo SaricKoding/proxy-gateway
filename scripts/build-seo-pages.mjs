@@ -49,8 +49,12 @@ const CSS = `
   th, td { border:1px solid var(--ink-200); padding:9px 12px; text-align:left; }
   th { background:var(--ink-100); font-weight:600; color:var(--blue-900); }
   .products { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; margin:16px 0; padding:0; list-style:none; }
-  .products li { background:#fff; border:1px solid var(--ink-200); border-radius:10px; padding:11px 14px; font-size:14.5px; margin:0; }
-  .products li::before { content:"✦"; color:var(--gold-500); font-size:10px; margin-right:8px; }
+  .products li { display:flex; align-items:baseline; gap:9px; text-align:left; background:#fff; border:1px solid var(--ink-200); border-radius:10px; padding:11px 14px; font-size:14.5px; margin:0; }
+  .products li::before { content:"✦"; color:var(--gold-500); font-size:10px; flex:none; }
+  .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:4px 0 28px; }
+  .gallery figure { margin:0; background:#fff; border:1px solid var(--ink-200); border-radius:12px; overflow:hidden; }
+  .gallery img { width:100%; height:auto; display:block; aspect-ratio:4/3; object-fit:cover; }
+  .gallery figcaption { font-size:12.5px; line-height:1.4; padding:8px 11px; color:var(--ink-500); border-top:1px solid var(--ink-100); }
   .note { font-size:13.5px; color:var(--ink-500); }
   .cta { background:var(--blue-900); border-radius:16px; padding:28px 30px; margin:42px 0; color:#fff; }
   .cta h2 { color:#fff; margin-top:0; }
@@ -72,6 +76,53 @@ const CSS = `
   .footer a { color:var(--ink-500); }
   .updated { color:var(--ink-500); font-size:14px; margin:0 0 26px; }
 `
+
+/**
+ * Galerije stranica kategorija: stvarne fotografije proizvoda (ERP sync)
+ * pripremljene u /public/images/seo/ (720x540, jpg + webp).
+ */
+const GALLERIES = {
+  'veleprodaja-sredstava-za-ciscenje': [
+    { img: 'ciscenje-1', alt: 'Mop Snappy s štapom' },
+    { img: 'ciscenje-2', alt: 'Metla Grand' },
+    { img: 'ciscenje-3', alt: 'Set krpa od mikrofibre 7/1' },
+  ],
+  'veleprodaja-posuda': [
+    { img: 'posude-1', alt: 'Tava catering inox 28 cm' },
+    { img: 'posude-2', alt: 'Tepsija kamen 40×40 cm' },
+    { img: 'posude-3', alt: 'Silikonski kalup za kolače' },
+  ],
+  'veleprodaja-inox-galanterije': [
+    { img: 'inox-1', alt: 'Kuharska hvataljka 32 cm' },
+    { img: 'inox-2', alt: 'Rezač za pizzu' },
+    { img: 'inox-3', alt: 'Fix držač ubrusa' },
+  ],
+  'veleprodaja-drvene-galanterije': [
+    { img: 'drvena-1', alt: 'Daska za rezanje od akacije' },
+    { img: 'drvena-2', alt: 'Set daska za pizzu' },
+    { img: 'drvena-3', alt: 'Valjak za tijesto' },
+  ],
+  'veleprodaja-tekstila-za-domacinstvo': [
+    { img: 'tekstil-1', alt: 'Tapet Tera 60 cm' },
+    { img: 'tekstil-2', alt: 'Podloga non-slip crna 60 cm' },
+    { img: 'tekstil-3', alt: 'Stolnjak prozirni 90 cm' },
+  ],
+  'veleprodaja-otiraca': [
+    { img: 'otiraci-1', alt: 'Otirač Dakota 90×150 cm' },
+    { img: 'otiraci-2', alt: 'Otirač Nevada 120×180 cm' },
+    { img: 'otiraci-3', alt: 'Otirač Dakota 40×70 cm' },
+  ],
+  'veleprodaja-spremanja-ormara': [
+    { img: 'ormar-1', alt: 'Set vakum vreća 3/1' },
+    { img: 'ormar-2', alt: 'Vakum box 145 l' },
+    { img: 'ormar-3', alt: 'Vakum vreća s vješalicom 2/1' },
+  ],
+  'veleprodaja-opremanja': [
+    { img: 'oprema-1', alt: 'Zidni sat 51 cm' },
+    { img: 'oprema-2', alt: 'Metalna polica 180×90×40 cm' },
+    { img: 'oprema-3', alt: 'Zavjesa Cinglia 120×230 cm' },
+  ],
+}
 
 function jsonLd(page) {
   const url = `${ORIGIN}/${page.slug}/`
@@ -136,7 +187,7 @@ function render(page, all) {
   const productsHtml = page.products?.length
     ? `<h2>${esc(page.productsTitle || 'Primjeri iz asortimana')}</h2>
        <ul class="products">${page.products.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>
-       <p class="note">Prikaz je informativan — potpuni katalog s veleprodajnim cijenama dostupan je ugovornim partnerima u B2B webshopu.</p>`
+       <p class="note">Prikaz je informativan, potpuni katalog s veleprodajnim cijenama dostupan je ugovornim partnerima u B2B webshopu.</p>`
     : ''
 
   const faqHtml = page.faq?.length
@@ -153,6 +204,15 @@ function render(page, all) {
 
   const dateHtml = page.type === 'guide'
     ? `<p class="updated">Objavljeno: 16. srpnja 2026. · Proxy d.o.o., Split</p>` : ''
+
+  const gallery = GALLERIES[page.slug]
+  const galleryHtml = gallery?.length
+    ? `<div class="gallery">${gallery
+        .map(
+          (g) => `<figure><picture><source srcset="/images/seo/${g.img}.webp" type="image/webp" /><img src="/images/seo/${g.img}.jpg" alt="${esc(g.alt)} - Proxy veleprodaja" title="${esc(g.alt)}" width="720" height="540" loading="lazy" decoding="async" /></picture><figcaption>${esc(g.alt)}</figcaption></figure>`
+        )
+        .join('')}</div>`
+    : ''
 
   return `<!doctype html>
 <html lang="hr">
@@ -192,12 +252,13 @@ ${jsonLd(page)}
   <h1>${esc(page.h1)}</h1>
   ${dateHtml}
   <p class="lead">${esc(page.lead)}</p>
+  ${galleryHtml}
   ${page.body}
   ${productsHtml}
   ${faqHtml}
   <div class="cta">
     <h2>${esc(page.ctaTitle || 'Tražite pouzdanog veleprodajnog dobavljača?')}</h2>
-    <p>${esc(page.ctaText || 'Proxy d.o.o. iz Splita opskrbljuje 300+ partnera u cijeloj Hrvatskoj — trgovine, hotele, restorane i ustanove. Isporuka u 3 radna dana, bonitet A+, briga o Vašoj polici.')}</p>
+    <p>${esc(page.ctaText || 'Proxy d.o.o. iz Splita opskrbljuje 300+ partnera u cijeloj Hrvatskoj, trgovine, hotele, restorane i ustanove. Isporuka u 3 radna dana, bonitet A+, briga o Vašoj polici.')}</p>
     <div class="btns">
       <a class="btn btn-gold" href="/postanite-partner/">Postanite partner</a>
       <a class="btn btn-ghost" href="mailto:info@proxy1.hr">info@proxy1.hr</a>
