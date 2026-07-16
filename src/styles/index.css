@@ -946,26 +946,62 @@ section { padding: var(--sp-9) 0; }
   object-position: center;
   display: block;
 }
-.doormats-copy {
-  width: 100%; max-width: 760px; margin: var(--sp-6) auto 0;
-  text-align: center;
+/* --- Ticker traka s natpisima (vrti se zdesna nalijevo) --- */
+.doormats-marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-top: var(--sp-7);
+  background: var(--blue-900);
+  border-top: 1px solid var(--gold-600);
+  border-bottom: 1px solid var(--gold-600);
+  box-shadow: inset 0 1px 0 rgba(212,167,74,.15), inset 0 -1px 0 rgba(212,167,74,.15);
 }
-.doormats-list {
-  margin: 0 auto; display: grid; gap: 10px;
-  max-width: 560px; text-align: left;
+.doormats-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: doormats-ticker 32s linear infinite;
+  will-change: transform;
 }
-.doormats-list li { position: relative; padding-left: 30px; color: var(--ink-700); }
-.doormats-list li::before {
-  content: ""; position: absolute; left: 0; top: 9px;
-  width: 18px; height: 10px;
-  border-left: 2.5px solid var(--gold-600);
-  border-bottom: 2.5px solid var(--gold-600);
-  transform: rotate(-45deg);
-  border-bottom-left-radius: 2px;
+.doormats-marquee:hover .doormats-marquee-track {
+  animation-play-state: paused;
 }
+.doormats-marquee-group {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+.doormats-marquee-group li {
+  display: flex;
+  align-items: center;
+  flex: none;
+  padding: 15px 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-100);
+  white-space: nowrap;
+}
+.doormats-marquee-group li::after {
+  content: "✦";
+  margin: 0 32px;
+  font-size: 12px;
+  color: var(--gold-500);
+}
+@keyframes doormats-ticker {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .doormats-marquee-track { animation: none; width: 100%; }
+  .doormats-marquee-group { flex-wrap: wrap; justify-content: center; width: 100%; }
+  .doormats-marquee-group li:nth-child(n+6) { display: none; } /* bez duplikata */
+  .doormats-marquee-group[aria-hidden="true"] { display: none; }
+}
+
 .doormats-cta {
   display: flex; flex-wrap: wrap; gap: var(--sp-3);
-  margin-top: var(--sp-5); justify-content: center;
+  margin-top: var(--sp-6); justify-content: center;
 }
 
 .doormats-gallery {
@@ -1258,7 +1294,10 @@ section { padding: var(--sp-9) 0; }
   .doormats-head { margin-bottom: var(--sp-5); }
   .doormats-head .lead { font-size: 15.5px; margin-top: var(--sp-3); }
   .doormats-media { aspect-ratio: 16 / 10; }
-  .doormats-copy { margin-top: var(--sp-5); }
+  .doormats-marquee { margin-top: var(--sp-5); }
+  .doormats-marquee-group li { font-size: 16px; padding: 11px 0; letter-spacing: .1em; }
+  .doormats-marquee-group li::after { margin: 0 20px; font-size: 10px; }
+  .doormats-cta { margin-top: var(--sp-5); }
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-3);

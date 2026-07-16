@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
 Disallow: /healthz
 
 # AI crawlers - explicitly allowed (AI Overviews, ChatGPT search, Perplexity etc.)

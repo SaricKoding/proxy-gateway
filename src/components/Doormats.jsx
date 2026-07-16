@@ -40,16 +40,24 @@ export default function Doormats() {
             height="1067"
           />
         </figure>
+      </div>
 
-        <div className="doormats-copy">
-          <ul className="doormats-list">
-            {d.bullets.map((b, i) => <li key={i}>{b}</li>)}
+      {/* Ticker traka — natpisi se vrte zdesna nalijevo preko cijele širine */}
+      <div className="doormats-marquee" aria-label={d.bullets.join(' · ')}>
+        <div className="doormats-marquee-track">
+          <ul className="doormats-marquee-group">
+            {[...d.bullets, ...d.bullets].map((b, i) => <li key={i}>{b}</li>)}
           </ul>
+          <ul className="doormats-marquee-group" aria-hidden="true">
+            {[...d.bullets, ...d.bullets].map((b, i) => <li key={i}>{b}</li>)}
+          </ul>
+        </div>
+      </div>
 
-          <div className="doormats-cta">
-            <a className="btn btn-gold btn-lg" href="https://veleprodaja.proxy1.hr" rel="noopener">{d.ctaWholesale}</a>
-            <a className="btn btn-ghost-dark btn-lg" href="https://maloprodaja.proxy1.hr" rel="noopener">{d.ctaRetail}</a>
-          </div>
+      <div className="container">
+        <div className="doormats-cta">
+          <a className="btn btn-gold btn-lg" href="https://veleprodaja.proxy1.hr" rel="noopener">{d.ctaWholesale}</a>
+          <a className="btn btn-ghost-dark btn-lg" href="https://maloprodaja.proxy1.hr" rel="noopener">{d.ctaRetail}</a>
         </div>
       </div>
 
