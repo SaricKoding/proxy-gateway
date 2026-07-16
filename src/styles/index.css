@@ -951,15 +951,11 @@ section { padding: var(--sp-9) 0; }
   width: 100%;
   overflow: hidden;
   margin-top: var(--sp-7);
-  background: var(--blue-900);
-  border-top: 1px solid var(--gold-600);
-  border-bottom: 1px solid var(--gold-600);
-  box-shadow: inset 0 1px 0 rgba(212,167,74,.15), inset 0 -1px 0 rgba(212,167,74,.15);
 }
 .doormats-marquee-track {
   display: flex;
   width: max-content;
-  animation: doormats-ticker 32s linear infinite;
+  animation: doormats-ticker 60s linear infinite;
   will-change: transform;
 }
 .doormats-marquee:hover .doormats-marquee-track {
@@ -974,19 +970,19 @@ section { padding: var(--sp-9) 0; }
   display: flex;
   align-items: center;
   flex: none;
-  padding: 15px 0;
+  padding: 10px 0;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 22px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--gold-100);
+  color: var(--blue-900);
   white-space: nowrap;
 }
 .doormats-marquee-group li::after {
   content: "✦";
-  margin: 0 32px;
-  font-size: 12px;
+  margin: 0 36px;
+  font-size: 13px;
   color: var(--gold-500);
 }
 @keyframes doormats-ticker {

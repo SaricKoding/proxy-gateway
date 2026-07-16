@@ -32,7 +32,7 @@ export default function Doormats() {
 
         <figure className="doormats-media">
           <Picture
-            src="/images/otirac-hero.jpg"
+            src="/images/otirac-hero.jpg?v=2"
             alt={d.imageAlt}
             title={d.imageTitle || d.imageAlt}
             loading="lazy"
