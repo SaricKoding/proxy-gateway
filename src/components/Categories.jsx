@@ -12,21 +12,34 @@ const images = [
   '/images/wholesale-fabric.jpg',
 ]
 
-// SEO stranice kategorija (isti redoslijed kao c.list u i18n)
-const links = [
-  '/veleprodaja-sredstava-za-ciscenje/',
-  '/veleprodaja-drvene-galanterije/',
-  '/veleprodaja-inox-galanterije/',
-  '/veleprodaja-opremanja/',
-  '/veleprodaja-otiraca/',
-  '/veleprodaja-posuda/',
-  '/veleprodaja-spremanja-ormara/',
-  '/veleprodaja-tekstila-za-domacinstvo/',
-]
+// SEO stranice kategorija (isti redoslijed kao c.list u i18n), po jeziku
+const linksByLocale = {
+  hr: [
+    '/veleprodaja-sredstava-za-ciscenje/',
+    '/veleprodaja-drvene-galanterije/',
+    '/veleprodaja-inox-galanterije/',
+    '/veleprodaja-opremanja/',
+    '/veleprodaja-otiraca/',
+    '/veleprodaja-posuda/',
+    '/veleprodaja-spremanja-ormara/',
+    '/veleprodaja-tekstila-za-domacinstvo/',
+  ],
+  en: [
+    '/en/wholesale-cleaning-supplies/',
+    '/en/wholesale-wooden-kitchenware/',
+    '/en/wholesale-stainless-steel-kitchenware/',
+    '/en/wholesale-home-equipment/',
+    '/en/wholesale-doormats/',
+    '/en/wholesale-cookware/',
+    '/en/wholesale-closet-storage/',
+    '/en/wholesale-household-textiles/',
+  ],
+}
 
 export default function Categories() {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
   const c = t('categories')
+  const links = linksByLocale[locale] || linksByLocale.hr
 
   return (
     <section id="kategorije" className="categories" aria-labelledby="cat-heading">

@@ -52,6 +52,9 @@
 
   <url>
     <loc>https://proxy1.hr/postanite-partner/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/postanite-partner/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/become-a-partner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/postanite-partner/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -59,6 +62,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-sredstava-za-ciscenje/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-sredstava-za-ciscenje/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-cleaning-supplies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-sredstava-za-ciscenje/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -66,6 +72,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-posuda/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-posuda/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-cookware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-posuda/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -73,6 +82,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-inox-galanterije/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-inox-galanterije/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-stainless-steel-kitchenware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-inox-galanterije/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -80,6 +92,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-drvene-galanterije/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-drvene-galanterije/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-wooden-kitchenware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-drvene-galanterije/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -87,6 +102,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-household-textiles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -94,6 +112,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-otiraca/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-otiraca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-doormats/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-otiraca/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -101,6 +122,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-spremanja-ormara/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-spremanja-ormara/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-closet-storage/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-spremanja-ormara/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -108,6 +132,9 @@
 
   <url>
     <loc>https://proxy1.hr/veleprodaja-opremanja/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-opremanja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-home-equipment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-opremanja/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -129,6 +156,96 @@
 
   <url>
     <loc>https://proxy1.hr/vodic-marze-u-maloprodaji-kucanstva/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/become-a-partner/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/postanite-partner/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/become-a-partner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/postanite-partner/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-cleaning-supplies/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-sredstava-za-ciscenje/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-cleaning-supplies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-sredstava-za-ciscenje/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-cookware/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-posuda/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-cookware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-posuda/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-stainless-steel-kitchenware/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-inox-galanterije/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-stainless-steel-kitchenware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-inox-galanterije/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-wooden-kitchenware/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-drvene-galanterije/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-wooden-kitchenware/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-drvene-galanterije/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-household-textiles/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-household-textiles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-doormats/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-otiraca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-doormats/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-otiraca/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-closet-storage/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-spremanja-ormara/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-closet-storage/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-spremanja-ormara/" />
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://proxy1.hr/en/wholesale-home-equipment/</loc>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://proxy1.hr/veleprodaja-opremanja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://proxy1.hr/en/wholesale-home-equipment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proxy1.hr/veleprodaja-opremanja/" />
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

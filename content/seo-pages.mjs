@@ -470,4 +470,320 @@ export const PAGES = [
     ],
     related: ['vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama', 'vodic-kako-odabrati-veleprodajnog-dobavljaca', 'postanite-partner'],
   },
+  // ═══════════════════════ ENGLESKE VERZIJE ═══════════════════════
+  {
+    slug: 'en/become-a-partner',
+    lang: 'en',
+    pair: 'postanite-partner',
+    type: 'partner',
+    title: 'Become a partner: wholesale supplier for stores and hospitality in Croatia | Proxy d.o.o.',
+    metaDesc:
+      'Looking for a wholesale supplier in Croatia? Proxy d.o.o. Split supplies 300+ partners: 800+ household products, delivery within 3 working days, shelf care. Ideal for stores, hotels, restaurants and holiday rentals.',
+    eyebrow: 'Partnership',
+    h1: 'Become a Proxy wholesale partner',
+    lead: 'We supply more than 300 stores, hotels, restaurants and institutions across Croatia. If you run a store, a hospitality venue or holiday apartments and need a reliable household goods supplier, you are in the right place.',
+    serviceType: 'Wholesale supply for retail and hospitality',
+    body: `
+<h2>Why partners choose Proxy</h2>
+<ul>
+  <li><strong>800+ products in one place</strong>: cleaning, cookware, stainless steel and wooden kitchenware, textiles, doormats, home equipment. One supplier instead of five.</li>
+  <li><strong>Delivery within 3 working days</strong>: anywhere in Croatia, from our own warehouse in Split.</li>
+  <li><strong>Shelf care</strong>: our sales rep tracks what sells, suggests restocks and helps arrange your shelf to sell better.</li>
+  <li><strong>A+ credit rating</strong>: financially stable, in business since 2016.</li>
+  <li><strong>Fast claims and flexible returns</strong>: resolved immediately, without weeks of procedures.</li>
+  <li><strong>B2B webshop 24/7</strong>: order whenever it suits you, with your prices and live stock levels.</li>
+  <li><strong>In-house production of personalised doormats</strong>: logo doormats made to measure, a product your competitors do not have.</li>
+</ul>
+
+<h2>Who can become a partner?</h2>
+<p>Wholesale terms are available to companies and trades: retail stores, drugstores, hospitality venues, hotels, holiday apartment operators, institutions and distributors. We do not require a minimum annual volume to start; we begin with a trial order and build the relationship from there.</p>
+
+<h2>How it works</h2>
+<ol>
+  <li><strong>Send an enquiry</strong> to <a href="mailto:info@proxy1.hr">info@proxy1.hr</a> with your company name, VAT ID and a short description of your business.</li>
+  <li><strong>Our sales rep contacts you</strong> to agree the assortment, discount terms and delivery schedule. On request, they visit your location.</li>
+  <li><strong>You get access to the B2B webshop</strong> with your contracted prices, stock levels and order history.</li>
+  <li><strong>First delivery</strong> within 3 working days of order confirmation.</li>
+</ol>`,
+    ctaTitle: 'Send an enquiry, we reply within one working day',
+    ctaText: 'Tell us who you are and what you sell, and we will prepare an assortment and terms proposal for your store or venue.',
+    faq: [
+      {
+        q: 'Is there a minimum order for wholesale?',
+        a: 'No large entry order is required. We agree a trial order sized to your store or venue, and regular deliveries follow your turnover.',
+      },
+      {
+        q: 'Do you deliver across Croatia?',
+        a: 'Yes, the standard delivery time is 3 working days anywhere in Croatia, from our warehouse in Split.',
+      },
+      {
+        q: 'Do you supply hotels and holiday apartments?',
+        a: 'Yes. Hotels, restaurants, cafes and apartment operators make up a large share of our 300+ partners. Popular categories include stainless steel kitchenware, cookware, textiles and personalised logo doormats.',
+      },
+      {
+        q: 'Can I see prices before signing?',
+        a: 'The wholesale price list is available after partner registration because prices depend on contracted terms. On request we send an indicative offer for the categories you are interested in.',
+      },
+    ],
+    related: ['en/wholesale-doormats', 'en/wholesale-cleaning-supplies', 'en/wholesale-cookware'],
+  },
+  {
+    slug: 'en/wholesale-cleaning-supplies',
+    lang: 'en',
+    pair: 'veleprodaja-sredstava-za-ciscenje',
+    type: 'category',
+    title: 'Wholesale cleaning supplies and equipment | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale cleaning equipment in Croatia: mops, brooms, brushes, microfibre cloths, buckets, bin bags. 140+ products for stores and hospitality. Delivery in 3 days.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale cleaning supplies and equipment',
+    lead: 'The largest category in our range: 140+ cleaning tools and accessories for homes and commercial spaces, from mops and brooms to microfibre cloths and bin bags.',
+    serviceType: 'Wholesale cleaning equipment',
+    body: `
+<p>Cleaning products are the backbone of every household goods store: demand is year-round, turnover is fast and customers come back for the same items. Our range covers the whole shelf - <strong>mops and refills</strong> (flat, rotary), <strong>brooms</strong> for indoor and outdoor use, <strong>brushes</strong> of every kind, <strong>microfibre cloths</strong> for floors and glass, <strong>buckets with wringers</strong> and <strong>bin bags</strong> in all volumes, plus toilet brushes, dustpans, sponges and glass cleaners.</p>
+<p>For hospitality and cleaning services we offer heavier-duty professional versions in larger packs. Our sales rep helps you build the starting shelf for your space and customer profile, and through shelf care we track what sells and suggest restocks before the shelf runs empty.</p>`,
+    products: [
+      'Snappy mop with handle',
+      'Rotary and flat mop refills',
+      'Mop bucket 12 l with wringer',
+      'Broom 40 cm',
+      'Microfibre floor cloths',
+      'Glass cleaner tools',
+      'Bath brush with wooden handle',
+      'Bin bags 35 l strong',
+      'Toilet brushes and dustpans',
+    ],
+    faq: [
+      {
+        q: 'Do you have a professional line for hospitality and cleaning services?',
+        a: 'Yes, alongside the household line we offer heavy-duty professional mops, brooms and accessories in larger packs, suitable for daily intensive use.',
+      },
+    ],
+    related: ['en/wholesale-cookware', 'en/wholesale-household-textiles', 'en/become-a-partner'],
+  },
+  {
+    slug: 'en/wholesale-cookware',
+    lang: 'en',
+    pair: 'veleprodaja-posuda',
+    type: 'category',
+    title: 'Wholesale cookware and kitchen range | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale cookware in Croatia: stainless steel trays, bowls, strainers, cutlery sets, knives and kitchen tools. For stores and hospitality. Delivery in 3 days.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale cookware and kitchen range',
+    lead: 'Stainless steel trays, bowls and strainers, cutlery sets, knives and cooking utensils: a kitchen range that covers both households and professional kitchens.',
+    serviceType: 'Wholesale cookware',
+    body: `
+<p>Our kitchen range counts more than 140 products: <strong>cookware</strong> (stainless steel trays in many sizes, round and rectangular, bowls, soup strainers), <strong>cutlery sets</strong> for households and hospitality, <strong>knives</strong> for every purpose and <strong>cooking utensils</strong>. Products are selected for the quality-to-price ratio that works on a retail shelf.</p>
+<p>For hospitality we deliver cookware in quantities for equipping kitchens and terraces; for stores we build the retail assortment by shelf depth. The stainless steel range pairs well with our <a href="/en/wholesale-stainless-steel-kitchenware/">stainless steel kitchenware</a> for a complete offer.</p>`,
+    products: [
+      'Stainless steel tray 30×22, 35×26, 40×28 cm',
+      'Round stainless steel tray 30 cm',
+      'Stainless steel bowl 25×17 cm',
+      'Soup strainers 18 and 20 cm',
+      'Cutlery sets (47 models)',
+      'Kitchen knives (27 models)',
+      'Cooking utensils',
+    ],
+    faq: [
+      {
+        q: 'Do you equip hospitality kitchens?',
+        a: 'Yes, stainless steel trays, bowls and utensils are delivered in hospitality quantities, and our sales rep helps choose sizes and volumes for your kitchen capacity.',
+      },
+    ],
+    related: ['en/wholesale-stainless-steel-kitchenware', 'en/wholesale-wooden-kitchenware', 'en/become-a-partner'],
+  },
+  {
+    slug: 'en/wholesale-stainless-steel-kitchenware',
+    lang: 'en',
+    pair: 'veleprodaja-inox-galanterije',
+    type: 'category',
+    title: 'Wholesale stainless steel kitchenware | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale stainless steel kitchenware in Croatia: graters, whisks, tongs, oil sets, salt shakers, strainers. 130+ products for stores and HoReCa.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale stainless steel kitchenware',
+    lead: 'More than 130 stainless steel products: graters, whisks, tongs, oil and salt sets and strainers. Durable goods that sell in stores and get reordered by hospitality.',
+    serviceType: 'Wholesale stainless steel kitchenware',
+    body: `
+<p>Stainless steel kitchenware offers the best durability-to-price ratio on a household shelf. We stock <strong>graters</strong> (classic and with guides), <strong>whisks</strong> in several sizes, <strong>tongs</strong> for pasta, salad and grill, <strong>oil sets and salt shakers</strong> for tables, <strong>strainers</strong> and a wide choice of preparation and serving tools.</p>
+<p>For restaurants and taverns this category is consumable: it gets replaced regularly, so hospitality partners reorder in cycles while we keep stock in Split with 3-day delivery. For stores we suggest a core shelf of around 20 bestsellers, expanded by demand.</p>`,
+    products: [
+      'Wooden grater, large and with guide',
+      'Stainless steel whisk 25 and 30 cm',
+      'Pasta tongs 22 cm',
+      'Oil set 5 pcs',
+      'Salt shaker set 3 pcs',
+      'Stainless steel strainers (9 models)',
+      'Cutlery holders',
+      'Serving tools',
+    ],
+    faq: [
+      {
+        q: 'Is the range suitable for professional hospitality use?',
+        a: 'Yes, items are selected to withstand daily kitchen and dining room use. Hospitality venues reorder them in cycles and we keep them permanently in stock.',
+      },
+    ],
+    related: ['en/wholesale-cookware', 'en/wholesale-wooden-kitchenware', 'en/become-a-partner'],
+  },
+  {
+    slug: 'en/wholesale-wooden-kitchenware',
+    lang: 'en',
+    pair: 'veleprodaja-drvene-galanterije',
+    type: 'category',
+    title: 'Wholesale wooden kitchenware | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale wooden kitchenware in Croatia: cutting boards in all sizes, wooden kitchen tools. 70+ products for stores and hospitality. Delivery in 3 days.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale wooden kitchenware',
+    lead: 'Cutting boards in every size and shape plus wooden kitchen tools: 70+ natural-look products that perform well on the shelf.',
+    serviceType: 'Wholesale wooden kitchenware',
+    body: `
+<p>Wooden kitchenware is back in demand: customers want natural materials in the kitchen, and hospitality venues use wooden boards for serving. The range includes <strong>cutting boards</strong> from 16 to 45 cm - classic, round and with metal handles - and <strong>wooden kitchen tools</strong>: spoons, spatulas, graters with wooden bodies and similar items.</p>
+<p>Boards with metal handles and larger formats (45×25 cm) are popular with taverns and pizzerias as serving boards, a category that hospitality wears out and reorders. For stores this is a typical impulse item: well-displayed wooden kitchenware raises basket value without any promotion.</p>`,
+    products: [
+      'Cutting board 16, 18 and 20 cm',
+      'Round cutting board 25 cm',
+      'Cutting board 45×25 cm',
+      'Board with metal handle 29×19 cm',
+      'Acacia cutting board',
+      'Wooden kitchen tools',
+    ],
+    faq: [
+      {
+        q: 'Are wooden boards used for serving in hospitality?',
+        a: 'Yes, larger formats and boards with handles are often used as serving boards in taverns and pizzerias, so venues order them in quantity and replace them regularly.',
+      },
+    ],
+    related: ['en/wholesale-cookware', 'en/wholesale-stainless-steel-kitchenware', 'en/become-a-partner'],
+  },
+  {
+    slug: 'en/wholesale-household-textiles',
+    lang: 'en',
+    pair: 'veleprodaja-tekstila-za-domacinstvo',
+    type: 'category',
+    title: 'Wholesale household textiles | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale household textiles in Croatia: runner rugs, non-slip mats, tablecloths, door curtains. 100+ products for stores and holiday rentals.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale household textiles',
+    lead: 'Runner rugs, bathroom and kitchen mats, tablecloths and door curtains: a textile range of 100+ products that lets the shelf change with the seasons.',
+    serviceType: 'Wholesale household textiles',
+    body: `
+<p>Textiles are how a store breathes through the seasons: door curtains and light mats in summer, thicker runners and tablecloths in winter. The range includes <strong>runner rugs</strong> (Goa, Nuvola, Tera and other models in several widths), <strong>Practic mats</strong> in various widths and colours including non-slip versions, <strong>tablecloths</strong> in 30+ variants and <strong>door curtains</strong>.</p>
+<p>Textiles pair naturally with our <a href="/en/wholesale-doormats/">doormat range</a>: together they form the soft corner of the store that customers love to browse. For holiday apartments, textiles are part of unit equipping along with storage and doormats, delivered within 3 working days.</p>`,
+    products: [
+      'Tera runner rug 60 cm',
+      'Goa runner rug 60×180 cm',
+      'Practic mat 65 cm (black, beige)',
+      'Non-slip mat 32×150 and 43×150 cm',
+      'Tablecloths (30+ variants)',
+      'Door curtains (18 models)',
+    ],
+    faq: [
+      {
+        q: 'Does the textile range change with seasons?',
+        a: 'Yes. Door curtains and lighter mats sell in summer, runners and tablecloths in winter. Our sales rep suggests seasonal shelf rotation so stock never sits.',
+      },
+    ],
+    related: ['en/wholesale-doormats', 'en/wholesale-closet-storage', 'en/become-a-partner'],
+  },
+  {
+    slug: 'en/wholesale-doormats',
+    lang: 'en',
+    pair: 'veleprodaja-otiraca',
+    type: 'category',
+    title: 'Wholesale doormats and custom logo doormats | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale doormats in Croatia: Alaska, Dakota, Nevada, Tekno models plus in-house production of personalised logo doormats for hotels, restaurants and offices.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale doormats: standard and personalised',
+    lead: 'The most recognisable part of the Proxy range: 100+ doormat models for stores, plus in-house production of personalised logo doormats for hotels, restaurants and businesses.',
+    serviceType: 'Wholesale doormats and custom logo doormat production',
+    body: `
+<p>Doormats are our speciality. For stores we offer a wide retail programme: <strong>Alaska</strong> (40×70 up to 90×150 cm), <strong>Dakota</strong>, <strong>Nevada</strong>, <strong>Mascote</strong>, <strong>Tekno</strong> (square and half-round) and other models in all standard sizes, plus <strong>professional doormats</strong> with higher fibre density for heavy traffic.</p>
+<p>What makes us unique: <strong>in-house production of personalised doormats</strong> with a logo, name or welcome message. Hotels, restaurants and companies order doormats made to the measure of their entrance, in the colours of their visual identity, with the design approved before production. Typical sizes are 60×90, 80×120 and 100×150 cm, and custom dimensions are available.</p>
+<p>For hotels and holiday rentals on the Adriatic this is the finishing touch of the entrance; for retail partners it is a service they can resell with their own margin while we handle production.</p>`,
+    products: [
+      'Alaska doormat 40×70 to 90×150 cm',
+      'Dakota doormat 40×60 to 90×150 cm',
+      'Nevada doormat 90×150 and 120×180 cm',
+      'Tekno doormat, square and half-round',
+      'Professional heavy-traffic doormats',
+      'Personalised logo doormats, in-house production',
+    ],
+    faq: [
+      {
+        q: 'What sizes are personalised doormats available in?',
+        a: 'Standard sizes are 60×90, 80×120 and 100×150 cm, and we also produce custom dimensions to fit your entrance or reception. Fibre density is chosen according to traffic.',
+      },
+      {
+        q: 'How do I order a logo doormat?',
+        a: 'Email info@proxy1.hr with your logo (vector SVG or PDF preferred), the desired size and approximate quantity. We prepare a design proposal, you approve it and production starts.',
+      },
+    ],
+    related: ['en/wholesale-household-textiles', 'en/become-a-partner', 'en/wholesale-home-equipment'],
+  },
+  {
+    slug: 'en/wholesale-closet-storage',
+    lang: 'en',
+    pair: 'veleprodaja-spremanja-ormara',
+    type: 'category',
+    title: 'Wholesale closet storage and organisation | Proxy d.o.o. Split, Croatia',
+    metaDesc:
+      'Wholesale closet organisation in Croatia: hangers (wood, metal, PVC), vacuum bags and storage boxes. For stores and holiday apartments. Delivery in 3 days.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale closet storage and organisation',
+    lead: 'Hangers in wood, metal and PVC, vacuum bags and boxes for seasonal storage: a home organisation category that keeps growing.',
+    serviceType: 'Wholesale home organisation and storage',
+    body: `
+<p>Home organisation is one of the fastest-growing household categories. We stock <strong>hangers</strong> - wooden (also in colours), metal and PVC in multi-packs (3, 5, 10 pcs) - plus <strong>vacuum bags</strong> in several sizes and large-volume <strong>vacuum boxes</strong> for storing bedding and clothes between seasons.</p>
+<p>The goods are light, take little warehouse space and turn over quickly in spring and autumn when customers switch wardrobes. For hotels and holiday apartments we deliver the storage programme together with <a href="/en/wholesale-household-textiles/">textiles</a> as part of equipping units.</p>`,
+    products: [
+      'Wooden hangers 3 and 5 pcs (also coloured)',
+      'Metal hangers 3 pcs',
+      'PVC hangers 10 pcs',
+      'Vacuum bag set 3 pcs',
+      'Vacuum bag 55×90 and 70×100 cm',
+      'Vacuum storage box 145 l',
+    ],
+    faq: [
+      {
+        q: 'When is the season for closet storage products?',
+        a: 'Peaks are spring and autumn during wardrobe changes; that is when we recommend a stronger shelf of vacuum bags and hangers. The core assortment sells year-round.',
+      },
+    ],
+    related: ['en/wholesale-household-textiles', 'en/wholesale-home-equipment', 'en/become-a-partner'],
+  },
+  {
+    slug: 'en/wholesale-home-equipment',
+    lang: 'en',
+    pair: 'veleprodaja-opremanja',
+    type: 'category',
+    title: 'Wholesale home equipment: shelving, mirrors, drying racks | Proxy d.o.o. Split',
+    metaDesc:
+      'Wholesale home equipment in Croatia: metal shelving, mirrors, ironing boards, drying racks, laundry baskets. 220+ products, the widest Proxy category.',
+    eyebrow: 'Wholesale range',
+    h1: 'Wholesale home equipment',
+    lead: 'The widest category in our range with 220+ products: metal shelving, mirrors, ironing boards, drying racks, baskets and everything a home needs to function.',
+    serviceType: 'Wholesale home equipment',
+    body: `
+<p>The equipment programme covers the bigger items of a household shelf: <strong>metal shelving</strong> for pantries and garages (up to 180×90×40 cm), <strong>mirrors</strong> in several formats (up to 50×150 cm), <strong>ironing boards</strong> (17 models), <strong>laundry drying racks</strong>, <strong>baskets</strong>, wall clocks and curtains.</p>
+<p>This category carries a higher average item price: the customer comes with intent and it raises the receipt value for the store. For hotels and holiday apartments the equipment programme is often part of the initial fit-out: shelving, drying racks, ironing boards and mirrors ordered per unit, delivered within 3 working days.</p>`,
+    products: [
+      'Metal shelving 180×90×40 cm',
+      'Mirror 50×150 cm',
+      'Ironing boards (17 models)',
+      'Drying racks (8 models)',
+      'Laundry baskets',
+      'Wall clocks and curtains',
+    ],
+    faq: [
+      {
+        q: 'Do you equip holiday apartments and hotels?',
+        a: 'Yes. Drying racks, ironing boards, mirrors and shelving are often delivered per accommodation unit, together with textiles and doormats as a package.',
+      },
+    ],
+    related: ['en/wholesale-closet-storage', 'en/wholesale-doormats', 'en/become-a-partner'],
+  },
 ]

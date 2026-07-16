@@ -1,9 +1,12 @@
 import { useLocale } from '../i18n/LocaleContext'
 
 export default function Footer() {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
   const f = t('footer')
   const year = new Date().getFullYear()
+  const tradeLinks = locale === 'en'
+    ? { partner: '/en/become-a-partner/', guide1: '/vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama/', guide2: '/vodic-kako-odabrati-veleprodajnog-dobavljaca/', guide3: '/vodic-marze-u-maloprodaji-kucanstva/' }
+    : { partner: '/postanite-partner/', guide1: '/vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama/', guide2: '/vodic-kako-odabrati-veleprodajnog-dobavljaca/', guide3: '/vodic-marze-u-maloprodaji-kucanstva/' }
 
   return (
     <footer className="site-footer" role="contentinfo">
@@ -38,10 +41,10 @@ export default function Footer() {
 
           <h3 className="footer-subhead">{f.tradeHead || 'Za trgovce'}</h3>
           <ul>
-            <li><a href="/postanite-partner/">{f.trade?.partner || 'Postanite partner'}</a></li>
-            <li><a href="/vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama/">{f.trade?.guide1 || 'Kako otvoriti trgovinu'}</a></li>
-            <li><a href="/vodic-kako-odabrati-veleprodajnog-dobavljaca/">{f.trade?.guide2 || 'Kako odabrati dobavljača'}</a></li>
-            <li><a href="/vodic-marze-u-maloprodaji-kucanstva/">{f.trade?.guide3 || 'Marže u maloprodaji'}</a></li>
+            <li><a href={tradeLinks.partner}>{f.trade?.partner || 'Postanite partner'}</a></li>
+            <li><a href={tradeLinks.guide1}>{f.trade?.guide1 || 'Kako otvoriti trgovinu'}</a></li>
+            <li><a href={tradeLinks.guide2}>{f.trade?.guide2 || 'Kako odabrati dobavljača'}</a></li>
+            <li><a href={tradeLinks.guide3}>{f.trade?.guide3 || 'Marže u maloprodaji'}</a></li>
           </ul>
 
           <h3 className="footer-subhead">{f.contactHead}</h3>
