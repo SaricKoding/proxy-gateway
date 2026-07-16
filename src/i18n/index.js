@@ -10,10 +10,10 @@ export const messages = {
     meta: {
       title: 'Veleprodaja kućanstva i personalizirani otirači | Proxy d.o.o. Split',
       description:
-        'Velika veleprodajna tvrtka za asortiman kućanstva i ugostiteljstva. Više od 200 partnera u Hrvatskoj. Izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore. Proxy d.o.o. Split, Hrvatska.',
+        'Velika veleprodajna tvrtka za asortiman kućanstva i ugostiteljstva. Više od 300 partnera u Hrvatskoj. Izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore. Proxy d.o.o. Split, Hrvatska.',
       ogTitle: 'Veleprodaja kućanstva i personalizirani otirači. Proxy d.o.o. Split',
       ogDescription:
-        'Veleprodaja kućanskih artikala i ugostiteljskog programa s više od 200 partnera u Hrvatskoj. Izrada personaliziranih otirača s logotipom. Proxy d.o.o. Split, Hrvatska.',
+        'Veleprodaja kućanskih artikala i ugostiteljskog programa s više od 300 partnera u Hrvatskoj. Izrada personaliziranih otirača s logotipom. Proxy d.o.o. Split, Hrvatska.',
     },
 
     nav: {
@@ -42,8 +42,8 @@ export const messages = {
         text: 'Otirači s Vašim logotipom.',
       },
       marks: [
-        { n: '700+', l: 'artikala' },
-        { n: '200+', l: 'partnera u HR' },
+        { n: '800+', l: 'artikala' },
+        { n: '300+', l: 'partnera u HR' },
         { n: 'A+', l: 'bonitet' },
       ],
       logoAlt: 'Proxy d.o.o. Split — Sve što dom treba',
@@ -93,14 +93,14 @@ export const messages = {
     about: {
       eyebrow: 'O tvrtki',
       title: ['Osnovano 2016. u Splitu. ', 'Fer partnerstvo na prvom mjestu.'],
-      lead: 'Širok asortiman proizvoda za domaćinstvo. Preko 200 partnera u Hrvatskoj i vlastita izrada personaliziranih otirača s logotipima.',
+      lead: 'Širok asortiman proizvoda za domaćinstvo. Preko 300 partnera u Hrvatskoj i vlastita izrada personaliziranih otirača s logotipima.',
       p1: 'Tvrtku je 2016. osnovao Robert Raič nakon dugogodišnjeg iskustva u prodaji.',
       p2: 'Asortiman gradimo robom vrhunske kvalitete. O tome svjedoči rast baze klijenata.',
       p3: 'Vizija nam je širenje na strana tržišta, ulaganje u proizvodnju i razvoj zaposlenika.',
       stats: [
         { t: 'Godina osnutka', v: '2016.' },
         { t: 'Sjedište', v: 'Split, HR' },
-        { t: 'Partneri', v: '200+ u HR' },
+        { t: 'Partneri', v: '300+ u HR' },
         { t: 'Bonitet', v: 'A+' },
       ],
       caption: 'Skladište u Splitu',
@@ -111,7 +111,7 @@ export const messages = {
     why: {
       eyebrow: 'Zašto Proxy',
       title: ['Sedam razloga zašto nam ', 'kupci vjeruju'],
-      sub: 'Kako poslujemo s preko 200 partnera u Hrvatskoj.',
+      sub: 'Kako poslujemo s preko 300 partnera u Hrvatskoj.',
       reasons: [
         { t: 'Bonitet A+', d: 'Financijska stabilnost potvrđena službenim bonitetnim ocjenama.' },
         { t: 'Fleksibilnost', d: 'Naručivanje, dostave i povrate prilagođavamo potrebama kupca.' },
@@ -298,10 +298,10 @@ export const messages = {
     meta: {
       title: 'Wholesale household goods and custom logo doormats | Proxy d.o.o. Split',
       description:
-        'A large wholesale company for household and hospitality goods. Over 200 partners across Croatia. Custom-made doormats with your logo for hotels, restaurants and offices. Proxy d.o.o. Split, Croatia.',
+        'A large wholesale company for household and hospitality goods. Over 300 partners across Croatia. Custom-made doormats with your logo for hotels, restaurants and offices. Proxy d.o.o. Split, Croatia.',
       ogTitle: 'Wholesale household goods and custom logo doormats. Proxy d.o.o. Split',
       ogDescription:
-        'Wholesale household goods and hospitality range with over 200 partners across Croatia. Custom-made doormats with your logo. Proxy d.o.o. Split, Croatia.',
+        'Wholesale household goods and hospitality range with over 300 partners across Croatia. Custom-made doormats with your logo. Proxy d.o.o. Split, Croatia.',
     },
 
     nav: {
@@ -322,7 +322,7 @@ export const messages = {
     hero: {
       eyebrow: '',
       title: ['Partner for ', 'WHOLESALE', ' and ', 'RETAIL'],
-      sub: 'Wholesale household and hospitality goods. Over 200 partners across Croatia.',
+      sub: 'Wholesale household and hospitality goods. Over 300 partners across Croatia.',
       ctaPrimary: 'Choose how to shop',
       ctaSecondary: 'About us',
       doormatPill: {
@@ -330,8 +330,8 @@ export const messages = {
         text: 'Doormats with your logo.',
       },
       marks: [
-        { n: '700+', l: 'products' },
-        { n: '200+', l: 'partners in Croatia' },
+        { n: '800+', l: 'products' },
+        { n: '300+', l: 'partners in Croatia' },
         { n: 'A+', l: 'credit rating' },
       ],
       logoAlt: 'Proxy d.o.o. Split — Everything a home needs',
@@ -381,14 +381,14 @@ export const messages = {
     about: {
       eyebrow: 'About the company',
       title: ['Founded in 2016 in Split. ', 'Fair partnership above all.'],
-      lead: 'Wholesale household and hospitality goods, headquartered in Split. Over 200 partners across Croatia and in-house personalised doormat production.',
+      lead: 'Wholesale household and hospitality goods, headquartered in Split. Over 300 partners across Croatia and in-house personalised doormat production.',
       p1: 'Founded in 2016 by Robert Raič after many years of sales experience.',
       p2: 'We build the assortment with top-quality goods. The growing client base confirms our service.',
       p3: 'Our vision is expansion into foreign markets, investing in production and continuous employee development.',
       stats: [
         { t: 'Established', v: '2016' },
         { t: 'Headquarters', v: 'Split, HR' },
-        { t: 'Partners', v: '200+ in Croatia' },
+        { t: 'Partners', v: '300+ in Croatia' },
         { t: 'Credit rating', v: 'A+' },
       ],
       caption: 'Warehouse in Split',
@@ -399,7 +399,7 @@ export const messages = {
     why: {
       eyebrow: 'Why Proxy',
       title: ['Seven reasons our ', 'customers trust us'],
-      sub: 'How we work with 200+ partners across Croatia.',
+      sub: 'How we work with 300+ partners across Croatia.',
       reasons: [
         { t: 'A+ credit rating', d: 'Financial stability confirmed by official credit ratings.' },
         { t: 'Flexibility', d: 'Orders, deliveries and returns adapted to real needs.' },
