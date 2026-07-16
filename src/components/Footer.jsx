@@ -96,7 +96,7 @@ export default function Footer() {
           <span>© {year} Proxy d.o.o. {f.rights}</span>
           <span className="footer-credit">
             {f.credit[0]}·{' '}
-            <a href="https://www.klikoteka.hr" target="_blank" rel="noopener noreferrer">
+            <a href="https://klikoteka.hr/" target="_blank" rel="noopener noreferrer">
               {f.credit[1]}
             </a>
           </span>
