@@ -32,7 +32,6 @@ export const messages = {
     },
 
     hero: {
-      eyebrow: '',
       title: ['Partner za ', 'VELEPRODAJU', ' i ', 'MALOPRODAJU'],
       sub: 'Širok asortiman proizvoda za domaćinstvo.',
       ctaPrimary: 'Odaberi način kupnje',
@@ -60,7 +59,6 @@ export const messages = {
     },
 
     gateway: {
-      eyebrow: 'Vaš izbor',
       title: 'Gdje želite kupovati?',
       sub: 'Oba kanala su dio Proxy d.o.o.',
       cards: {
@@ -91,7 +89,6 @@ export const messages = {
     },
 
     about: {
-      eyebrow: 'O tvrtki',
       title: ['Osnovano 2016. u Splitu. ', 'Fer partnerstvo na prvom mjestu.'],
       lead: 'Širok asortiman proizvoda za domaćinstvo. Preko 300 partnera u Hrvatskoj i vlastita izrada personaliziranih otirača s logotipima.',
       p1: 'Tvrtku je 2016. osnovao Robert Raič nakon dugogodišnjeg iskustva u prodaji.',
@@ -109,7 +106,6 @@ export const messages = {
     },
 
     why: {
-      eyebrow: 'Zašto Proxy',
       title: ['Sedam razloga zašto nam ', 'kupci vjeruju'],
       sub: 'Kako poslujemo s preko 300 partnera u Hrvatskoj.',
       reasons: [
@@ -124,7 +120,6 @@ export const messages = {
     },
 
     warehouse: {
-      eyebrow: 'Infrastruktura',
       title: 'Naše skladište',
       sub: 'Organizirano i uredno. Brza i točna isporuka.',
       openImage: 'Otvori sliku',
@@ -155,7 +150,6 @@ export const messages = {
     },
 
     categories: {
-      eyebrow: 'Asortiman',
       title: 'Kategorije proizvoda',
       sub: 'Od čišćenja do ugostiteljskog programa.',
       itemsLabel: (n) => `${n} artikala`,
@@ -193,7 +187,6 @@ export const messages = {
     },
 
     doormats: {
-      eyebrow: 'Vlastita izrada',
       title: ['Personalizirani otirači ', 's Vašim logotipom'],
       lead: 'Otirači po narudžbi za hotele, restorane i poslovne prostore. Vaš logotip, vaše dimenzije, vaš dizajn.',
       bullets: [
@@ -208,6 +201,10 @@ export const messages = {
       imageAlt: 'Personalizirani otirač s logotipom tvrtke - Proxy d.o.o. Split',
       imageTitle: 'Personalizirani otirač s logotipom - izrada Proxy d.o.o. Split',
       galleryAlts: [
+        'Otirač s logotipom Proxy na ulazu, izrada Proxy',
+        'Vanjski otirač s natpisom na ulazu u zgradu, izrada Proxy',
+        'Sivi unutarnji otirač s bijelim logotipom, izrada Proxy',
+        'Kut vanjskog otirača s gumenim rubom izbliza',
         'Personalizirani otirač PRISTAV u dvije varijante boja',
         'Personalizirani otirač KINGTRADE postavljen na ulazu',
         'Personalizirani otirač KINGTRADE, prikaz boja',
@@ -218,6 +215,10 @@ export const messages = {
         'Asortiman otirača u Proxy maloprodajnom prostoru',
       ],
       galleryTitles: [
+        'Otirač s logotipom Proxy - vlastiti primjerak',
+        'Vanjski otirač s natpisom - vlastiti primjerak',
+        'Unutarnji otirač s logotipom - vlastiti primjerak',
+        'Vanjski otirač izbliza - vlakno i rub',
         'Otirač PRISTAV - Proxy izrada s logotipom',
         'Otirač KINGTRADE - postavljen na ulazu',
         'Otirač KINGTRADE - prikaz dostupnih boja',
@@ -269,7 +270,6 @@ export const messages = {
     },
 
     faq: {
-      eyebrow: 'Česta pitanja',
       title: ['Veleprodaja asortimana ', 'za kućanstvo u Hrvatskoj'],
       sub: '',
       items: [
@@ -287,7 +287,7 @@ export const messages = {
         },
         {
           q: 'Što se sve može staviti na otirač?',
-          a: 'Logotip tvrtke, naziv objekta, slogan ili pozdravnu poruku te kombinacije teksta i znaka. Boje preuzimamo iz Vašeg vizualnog identiteta. Dizajn potvrđujete prije izrade.',
+          a: 'Logotip tvrtke, naziv objekta, slogan ili pozdravnu poruku te kombinacije teksta i logotipa. Boje preuzimamo iz Vašeg vizualnog identiteta. Dizajn potvrđujete prije izrade.',
         },
         {
           q: 'Tko može kupovati u Proxy veleprodaji?',
@@ -327,7 +327,6 @@ export const messages = {
     },
 
     hero: {
-      eyebrow: '',
       title: ['Partner for ', 'WHOLESALE', ' and ', 'RETAIL'],
       sub: 'Wholesale household and hospitality goods. Over 300 partners across Croatia.',
       ctaPrimary: 'Choose how to shop',
@@ -355,7 +354,6 @@ export const messages = {
     },
 
     gateway: {
-      eyebrow: 'Your choice',
       title: 'Where would you like to shop?',
       sub: 'Both channels are part of Proxy d.o.o.',
       cards: {
@@ -386,7 +384,6 @@ export const messages = {
     },
 
     about: {
-      eyebrow: 'About the company',
       title: ['Founded in 2016 in Split. ', 'Fair partnership above all.'],
       lead: 'Wholesale household and hospitality goods, headquartered in Split. Over 300 partners across Croatia and in-house personalised doormat production.',
       p1: 'Founded in 2016 by Robert Raič after many years of sales experience.',
@@ -404,7 +401,6 @@ export const messages = {
     },
 
     why: {
-      eyebrow: 'Why Proxy',
       title: ['Seven reasons our ', 'customers trust us'],
       sub: 'How we work with 300+ partners across Croatia.',
       reasons: [
@@ -419,7 +415,6 @@ export const messages = {
     },
 
     warehouse: {
-      eyebrow: 'Infrastructure',
       title: 'Our warehouse',
       sub: 'Organised and ready. Fast, accurate delivery.',
       openImage: 'Open image',
@@ -450,7 +445,6 @@ export const messages = {
     },
 
     categories: {
-      eyebrow: 'Product range',
       title: 'Product categories',
       sub: 'From cleaning to hospitality supplies.',
       itemsLabel: (n) => `${n} products`,
@@ -488,7 +482,6 @@ export const messages = {
     },
 
     doormats: {
-      eyebrow: 'Made in-house',
       title: ['Personalised doormats ', 'with your logo'],
       lead: 'Custom doormats for hotels, restaurants and offices. Your logo, your dimensions, your design.',
       bullets: [
@@ -503,6 +496,10 @@ export const messages = {
       imageAlt: 'Personalised doormat with company logo - Proxy d.o.o. Split',
       imageTitle: 'Personalised doormat with logo - made by Proxy d.o.o. Split',
       galleryAlts: [
+        'Doormat with the Proxy logo at an entrance, made by Proxy',
+        'Outdoor doormat with lettering at a building entrance, made by Proxy',
+        'Grey indoor doormat with a white logo, made by Proxy',
+        'Corner of an outdoor doormat with rubber edge, close up',
         'Custom doormat PRISTAV in two colour variants',
         'Custom doormat KINGTRADE installed at entrance',
         'Custom doormat KINGTRADE, colour swatch demo',
@@ -513,6 +510,10 @@ export const messages = {
         'Doormat assortment in Proxy retail showroom',
       ],
       galleryTitles: [
+        'Doormat with Proxy logo - our own sample',
+        'Outdoor doormat with lettering - our own sample',
+        'Indoor doormat with logo - our own sample',
+        'Outdoor doormat close up - fibre and edge',
         'Doormat PRISTAV - Proxy custom logo production',
         'Doormat KINGTRADE - installed at entrance',
         'Doormat KINGTRADE - colour swatches',
@@ -564,7 +565,6 @@ export const messages = {
     },
 
     faq: {
-      eyebrow: 'FAQ',
       title: ['Wholesale household goods ', 'in Croatia'],
       sub: '',
       items: [

@@ -8,7 +8,6 @@ export default function About() {
     <section id="o-nama" className="about" aria-labelledby="about-heading">
       <div className="container about-stack">
         <header className="section-head about-head">
-          <p className="eyebrow dark">{a.eyebrow}</p>
           <h2 id="about-heading" className="section-title">
             {a.title[0]}
             <span className="gold">{a.title[1]}</span>

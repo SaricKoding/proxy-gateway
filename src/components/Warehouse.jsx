@@ -56,7 +56,6 @@ export default function Warehouse() {
     <section id="skladiste" className="warehouse" aria-labelledby="warehouse-heading">
       <div className="container">
         <header className="section-head">
-          <p className="eyebrow">{w.eyebrow}</p>
           <h2 id="warehouse-heading" className="section-title">{w.title}</h2>
           <p className="section-sub">{w.sub}</p>
         </header>

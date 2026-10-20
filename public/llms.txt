@@ -1,62 +1,32 @@
 # Proxy d.o.o.
 
-> Trgovina na veliko i malo asortimanom za domaćinstvo i ugostiteljstvo. Izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore. Sjedište u Splitu, Hrvatska. Osnovano 2016.
+> Veleprodaja pribora za čišćenje, kuhinju i dom za trgovine, hotele i ugostitelje. Otirači s logotipom po narudžbi. Skladište u Splitu, Hrvatska. Osnovano 2016.
 
 ## O tvrtki
 
-Proxy d.o.o. je hrvatska tvrtka osnovana 11. svibnja 2016. u Splitu. Osnivač je Robert Raič. Bonitetna ocjena A+. Asortiman uključuje preko 800 artikala iz područja: čišćenje, drvena galanterija, inox galanterija, opremanje, posuđe, spremanje ormara, tekstil za domaćinstvo i personalizirani otirači s logotipom.
+Proxy d.o.o. je hrvatska tvrtka osnovana 11. svibnja 2016. Osnivač je Robert Raič. Bonitetna ocjena A+. U veleprodajnoj ponudi je 700+ artikala iz područja: čišćenje, drvena galanterija, inox galanterija, opremanje, posuđe, spremanje ormara, tekstil za domaćinstvo, otirači i stalci za izlaganje. Više od 300 partnera u Hrvatskoj.
 
-- Adresa: Solinska 49, Dujmovača, 21000 Split, Hrvatska
+- Skladište: Solinska 49, Dujmovača, 21000 Split, Hrvatska
 - OIB: 79145895043
 - Email: info@proxy1.hr
 - Web: https://proxy1.hr
-- Veleprodaja (B2B): https://veleprodaja.proxy1.hr
-- Maloprodaja (B2C): https://maloprodaja.proxy1.hr
-
-## Personalizirani otirači
-
-Proxy d.o.o. izrađuje personalizirane otirače po narudžbi:
-
-- Logotipi tvrtki i brendova (vektorska izrada)
-- Natpisi po narudžbi: naziv objekta, slogan, pozdravna poruka
-- Standardne i prilagođene dimenzije: 60x90 cm, 80x120 cm, 100x150 cm i po mjeri
-- Različite gustoće vlakana prema učestalosti prometa
-- Izrada za hotele, restorane, ugostiteljske objekte i poslovne prostore
-- Pojedinačna izrada i veleprodajne količine
-
-Postupak narudžbe: pošaljite upit s logotipom (SVG/PDF), željenom veličinom i okvirnom količinom na info@proxy1.hr. Pripremamo prijedlog dizajna, vi potvrđujete i kreće izrada.
-
-- [Sekcija o personaliziranim otiračima](https://proxy1.hr/#otiraci)
-- [Često postavljana pitanja](https://proxy1.hr/#faq)
+- Katalog asortimana (bez cijena): https://proxy1.hr/katalog/
+- Veleprodajni webshop za ovlaštene kupce: https://veleprodaja.proxy1.hr
+- Otirači s logotipom: https://otiraci.proxy1.hr
 
 ## Veleprodaja
 
-Veleprodajni kanal namijenjen je ugovornim partnerima: tvrtkama, ugostiteljskim objektima, hotelima i ustanovama. Standardna isporuka u roku od 3 radna dana na području Hrvatske.
+Veleprodaja je namijenjena tvrtkama i obrtima: trgovinama, drogerijama, hotelima, apartmanima, restoranima i ustanovama. Cijene, rabate i zalihu vide ovlašteni kupci u webshopu. Ovlašteni kupac se postaje dogovorom s upravom ili komercijalistom za područje:
 
-Kategorije asortimana:
+- Robert Raič, uprava: robert@proxy1.hr
+- Komercijala, Novalja do Dubrovnika s otocima: komercijala@proxy1.hr, +385 98 704 043
+- Komercijala, Rab, Istra i ostatak Hrvatske: komercijala2@proxy1.hr, +385 99 467 0564
 
-- Sredstva i pribor za čišćenje
-- Drvena galanterija (kuhinjski pribor)
-- Inox galanterija
-- Posuđe i kuhinjska oprema
-- Tekstil za domaćinstvo
-- Spremanje ormara
-- Opremanje (police, displeji, oprema za prodajne prostore)
-- Personalizirani otirači
+Javni katalog svih artikala, s fotografijom, šifrom i pakiranjem: https://proxy1.hr/katalog/
 
-## Maloprodaja
+## Otirači s logotipom
 
-Maloprodajni kanal otvoren je svima. Pojedinačna kupovina bez ugovora i bez registracije partnera.
-
-## Pravne stranice
-
-- [Politika privatnosti](https://proxy1.hr/politika-privatnosti)
-- [Politika kolačića](https://proxy1.hr/politika-kolacica)
-
-## Optional
-
-- [Sitemap](https://proxy1.hr/sitemap.xml)
-- [Robots](https://proxy1.hr/robots.txt)
+Otirač s logotipom tvrtke kupac slaže sam u dizajneru na https://otiraci.proxy1.hr, u stvarnoj veličini. Dva modela (Classic za unutra, Promo za vanjski ulaz), 17 mjera od 60 × 85 do 200 × 300 cm. Boja se ubrizgava u vlakno do dna. Kontakt: Neda Raič, info@proxy1.hr, +385 99 435 30 40.
 
 ## Veleprodajni program (stranice)
 
@@ -66,7 +36,7 @@ Maloprodajni kanal otvoren je svima. Pojedinačna kupovina bez ugovora i bez reg
 - Inox galanterija: https://proxy1.hr/veleprodaja-inox-galanterije/
 - Drvena galanterija: https://proxy1.hr/veleprodaja-drvene-galanterije/
 - Tekstil za domaćinstvo: https://proxy1.hr/veleprodaja-tekstila-za-domacinstvo/
-- Otirači (standardni i personalizirani): https://proxy1.hr/veleprodaja-otiraca/
+- Otirači: https://proxy1.hr/veleprodaja-otiraca/
 - Spremanje ormara: https://proxy1.hr/veleprodaja-spremanja-ormara/
 - Oprema za dom: https://proxy1.hr/veleprodaja-opremanja/
 
@@ -75,3 +45,9 @@ Maloprodajni kanal otvoren je svima. Pojedinačna kupovina bez ugovora i bez reg
 - Kako otvoriti trgovinu kućanskim potrepštinama: https://proxy1.hr/vodic-kako-otvoriti-trgovinu-kucanskim-potrepstinama/
 - Kako odabrati veleprodajnog dobavljača: https://proxy1.hr/vodic-kako-odabrati-veleprodajnog-dobavljaca/
 - Marže u maloprodaji kućanstva: https://proxy1.hr/vodic-marze-u-maloprodaji-kucanstva/
+
+## Pravne stranice
+
+- [Politika privatnosti](https://proxy1.hr/politika-privatnosti/)
+- [Politika kolačića](https://proxy1.hr/politika-kolacica/)
+- [Sitemap](https://proxy1.hr/sitemap.xml)

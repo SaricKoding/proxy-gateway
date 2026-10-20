@@ -1,7 +1,13 @@
 import { useLocale } from '../i18n/LocaleContext'
 import Picture from './Picture'
 
+// Prva cetiri su vlastiti primjerci koje je vlasnik snimio (rujan 2026.);
+// isti stoje na veleprodaji, maloprodaji i otiraci.proxy1.hr.
 const gallery = [
+  '/images/otirac-9.jpg',
+  '/images/otirac-10.jpg',
+  '/images/otirac-11.jpg',
+  '/images/otirac-12.jpg',
   '/images/otirac-1.jpg',
   '/images/otirac-2.jpg',
   '/images/otirac-3.jpg',
@@ -22,7 +28,6 @@ export default function Doormats() {
     <section id="otiraci" className="doormats" aria-labelledby="doormats-heading">
       <div className="container doormats-stack">
         <header className="section-head doormats-head">
-          <p className="eyebrow">{d.eyebrow}</p>
           <h2 id="doormats-heading" className="section-title">
             {d.title[0]}
             <span className="gold">{d.title[1]}</span>

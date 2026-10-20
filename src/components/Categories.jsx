@@ -45,7 +45,6 @@ export default function Categories() {
     <section id="kategorije" className="categories" aria-labelledby="cat-heading">
       <div className="container">
         <header className="section-head">
-          <p className="eyebrow dark">{c.eyebrow}</p>
           <h2 id="cat-heading" className="section-title">{c.title}</h2>
           <p className="section-sub">{c.sub}</p>
         </header>

@@ -29,7 +29,6 @@ export default function WhyProxy() {
     <section id="zasto-proxy" className="why" aria-labelledby="why-heading">
       <div className="container">
         <header className="section-head">
-          <p className="eyebrow">{w.eyebrow}</p>
           <h2 id="why-heading" className="section-title">
             {w.title[0]}
             <span className="gold">{w.title[1]}</span>

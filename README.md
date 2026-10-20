@@ -103,3 +103,22 @@ PORT=8080 npm start
 - `/#skladiste`    Warehouse gallery
 - `/#kategorije`   Product categories
 - `/#otiraci`      Personalised doormats
+
+## Stranica od 15.10.2026.: statička gradnja i javni katalog
+
+Build više ne koristi React/Vite (`npm run build:react-staro` ostaje samo za usporedbu).
+`npm run build` = `scripts/build-site.mjs` (naslovnica HR/EN, katalog, sitemap) + `scripts/build-seo-pages.mjs` (vodiči, partner, kategorije). Zajednički okvir je `scripts/lib/okvir.mjs` (zaglavlje, podnožje, KONTAKTI), stil `public/site.css`.
+
+**Osvježavanje kataloga** (artikli dolaze iz veleprodaje, BEZ cijena i zaliha):
+
+```bash
+K=~/.ssh/id_ed25519; S=root@204.168.134.196
+scp -i $K scripts/katalog-izvoz.php $S:/tmp/ && ssh -i $K $S "cd /home/ploi/veleprodaja.proxy1.hr/public && sudo -u ploi wp eval-file /tmp/katalog-izvoz.php 2>/dev/null > /tmp/katalog.out; grep '^@SLIKA' /tmp/katalog.out | cut -c8- > /tmp/k.txt; tar czf /tmp/k.tgz -T /tmp/k.txt --transform 's#.*/##'"
+scp -i $K $S:/tmp/katalog.out katalog-izvor/ && head -1 katalog-izvor/katalog.out > katalog-izvor/katalog.json
+scp -i $K $S:/tmp/k.tgz katalog-izvor/ && tar xzf katalog-izvor/k.tgz -C katalog-izvor/slike
+npm run katalog:slike && npm run build
+```
+
+Deploy: `tar czf - -C dist . | ssh ... "tar xzf - -C /home/ploi/proxy1.hr/dist-new"` pa zamjena mapa (vidi memoriju projekta).
+
+**Opisi artikala (SEO):** `content/opisi-artikala.json` (id → tekst) za 549 artikala kojima ERP nema opis ili ima samo kratku napomenu; ERP opis od 120+ znakova ima prednost. Novi artikli nakon osvježavanja kataloga nemaju opis dok se ne dopiše (izvor serija u `katalog-izvor/opisi/`, spajanje `python -I scripts/opisi-spoji.py`).

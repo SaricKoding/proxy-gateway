@@ -1,7 +1,7 @@
 /**
  * Sadržaj statičnih SEO stranica, generira ih scripts/build-seo-pages.mjs.
- * Sve činjenice: 800+ artikala, 300+ partnera, osnovano 2016. (Robert Raič),
- * bonitet A+, isporuka 3 radna dana, Split (Solinska 49, Dujmovača).
+ * Sve činjenice: 700+ artikala, 300+ partnera, osnovano 2016. (Robert Raič),
+ * bonitet A+, vlastito skladište u Splitu (Solinska 49, Dujmovača). Rok isporuke se ne obećava u danima.
  * Primjeri proizvoda su STVARNI artikli iz veleprodajnog kataloga.
  */
 
@@ -12,7 +12,7 @@ export const PAGES = [
     type: 'partner',
     title: 'Postanite partner: veleprodajni dobavljač za trgovine i ugostiteljstvo | Proxy d.o.o.',
     metaDesc:
-      'Tražite dobavljača za trgovinu ili ugostiteljski objekt? Proxy d.o.o. Split opskrbljuje 300+ partnera u Hrvatskoj: 800+ artikala za kućanstvo, isporuka u 3 radna dana, briga o polici. Postanite partner.',
+      'Tražite dobavljača za trgovinu ili ugostiteljski objekt? Proxy d.o.o. Split opskrbljuje više od 300 partnera u Hrvatskoj: 700+ artikala za kućanstvo na zalihi u Splitu, briga o polici. Postanite partner.',
     eyebrow: 'Suradnja',
     h1: 'Postanite partner Proxy veleprodaje',
     lead: 'Opskrbljujemo više od 300 trgovina, hotela, restorana i ustanova u cijeloj Hrvatskoj. Ako otvarate trgovinu ili tražite pouzdanijeg dobavljača asortimana za kućanstvo, na pravom ste mjestu.',
@@ -20,8 +20,8 @@ export const PAGES = [
     body: `
 <h2>Zašto trgovci biraju Proxy</h2>
 <ul>
-  <li><strong>800+ artikala na jednom mjestu</strong>: čišćenje, posuđe, inox i drvena galanterija, tekstil, otirači, oprema. Jedan dobavljač umjesto pet.</li>
-  <li><strong>Isporuka u 3 radna dana</strong>: po cijeloj Hrvatskoj, iz vlastitog skladišta u Splitu.</li>
+  <li><strong>700+ artikala na jednom mjestu</strong>: čišćenje, posuđe, inox i drvena galanterija, tekstil, otirači, oprema. Jedan dobavljač umjesto pet.</li>
+  <li><strong>Roba na zalihi</strong>: cijeli asortiman držimo u vlastitom skladištu u Splitu, pa se narudžba pakira odmah po zaprimanju.</li>
   <li><strong>Briga o polici</strong>: komercijalist prati prodaju, predlaže dopune i pomaže posložiti policu da bolje prodaje.</li>
   <li><strong>Bonitet A+</strong>: financijska stabilnost potvrđena službenim bonitetnim ocjenama, poslujemo od 2016.</li>
   <li><strong>Brze reklamacije i fleksibilni povrati</strong>: rješavamo odmah, bez procedura koje traju tjednima.</li>
@@ -37,7 +37,7 @@ export const PAGES = [
   <li><strong>Pošaljete upit</strong> na <a href="mailto:info@proxy1.hr">info@proxy1.hr</a>, dovoljno je ime tvrtke/obrta, OIB i kratki opis djelatnosti.</li>
   <li><strong>Javi Vam se komercijalist</strong>: dogovarate asortiman, rabatne uvjete i dinamiku isporuka. Po želji dolazi na Vašu lokaciju.</li>
   <li><strong>Dobivate pristup B2B webshopu</strong>: s ugovorenim cijenama, stanjem zaliha i poviješću narudžbi.</li>
-  <li><strong>Prva isporuka</strong>: u roku od 3 radna dana od potvrde narudžbe.</li>
+  <li><strong>Prva isporuka</strong>: roba je na zalihi, pa prva narudžba kreće iz skladišta čim je potvrdimo.</li>
 </ol>`,
     ctaTitle: 'Pošaljite upit, odgovaramo u jednom radnom danu',
     ctaText: 'Napišite nam tko ste i što prodajete, a mi ćemo pripremiti prijedlog asortimana i uvjeta za Vašu trgovinu ili objekt.',
@@ -48,7 +48,7 @@ export const PAGES = [
       },
       {
         q: 'Isporučujete li u cijelu Hrvatsku?',
-        a: 'Da, standardni rok isporuke je 3 radna dana na cijelom području Hrvatske, iz našeg skladišta u Splitu.',
+        a: 'Da, dostavljamo na cijelo područje Hrvatske iz našeg skladišta u Splitu. Rok za vaše mjesto dogovara komercijalist.',
       },
       {
         q: 'Mogu li vidjeti cijene prije ugovora?',
@@ -68,7 +68,7 @@ export const PAGES = [
     type: 'category',
     title: 'Veleprodaja sredstava i opreme za čišćenje | Proxy d.o.o. Split',
     metaDesc:
-      'Veleprodaja opreme za čišćenje: mopovi, metle, četke, krpe od mikrofibre, kante, vreće za smeće. 140+ artikala za trgovine i ugostiteljstvo. Isporuka u 3 dana. Proxy d.o.o. Split.',
+      'Veleprodaja opreme za čišćenje: mopovi, metle, četke, krpe od mikrofibre, kante, vreće za smeće. 140+ artikala za trgovine i ugostiteljstvo. Brza dostava po cijeloj Hrvatskoj. Proxy d.o.o. Split.',
     eyebrow: 'Veleprodajni program',
     h1: 'Veleprodaja sredstava i opreme za čišćenje',
     lead: 'Najveća kategorija našeg asortimana: 140+ artikala pribora i opreme za čišćenje doma i poslovnih prostora, od mopova i metli do krpa od mikrofibre i vreća za smeće.',
@@ -95,7 +95,7 @@ export const PAGES = [
       },
       {
         q: 'Kako naručiti veleprodajne količine opreme za čišćenje?',
-        a: 'Pošaljite upit na info@proxy1.hr ili se registrirajte kao partner, dobit ćete pristup B2B webshopu s veleprodajnim cijenama i stanjem zaliha te isporuku u 3 radna dana.',
+        a: 'Pošaljite upit na info@proxy1.hr ili se registrirajte kao partner, dobit ćete pristup B2B webshopu s veleprodajnim cijenama i stanjem zaliha.',
       },
     ],
     related: ['veleprodaja-posuda', 'veleprodaja-tekstila-za-domacinstvo', 'postanite-partner'],
@@ -105,7 +105,7 @@ export const PAGES = [
     type: 'category',
     title: 'Veleprodaja posuđa i kuhinjskog programa | Proxy d.o.o. Split',
     metaDesc:
-      'Veleprodaja posuđa: inox tepsije, zdjele, cjediljke, pribori za jelo, noževi i kuhače. Kuhinjski program za trgovine i ugostiteljstvo. Proxy d.o.o. Split, isporuka u 3 dana.',
+      'Veleprodaja posuđa: inox tepsije, zdjele, cjediljke, pribori za jelo, noževi i kuhače. Kuhinjski program za trgovine i ugostiteljstvo. Proxy d.o.o. Split, brza dostava po cijeloj Hrvatskoj.',
     eyebrow: 'Veleprodajni program',
     h1: 'Veleprodaja posuđa i kuhinjskog programa',
     lead: 'Inox tepsije, zdjele i cjediljke, setovi pribora za jelo, noževi i kuhače, kuhinjski program koji pokriva i kućanstvo i profesionalnu kuhinju.',
@@ -143,7 +143,7 @@ export const PAGES = [
     serviceType: 'Veleprodaja inox galanterije',
     body: `
 <p>Inox galanterija je kategorija s najboljim omjerom trajnosti i cijene na polici kućanskih potrepština. U asortimanu držimo <strong>ribeže</strong> (klasične i s vodilicom), <strong>mutilice</strong> u više veličina, <strong>hvataljke</strong> za špagete, salatu i roštilj, <strong>oljere i solnice</strong> za stolove, <strong>inox cjedila</strong> te širok izbor pribora za pripremu i posluživanje hrane.</p>
-<p>Za restorane i konobe inox program je potrošna roba koja se redovito obnavlja, zato partneri iz ugostiteljstva ovu kategoriju naručuju ciklički, a mi je držimo na zalihi u Splitu s isporukom u 3 radna dana. Trgovinama predlažemo osnovnu policu od 20-ak najprodavanijih artikala koju širimo prema potražnji.</p>`,
+<p>Za restorane i konobe inox program je potrošna roba koja se redovito obnavlja, zato partneri iz ugostiteljstva ovu kategoriju naručuju ciklički, a mi je držimo na zalihi u Splitu. Trgovinama predlažemo osnovnu policu od 20-ak najprodavanijih artikala koju širimo prema potražnji.</p>`,
     products: [
       'Ribež drveni veliki i s vodilicom',
       'Mutilica inox 25 i 30 cm',
@@ -167,7 +167,7 @@ export const PAGES = [
     type: 'category',
     title: 'Veleprodaja drvene galanterije | Proxy d.o.o. Split',
     metaDesc:
-      'Veleprodaja drvene galanterije: daske za rezanje svih dimenzija, kuhinjski pribor od drva. 70+ artikala za trgovine i ugostiteljstvo. Proxy d.o.o. Split, isporuka 3 dana.',
+      'Veleprodaja drvene galanterije: daske za rezanje svih dimenzija, kuhinjski pribor od drva. 70+ artikala za trgovine i ugostiteljstvo. Proxy d.o.o. Split, brza dostava po cijeloj Hrvatskoj.',
     eyebrow: 'Veleprodajni program',
     h1: 'Veleprodaja drvene galanterije',
     lead: 'Daske za rezanje u svim dimenzijama i oblicima te kuhinjski pribor od drva. 70+ artikala prirodnog izgleda koji odlično radi na polici.',
@@ -203,7 +203,7 @@ export const PAGES = [
     serviceType: 'Veleprodaja tekstila za domaćinstvo',
     body: `
 <p>Tekstil je kategorija kojom trgovina "diše" kroz sezone: ljeti zavjese za vrata i podloge, zimi deblji tapeti i stolnjaci. U asortimanu su <strong>tapeti</strong> (Goa, Nuvola i drugi modeli u više dimenzija), <strong>podloge</strong> Practic u raznim širinama i bojama, uključujući protuklizne "stop" varijante, <strong>stolnjaci</strong> u 30+ varijanti te <strong>zavjese za vrata</strong>.</p>
-<p>Tekstil se odlično kombinira s našim <a href="/veleprodaja-otiraca/">programom otirača</a>, zajedno čine "meki kut" trgovine koji kupci vole razgledavati. Uz redovite isporuke u 3 radna dana, policu možete mijenjati po sezoni bez zaliha koje stoje.</p>`,
+<p>Tekstil se odlično kombinira s našim <a href="/veleprodaja-otiraca/">programom otirača</a>, zajedno čine "meki kut" trgovine koji kupci vole razgledavati. Uz redovite isporuke iz Splita, policu možete mijenjati po sezoni bez zaliha koje stoje.</p>`,
     products: [
       'Tapet Goa 60×180 cm',
       'Tapet Nuvola 45×65 cm',
@@ -226,15 +226,15 @@ export const PAGES = [
     type: 'category',
     title: 'Veleprodaja otirača: standardni i personalizirani s logotipom | Proxy d.o.o.',
     metaDesc:
-      'Veleprodaja otirača: modeli Alaska, Mascote, Tekno, profesionalni otirači i vlastita izrada personaliziranih otirača s logotipom. 100+ artikala. Proxy d.o.o. Split.',
+      'Veleprodaja otirača: modeli Alaska, Mascote, Tekno, profesionalni otirači i vlastita izrada personaliziranih otirača s logotipom. Stotinjak artikala. Proxy d.o.o. Split.',
     eyebrow: 'Veleprodajni program',
     h1: 'Veleprodaja otirača: standardni i personalizirani',
-    lead: 'Najprepoznatljiviji dio Proxy ponude: 100+ modela otirača za trgovine te vlastita izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore.',
+    lead: 'Najprepoznatljiviji dio Proxy ponude: stotinjak artikala otirača za trgovine te vlastita izrada personaliziranih otirača s logotipom za hotele, restorane i poslovne prostore.',
     serviceType: 'Veleprodaja otirača i izrada personaliziranih otirača',
     body: `
 <p>Otirači su naša specijalnost. Trgovinama nudimo širok prodajni program: <strong>Alaska</strong> (od 40×70 do 90×150 cm), <strong>Mascote</strong>, <strong>Tekno</strong> (kvadratni i polukružni), <strong>Tropical</strong>, <strong>Super Rally</strong> i druge modele u svim standardnim dimenzijama, uz <strong>profesionalne otirače</strong> veće gustoće za intenzivan promet.</p>
 <p>Po čemu smo jedinstveni: <strong>vlastita izrada personaliziranih otirača</strong> s logotipom, natpisom ili pozdravnom porukom. Hoteli, restorani i tvrtke naručuju otirače po mjeri ulaza, s bojama iz vlastitog vizualnog identiteta, dizajn potvrđuju prije izrade. Za trgovce partnere to znači proizvod koji konkurencija nema na polici: Vi prodajete uslugu izrade, mi radimo proizvodnju.</p>
-<p>Više o personaliziranim otiračima, s galerijom izvedenih radova, na <a href="/#otiraci">početnoj stranici</a>.</p>`,
+<p>Otirač s logotipom svoje tvrtke složite sami u <a href="https://otiraci.proxy1.hr/">dizajneru otirača</a>, u stvarnoj veličini.</p>`,
     products: [
       'Otirač Alaska 40×70 do 90×150 cm',
       'Otirač Mascote 33×60 i 40×70 cm',
@@ -248,7 +248,7 @@ export const PAGES = [
     faq: [
       {
         q: 'Koje su tipične dimenzije personaliziranih otirača?',
-        a: 'Standardno 60×90, 80×120 i 100×150 cm, a izrađujemo i po mjeri ulaza ili recepcije. Gustoću vlakana biramo prema učestalosti prometa.',
+        a: '17 gotovih mjera, od 60×85 do 200×300 cm, a posebne mjere izrađujemo po dogovoru. Gustoću vlakana biramo prema učestalosti prometa.',
       },
       {
         q: 'Mogu li kao trgovina nuditi personalizirane otirače svojim kupcima?',
@@ -262,7 +262,7 @@ export const PAGES = [
     type: 'category',
     title: 'Veleprodaja programa za spremanje ormara | Proxy d.o.o. Split',
     metaDesc:
-      'Veleprodaja za spremanje ormara: vješalice (drvo, metal, PVC), vakum vreće i box kutije. Program organizacije doma za trgovine. Proxy d.o.o. Split, isporuka 3 dana.',
+      'Veleprodaja za spremanje ormara: vješalice (drvo, metal, PVC), vakum vreće i box kutije. Program organizacije doma za trgovine. Proxy d.o.o. Split, brza dostava po cijeloj Hrvatskoj.',
     eyebrow: 'Veleprodajni program',
     h1: 'Veleprodaja programa za spremanje ormara',
     lead: 'Vješalice u drvu, metalu i PVC-u, vakum vreće i kutije za sezonsko spremanje, kategorija organizacije doma koja stalno raste.',
@@ -297,7 +297,7 @@ export const PAGES = [
     serviceType: 'Veleprodaja opreme za dom',
     body: `
 <p>Program opremanja pokriva "veće komade" police kućanskih potrepština: <strong>metalne police</strong> za ostave i garaže (do 180×90×40 cm), <strong>ogledala</strong> raznih formata (do 50×150 cm), <strong>stolove za peglanje</strong> (17 modela), <strong>sušila za rublje</strong>, <strong>košare</strong> te prateću opremu za kućanstvo.</p>
-<p>Ovo je kategorija s višom prosječnom cijenom artikla, kupac dolazi ciljano, a trgovini podiže vrijednost računa. Za apartmane i hotele program opremanja često je dio početnog opremanja objekta: police, sušila, daske za peglanje i ogledala naručuju se u količinama po jedinicama smještaja, s isporukom u 3 radna dana.</p>`,
+<p>Ovo je kategorija s višom prosječnom cijenom artikla, kupac dolazi ciljano, a trgovini podiže vrijednost računa. Za apartmane i hotele program opremanja često je dio početnog opremanja objekta: police, sušila, daske za peglanje i ogledala naručuju se u količinama po jedinicama smještaja.</p>`,
     products: [
       'Polica metalna 180×90×40 cm',
       'Ogledalo 50×150 cm',
@@ -352,7 +352,7 @@ export const PAGES = [
 <h2>5. Izbor dobavljača</h2>
 <p>O tome smo napisali <a href="/vodic-kako-odabrati-veleprodajnog-dobavljaca/">poseban vodič</a>, a ukratko: gledajte bonitet, rok isporuke, minimalne narudžbe, politiku reklamacija i podršku na polici. Dobavljač koji Vam pomogne posložiti policu i predlaže dopune vrijedi više od najnižeg cjenika.</p>`,
     ctaTitle: 'Otvarate trgovinu? Pomoći ćemo Vam posložiti početnu policu',
-    ctaText: 'Proxy opskrbljuje 300+ trgovina u Hrvatskoj. 800+ artikala u svim kategorijama kućanstva, isporuka u 3 radna dana, komercijalist koji pomaže s asortimanom od prvog dana.',
+    ctaText: 'Proxy opskrbljuje 300+ trgovina u Hrvatskoj. 700+ artikala u svim kategorijama kućanstva na zalihi u Splitu i komercijalist koji pomaže s asortimanom od prvog dana.',
     faq: [
       {
         q: 'Koliko traje otvaranje trgovine od odluke do prvog kupca?',
@@ -405,7 +405,7 @@ export const PAGES = [
   <li>Možete li mi dati kontakt 2–3 trgovine koje već opskrbljujete?</li>
 </ul>`,
     ctaTitle: 'Provjerite nas po svih 7 kriterija',
-    ctaText: 'Proxy d.o.o.: bonitet A+, poslujemo od 2016., isporuka u 3 radna dana po cijeloj Hrvatskoj, bez velikih minimuma, komercijalist na terenu i B2B webshop 24/7. Rado ćemo Vam dati i reference partnera.',
+    ctaText: 'Proxy d.o.o.: bonitet A+, poslujemo od 2016., dostava po cijeloj Hrvatskoj, bez velikih minimuma, komercijalist na terenu i B2B webshop 24/7. Rado ćemo Vam dati i reference partnera.',
     faq: [
       {
         q: 'Je li bolje raditi s jednim ili više dobavljača?',
@@ -478,7 +478,7 @@ export const PAGES = [
     type: 'partner',
     title: 'Become a partner: wholesale supplier for stores and hospitality in Croatia | Proxy d.o.o.',
     metaDesc:
-      'Looking for a wholesale supplier in Croatia? Proxy d.o.o. Split supplies 300+ partners: 800+ household products, delivery within 3 working days, shelf care. Ideal for stores, hotels, restaurants and holiday rentals.',
+      'Looking for a wholesale supplier in Croatia? Proxy d.o.o. Split supplies more than 300 partners: 700+ household products in stock in Split, shelf care. Ideal for stores, hotels, restaurants and holiday rentals.',
     eyebrow: 'Partnership',
     h1: 'Become a Proxy wholesale partner',
     lead: 'We supply more than 300 stores, hotels, restaurants and institutions across Croatia. If you run a store, a hospitality venue or holiday apartments and need a reliable household goods supplier, you are in the right place.',
@@ -486,8 +486,8 @@ export const PAGES = [
     body: `
 <h2>Why partners choose Proxy</h2>
 <ul>
-  <li><strong>800+ products in one place</strong>: cleaning, cookware, stainless steel and wooden kitchenware, textiles, doormats, home equipment. One supplier instead of five.</li>
-  <li><strong>Delivery within 3 working days</strong>: anywhere in Croatia, from our own warehouse in Split.</li>
+  <li><strong>700+ products in one place</strong>: cleaning, cookware, stainless steel and wooden kitchenware, textiles, doormats, home equipment. One supplier instead of five.</li>
+  <li><strong>Stock on hand</strong>: the whole range is kept in our own warehouse in Split, so orders are packed as soon as they arrive.</li>
   <li><strong>Shelf care</strong>: our sales rep tracks what sells, suggests restocks and helps arrange your shelf to sell better.</li>
   <li><strong>A+ credit rating</strong>: financially stable, in business since 2016.</li>
   <li><strong>Fast claims and flexible returns</strong>: resolved immediately, without weeks of procedures.</li>
@@ -503,7 +503,7 @@ export const PAGES = [
   <li><strong>Send an enquiry</strong> to <a href="mailto:info@proxy1.hr">info@proxy1.hr</a> with your company name, VAT ID and a short description of your business.</li>
   <li><strong>Our sales rep contacts you</strong> to agree the assortment, discount terms and delivery schedule. On request, they visit your location.</li>
   <li><strong>You get access to the B2B webshop</strong> with your contracted prices, stock levels and order history.</li>
-  <li><strong>First delivery</strong> within 3 working days of order confirmation.</li>
+  <li><strong>First delivery</strong>: the goods are in stock, so your first order leaves the warehouse as soon as we confirm it.</li>
 </ol>`,
     ctaTitle: 'Send an enquiry, we reply within one working day',
     ctaText: 'Tell us who you are and what you sell, and we will prepare an assortment and terms proposal for your store or venue.',
@@ -514,7 +514,7 @@ export const PAGES = [
       },
       {
         q: 'Do you deliver across Croatia?',
-        a: 'Yes, the standard delivery time is 3 working days anywhere in Croatia, from our warehouse in Split.',
+        a: 'Yes, we deliver anywhere in Croatia from our warehouse in Split. Your sales representative agrees the delivery time for your location.',
       },
       {
         q: 'Do you supply hotels and holiday apartments?',
@@ -534,7 +534,7 @@ export const PAGES = [
     type: 'category',
     title: 'Wholesale cleaning supplies and equipment | Proxy d.o.o. Split, Croatia',
     metaDesc:
-      'Wholesale cleaning equipment in Croatia: mops, brooms, brushes, microfibre cloths, buckets, bin bags. 140+ products for stores and hospitality. Delivery in 3 days.',
+      'Wholesale cleaning equipment in Croatia: mops, brooms, brushes, microfibre cloths, buckets, bin bags. 140+ products for stores and hospitality. Fast delivery across Croatia.',
     eyebrow: 'Wholesale range',
     h1: 'Wholesale cleaning supplies and equipment',
     lead: 'The largest category in our range: 140+ cleaning tools and accessories for homes and commercial spaces, from mops and brooms to microfibre cloths and bin bags.',
@@ -568,7 +568,7 @@ export const PAGES = [
     type: 'category',
     title: 'Wholesale cookware and kitchen range | Proxy d.o.o. Split, Croatia',
     metaDesc:
-      'Wholesale cookware in Croatia: stainless steel trays, bowls, strainers, cutlery sets, knives and kitchen tools. For stores and hospitality. Delivery in 3 days.',
+      'Wholesale cookware in Croatia: stainless steel trays, bowls, strainers, cutlery sets, knives and kitchen tools. For stores and hospitality. Fast delivery across Croatia.',
     eyebrow: 'Wholesale range',
     h1: 'Wholesale cookware and kitchen range',
     lead: 'Stainless steel trays, bowls and strainers, cutlery sets, knives and cooking utensils: a kitchen range that covers both households and professional kitchens.',
@@ -633,7 +633,7 @@ export const PAGES = [
     type: 'category',
     title: 'Wholesale wooden kitchenware | Proxy d.o.o. Split, Croatia',
     metaDesc:
-      'Wholesale wooden kitchenware in Croatia: cutting boards in all sizes, wooden kitchen tools. 70+ products for stores and hospitality. Delivery in 3 days.',
+      'Wholesale wooden kitchenware in Croatia: cutting boards in all sizes, wooden kitchen tools. 70+ products for stores and hospitality. Fast delivery across Croatia.',
     eyebrow: 'Wholesale range',
     h1: 'Wholesale wooden kitchenware',
     lead: 'Cutting boards in every size and shape plus wooden kitchen tools: 70+ natural-look products that perform well on the shelf.',
@@ -671,7 +671,7 @@ export const PAGES = [
     serviceType: 'Wholesale household textiles',
     body: `
 <p>Textiles are how a store breathes through the seasons: door curtains and light mats in summer, thicker runners and tablecloths in winter. The range includes <strong>runner rugs</strong> (Goa, Nuvola, Tera and other models in several widths), <strong>Practic mats</strong> in various widths and colours including non-slip versions, <strong>tablecloths</strong> in 30+ variants and <strong>door curtains</strong>.</p>
-<p>Textiles pair naturally with our <a href="/en/wholesale-doormats/">doormat range</a>: together they form the soft corner of the store that customers love to browse. For holiday apartments, textiles are part of unit equipping along with storage and doormats, delivered within 3 working days.</p>`,
+<p>Textiles pair naturally with our <a href="/en/wholesale-doormats/">doormat range</a>: together they form the soft corner of the store that customers love to browse. For holiday apartments, textiles are part of unit equipping along with storage and doormats, with fast delivery across Croatia.</p>`,
     products: [
       'Tera runner rug 60 cm',
       'Goa runner rug 60×180 cm',
@@ -698,11 +698,11 @@ export const PAGES = [
       'Wholesale doormats in Croatia: Alaska, Dakota, Nevada, Tekno models plus in-house production of personalised logo doormats for hotels, restaurants and offices.',
     eyebrow: 'Wholesale range',
     h1: 'Wholesale doormats: standard and personalised',
-    lead: 'The most recognisable part of the Proxy range: 100+ doormat models for stores, plus in-house production of personalised logo doormats for hotels, restaurants and businesses.',
+    lead: 'The most recognisable part of the Proxy range: around a hundred doormat items for stores, plus in-house production of personalised logo doormats for hotels, restaurants and businesses.',
     serviceType: 'Wholesale doormats and custom logo doormat production',
     body: `
 <p>Doormats are our speciality. For stores we offer a wide retail programme: <strong>Alaska</strong> (40×70 up to 90×150 cm), <strong>Dakota</strong>, <strong>Nevada</strong>, <strong>Mascote</strong>, <strong>Tekno</strong> (square and half-round) and other models in all standard sizes, plus <strong>professional doormats</strong> with higher fibre density for heavy traffic.</p>
-<p>What makes us unique: <strong>in-house production of personalised doormats</strong> with a logo, name or welcome message. Hotels, restaurants and companies order doormats made to the measure of their entrance, in the colours of their visual identity, with the design approved before production. Typical sizes are 60×90, 80×120 and 100×150 cm, and custom dimensions are available.</p>
+<p>What makes us unique: <strong>in-house production of personalised doormats</strong> with a logo, name or welcome message. Hotels, restaurants and companies order doormats made to the measure of their entrance, in the colours of their visual identity, with the design approved before production. There are 17 standard sizes from 60×85 to 200×300 cm, and custom dimensions are available.</p>
 <p>For hotels and holiday rentals on the Adriatic this is the finishing touch of the entrance; for retail partners it is a service they can resell with their own margin while we handle production.</p>`,
     products: [
       'Alaska doormat 40×70 to 90×150 cm',
@@ -715,7 +715,7 @@ export const PAGES = [
     faq: [
       {
         q: 'What sizes are personalised doormats available in?',
-        a: 'Standard sizes are 60×90, 80×120 and 100×150 cm, and we also produce custom dimensions to fit your entrance or reception. Fibre density is chosen according to traffic.',
+        a: 'There are 17 standard sizes from 60×85 to 200×300 cm, and we also produce custom dimensions by arrangement. Fibre density is chosen according to traffic.',
       },
       {
         q: 'How do I order a logo doormat?',
@@ -731,7 +731,7 @@ export const PAGES = [
     type: 'category',
     title: 'Wholesale closet storage and organisation | Proxy d.o.o. Split, Croatia',
     metaDesc:
-      'Wholesale closet organisation in Croatia: hangers (wood, metal, PVC), vacuum bags and storage boxes. For stores and holiday apartments. Delivery in 3 days.',
+      'Wholesale closet organisation in Croatia: hangers (wood, metal, PVC), vacuum bags and storage boxes. For stores and holiday apartments. Fast delivery across Croatia.',
     eyebrow: 'Wholesale range',
     h1: 'Wholesale closet storage and organisation',
     lead: 'Hangers in wood, metal and PVC, vacuum bags and boxes for seasonal storage: a home organisation category that keeps growing.',
@@ -769,7 +769,7 @@ export const PAGES = [
     serviceType: 'Wholesale home equipment',
     body: `
 <p>The equipment programme covers the bigger items of a household shelf: <strong>metal shelving</strong> for pantries and garages (up to 180×90×40 cm), <strong>mirrors</strong> in several formats (up to 50×150 cm), <strong>ironing boards</strong> (17 models), <strong>laundry drying racks</strong>, <strong>baskets</strong>, wall clocks and curtains.</p>
-<p>This category carries a higher average item price: the customer comes with intent and it raises the receipt value for the store. For hotels and holiday apartments the equipment programme is often part of the initial fit-out: shelving, drying racks, ironing boards and mirrors ordered per unit, delivered within 3 working days.</p>`,
+<p>This category carries a higher average item price: the customer comes with intent and it raises the receipt value for the store. For hotels and holiday apartments the equipment programme is often part of the initial fit-out: shelving, drying racks, ironing boards and mirrors ordered per unit, with fast delivery across Croatia.</p>`,
     products: [
       'Metal shelving 180×90×40 cm',
       'Mirror 50×150 cm',

@@ -13,7 +13,6 @@ export default function Gateway() {
     <section id="izbor" className="gateway" aria-labelledby="gateway-heading">
       <div className="container">
         <header className="section-head">
-          <p className="eyebrow dark">{g.eyebrow}</p>
           <h2 id="gateway-heading" className="section-title">{g.title}</h2>
           <p className="section-sub">{g.sub}</p>
         </header>

@@ -1,67 +1,49 @@
 /**
- * PROXY d.o.o. — GDPR cookie consent (Google Consent Mode v2)
+ * PROXY d.o.o., privola za kolačiće (zajednička za proxy1.hr i otiraci.proxy1.hr)
  *
- * Single source of truth for analytics consent across:
- *   - React gateway (proxy-gateway/index.html)
- *   - Static legal pages (politika-privatnosti, politika-kolacica)
+ * Verzija 2 (15.10.2026.). Strogi način:
+ *   - Google Analytics 4 se NE učitava dok posjetitelj ne klikne "Prihvati".
+ *     Do tada s Googleom nema nikakve veze (ni anonimnih "pingova").
+ *   - "Odbij" i povlačenje privole brišu postojeće _ga kolačiće.
+ *   - Oglašivački signali (ad_storage, ad_user_data, ad_personalization) su
+ *     uvijek odbijeni: oglase ne koristimo.
+ *   - Odabir se pamti 12 mjeseci, nakon toga se pita ponovno.
+ *   - "Odbij" i "Prihvati" su jednako istaknuti; traka ne blokira stranicu.
  *
- * What it does:
- *   1. Sets Google Consent Mode v2 defaults (everything denied) BEFORE gtag.js loads.
- *   2. Loads gtag.js asynchronously and configs GA4 (G-Q8GQ6GBK77).
- *   3. Reads stored consent from localStorage and applies it.
- *   4. If no choice stored, renders a bilingual banner (HR/EN) with Accept / Reject.
- *   5. Exposes `window.proxyOpenConsent()` and listens for `proxy:open-cookie-banner`
- *      so the React footer's "Cookie settings" link can reopen the banner.
+ * Postavke se čitaju s oznake <script>:
+ *   data-ga        GA4 oznaka (npr. G-XXXX); bez nje se analitika ne učitava
+ *   data-mjesto    naziv stranice u traci ("proxy1.hr")
+ *   data-politika  putanja politike kolačića ("/politika-kolacica/")
+ * Isto se može zadati na <html> kao data-pc-ga, data-pc-mjesto, data-pc-politika.
  *
- * Meta Pixel (Facebook): currently disabled. To enable, set META_ENABLED = true
- * and put the pixel ID in META_PIXEL_ID. The pixel then fires only on accept.
+ * Javni API: window.proxyOpenConsent() ponovno otvara traku (poveznica
+ * "Postavke kolačića" u podnožju).
  */
 (function () {
   'use strict';
 
-  // ============================================================
-  // CONFIG
-  // ============================================================
-  var GA_ID = 'G-Q8GQ6GBK77';
-  var STORAGE_KEY = 'proxy_cookie_consent';
+  var me = document.currentScript;
+  // Postavke s oznake <script>, ili s <html data-pc-*> kad skriptu umece okvir
+  // (Next.js) pa oznaka nema nase atribute.
+  var cfg = function (k, d) {
+    return (me && me.getAttribute('data-' + k)) || document.documentElement.getAttribute('data-pc-' + k) || d;
+  };
+  var GA_ID = cfg('ga', '');
+  var MJESTO = cfg('mjesto', location.hostname);
+  var POLITIKA = cfg('politika', '/politika-kolacica/');
+  var KLJUC = 'proxy_cookie_consent';
+  var VERZIJA = 2;
+  var TRAJANJE = 365 * 24 * 60 * 60 * 1000;
 
-  var META_ENABLED = false;
-  var META_PIXEL_ID = '';
+  var en = (document.documentElement.lang || 'hr').toLowerCase().indexOf('en') === 0;
+  var T = en
+    ? { title: 'Cookies on ' + MJESTO, text: 'We use only the storage the site needs to work. With your consent we also use Google Analytics to see how the site is used. You can change your choice at any time in the footer.', link: 'Cookie policy', accept: 'Accept analytics', reject: 'Reject', aria: 'Cookie consent' }
+    : { title: 'Kolačići na ' + MJESTO, text: 'Koristimo samo ono što je nužno za rad stranice. Uz vaš pristanak koristimo i Google Analytics, da vidimo kako se stranica koristi. Odabir možete promijeniti u svako doba u podnožju stranice.', link: 'Politika kolačića', accept: 'Prihvati analitiku', reject: 'Odbij', aria: 'Pristanak na kolačiće' };
 
-  // ============================================================
-  // I18N — matches src/i18n/index.js `cookies` block
-  // ============================================================
-  var lang = (document.documentElement.lang || 'hr').toLowerCase();
-  var isEN = lang.indexOf('en') === 0;
-
-  var T = isEN
-    ? {
-        title: 'Cookies on proxy1.hr',
-        text: 'We use essential cookies to run the site. Analytics and statistics are used only with your consent. Read our',
-        linkLabel: 'Cookie policy',
-        accept: 'Accept',
-        reject: 'Reject',
-        aria: 'Cookie consent banner',
-      }
-    : {
-        title: 'Kolačići na proxy1.hr',
-        text: 'Koristimo nužne kolačiće za rad stranice. Statistika i analitika koriste se isključivo uz Vaš pristanak. Više u',
-        linkLabel: 'Politici kolačića',
-        accept: 'Prihvati',
-        reject: 'Odbij',
-        aria: 'Traka za pristanak na kolačiće',
-      };
-
-  // ============================================================
-  // GOOGLE CONSENT MODE V2
-  // ============================================================
+  /* ---------------------------------------------------- Google, tek uz privolu */
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
-  window.gtag = gtag;
-
-  // Deny everything except strictly necessary until the user consents.
-  // `wait_for_update` gives our script up to 500ms to call `consent update`
-  // before gtag.js sends any beacons.
+  window.gtag = window.gtag || gtag;
   gtag('consent', 'default', {
     ad_storage: 'denied',
     ad_user_data: 'denied',
@@ -69,226 +51,114 @@
     analytics_storage: 'denied',
     functionality_storage: 'granted',
     security_storage: 'granted',
-    wait_for_update: 500,
   });
 
-  gtag('js', new Date());
-  gtag('config', GA_ID, { anonymize_ip: true });
-
-  (function loadGtag() {
+  var ucitano = false;
+  function ucitajAnalitiku() {
+    if (ucitano || !GA_ID) return;
+    ucitano = true;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    gtag('js', new Date());
+    gtag('config', GA_ID);
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
     document.head.appendChild(s);
-  })();
-
-  // ============================================================
-  // STORAGE
-  // ============================================================
-  function readConsent() {
-    try {
-      var raw = window.localStorage.getItem(STORAGE_KEY);
-      if (!raw) return null;
-      var p = JSON.parse(raw);
-      if (p && (p.status === 'accepted' || p.status === 'rejected')) return p;
-      return null;
-    } catch (e) {
-      return null;
-    }
   }
 
-  function writeConsent(accepted) {
-    var payload = {
-      status: accepted ? 'accepted' : 'rejected',
-      version: 1,
-      ts: new Date().toISOString(),
-    };
-    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch (e) {}
-    applyConsent(accepted);
-    try {
-      window.dispatchEvent(new CustomEvent('proxy:cookie-consent', { detail: { status: payload.status } }));
-    } catch (e) {}
-  }
-
-  function applyConsent(accepted) {
-    gtag('consent', 'update', {
-      analytics_storage: accepted ? 'granted' : 'denied',
-      ad_storage: accepted ? 'granted' : 'denied',
-      ad_user_data: accepted ? 'granted' : 'denied',
-      ad_personalization: accepted ? 'granted' : 'denied',
-    });
-
-    if (META_ENABLED && accepted) loadMetaPixel();
-  }
-
-  function loadMetaPixel() {
-    if (!META_PIXEL_ID || window._proxyFbqLoaded) return;
-    window._proxyFbqLoaded = true;
-    // Standard Meta Pixel snippet (kept verbatim from Meta docs).
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
-      if (!f._fbq) f._fbq = n;
-      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
-      t = b.createElement(e); t.async = !0; t.src = v;
-      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    window.fbq('init', META_PIXEL_ID);
-    window.fbq('track', 'PageView');
-  }
-
-  // ============================================================
-  // BANNER UI
-  // ============================================================
-  var STYLE_ID = 'proxy-consent-style';
-  var BANNER_ID = 'proxy-consent-banner';
-
-  function injectStyles() {
-    if (document.getElementById(STYLE_ID)) return;
-    var css =
-      '#' + BANNER_ID + ' {' +
-        'position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 9999;' +
-        'background: #0B1E3A; color: #fff;' +
-        'border: 1px solid rgba(255,255,255,0.08);' +
-        'border-radius: 12px;' +
-        "font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;" +
-        'box-shadow: 0 20px 60px rgba(0,0,0,0.35);' +
-        'opacity: 0; transform: translateY(20px);' +
-        'transition: opacity 0.3s ease, transform 0.3s ease;' +
-        'max-width: 880px; margin: 0 auto;' +
-      '}' +
-      '#' + BANNER_ID + '.is-visible { opacity: 1; transform: translateY(0); }' +
-      '#' + BANNER_ID + ' .pcb-inner {' +
-        'display: grid; grid-template-columns: 1fr auto; gap: 20px;' +
-        'align-items: center; padding: 18px 22px;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-text strong {' +
-        "display: block; font-family: 'Barlow Condensed', 'Inter', sans-serif;" +
-        'font-weight: 700; font-size: 17px; letter-spacing: 0.3px; margin-bottom: 4px; color: #fff;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-text p {' +
-        'margin: 0; font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.85);' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-text a {' +
-        'color: #D7B561; text-decoration: underline; text-underline-offset: 2px;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-text a:hover { color: #E8C77A; }' +
-      '#' + BANNER_ID + ' .pcb-actions {' +
-        'display: inline-flex; gap: 10px; flex-shrink: 0;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-btn {' +
-        'cursor: pointer; appearance: none; font: inherit; font-weight: 600; font-size: 14px;' +
-        'border-radius: 8px; padding: 10px 18px; border: 1px solid transparent;' +
-        'transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-btn:focus-visible {' +
-        'outline: 2px solid #D7B561; outline-offset: 2px;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-btn-primary {' +
-        'background: #BF922F; color: #0B1220; border-color: #BF922F;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-btn-primary:hover {' +
-        'background: #D7B561; border-color: #D7B561;' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-btn-secondary {' +
-        'background: transparent; color: #fff; border-color: rgba(255,255,255,0.35);' +
-      '}' +
-      '#' + BANNER_ID + ' .pcb-btn-secondary:hover {' +
-        'background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6);' +
-      '}' +
-      '@media (max-width: 640px) {' +
-        '#' + BANNER_ID + ' { left: 12px; right: 12px; bottom: 12px; }' +
-        '#' + BANNER_ID + ' .pcb-inner { grid-template-columns: 1fr; gap: 14px; padding: 16px 18px; }' +
-        '#' + BANNER_ID + ' .pcb-actions { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }' +
-        '#' + BANNER_ID + ' .pcb-btn { padding: 12px 14px; }' +
-      '}';
-
-    var style = document.createElement('style');
-    style.id = STYLE_ID;
-    style.textContent = css;
-    document.head.appendChild(style);
-  }
-
-  function buildBanner() {
-    injectStyles();
-    var el = document.createElement('div');
-    el.id = BANNER_ID;
-    el.setAttribute('role', 'dialog');
-    el.setAttribute('aria-label', T.aria);
-    el.setAttribute('aria-live', 'polite');
-    el.innerHTML =
-      '<div class="pcb-inner">' +
-        '<div class="pcb-text">' +
-          '<strong>' + T.title + '</strong>' +
-          '<p>' + T.text + ' <a href="/politika-kolacica">' + T.linkLabel + '</a>.</p>' +
-        '</div>' +
-        '<div class="pcb-actions">' +
-          '<button type="button" class="pcb-btn pcb-btn-secondary" data-action="reject">' + T.reject + '</button>' +
-          '<button type="button" class="pcb-btn pcb-btn-primary" data-action="accept">' + T.accept + '</button>' +
-        '</div>' +
-      '</div>';
-
-    el.querySelector('[data-action="reject"]').addEventListener('click', function () {
-      writeConsent(false);
-      hideBanner();
-    });
-    el.querySelector('[data-action="accept"]').addEventListener('click', function () {
-      writeConsent(true);
-      hideBanner();
-    });
-    return el;
-  }
-
-  var bannerEl = null;
-  var hideTimer = null;
-
-  function showBanner() {
-    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
-    if (!bannerEl) bannerEl = buildBanner();
-    if (!bannerEl.parentNode) document.body.appendChild(bannerEl);
-    // Double-rAF so the transition runs even on fresh insert.
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        bannerEl.classList.add('is-visible');
+  /** Briše _ga kolačiće na ovoj i nadređenoj domeni (GA ih piše na "proxy1.hr"). */
+  function obrisiAnalitiku() {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    var dijelovi = location.hostname.split('.');
+    var domene = [location.hostname];
+    for (var i = 1; i < dijelovi.length - 1; i++) domene.push('.' + dijelovi.slice(i).join('.'));
+    document.cookie.split(';').forEach(function (c) {
+      var ime = c.split('=')[0].trim();
+      if (!/^_ga/.test(ime) && ime !== '_gid' && ime !== '_gat') return;
+      domene.forEach(function (d) {
+        document.cookie = ime + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
       });
+      document.cookie = ime + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
     });
   }
 
-  function hideBanner() {
-    if (!bannerEl) return;
-    bannerEl.classList.remove('is-visible');
-    hideTimer = setTimeout(function () {
-      if (bannerEl && bannerEl.parentNode) bannerEl.parentNode.removeChild(bannerEl);
-    }, 350);
+  /* ---------------------------------------------------- pohrana odabira */
+  function procitaj() {
+    try {
+      var p = JSON.parse(localStorage.getItem(KLJUC) || 'null');
+      if (!p || p.version !== VERZIJA) return null;
+      if (p.status !== 'accepted' && p.status !== 'rejected') return null;
+      if (Date.now() - new Date(p.ts).getTime() > TRAJANJE) return null;
+      return p;
+    } catch (e) { return null; }
+  }
+  function zapisi(prihvaceno) {
+    try {
+      localStorage.setItem(KLJUC, JSON.stringify({ status: prihvaceno ? 'accepted' : 'rejected', version: VERZIJA, ts: new Date().toISOString() }));
+    } catch (e) {}
+    if (prihvaceno) ucitajAnalitiku(); else obrisiAnalitiku();
+    try { window.dispatchEvent(new CustomEvent('proxy:cookie-consent', { detail: { status: prihvaceno ? 'accepted' : 'rejected' } })); } catch (e) {}
   }
 
-  // ============================================================
-  // PUBLIC API
-  // ============================================================
-  window.proxyOpenConsent = function () {
-    try { window.localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-    showBanner();
-  };
+  /* ---------------------------------------------------- traka */
+  var ID = 'proxy-consent-banner';
+  function stil() {
+    if (document.getElementById(ID + '-stil')) return;
+    var b = '#' + ID;
+    var css =
+      b + '{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:920px;margin:0 auto;background:#0c1b30;color:#fff;border-top:3px solid #c9a84c;font-family:Lato,"Segoe UI",system-ui,sans-serif;opacity:0;transform:translateY(16px);transition:opacity .3s ease,transform .35s cubic-bezier(.2,0,0,1)}' +
+      b + '.vidljiv{opacity:1;transform:none}' +
+      b + ' .pc-in{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:18px 22px}' +
+      b + ' strong{display:block;font-size:17px;font-weight:900;margin-bottom:4px}' +
+      b + ' p{margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.85)}' +
+      b + ' a{color:#fff;text-decoration:underline;text-decoration-color:#c9a84c;text-underline-offset:3px}' +
+      b + ' .pc-btns{display:flex;gap:10px}' +
+      b + ' button{cursor:pointer;font:inherit;font-weight:700;font-size:15px;min-height:44px;padding:10px 18px;border:1px solid #c9a84c;border-radius:0;transition:background .2s ease,color .2s ease}' +
+      b + ' .pc-ne{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}' +
+      b + ' .pc-ne:hover{background:#fff;color:#0c1b30;border-color:#fff}' +
+      b + ' .pc-da{background:#c9a84c;color:#0c1b30}' +
+      b + ' .pc-da:hover{background:#d9bb63}' +
+      b + ' button:focus-visible{outline:2px solid #c9a84c;outline-offset:2px}' +
+      '@media (max-width:640px){' + b + '{left:10px;right:10px;bottom:10px}' + b + ' .pc-in{grid-template-columns:1fr;gap:14px;padding:16px}' + b + ' .pc-btns{display:grid;grid-template-columns:1fr 1fr}}' +
+      '@media (prefers-reduced-motion:reduce){' + b + '{transition:none}}';
+    var s = document.createElement('style');
+    s.id = ID + '-stil';
+    s.textContent = css;
+    document.head.appendChild(s);
+  }
 
-  // Footer "Cookie settings" button dispatches this event (kept for back-compat
-  // with src/components/Footer.jsx).
-  window.addEventListener('proxy:open-cookie-banner', function () { showBanner(); });
-
-  // ============================================================
-  // INIT
-  // ============================================================
-  function init() {
-    var stored = readConsent();
-    if (stored) {
-      applyConsent(stored.status === 'accepted');
-    } else {
-      showBanner();
+  var traka = null;
+  function prikazi() {
+    stil();
+    if (!traka) {
+      traka = document.createElement('div');
+      traka.id = ID;
+      traka.setAttribute('role', 'region');
+      traka.setAttribute('aria-label', T.aria);
+      traka.innerHTML =
+        '<div class="pc-in"><div><strong>' + T.title + '</strong><p>' + T.text + ' <a href="' + POLITIKA + '">' + T.link + '</a>.</p></div>' +
+        '<div class="pc-btns"><button type="button" class="pc-ne">' + T.reject + '</button><button type="button" class="pc-da">' + T.accept + '</button></div></div>';
+      traka.querySelector('.pc-ne').addEventListener('click', function () { zapisi(false); sakrij(); });
+      traka.querySelector('.pc-da').addEventListener('click', function () { zapisi(true); sakrij(); });
     }
+    if (!traka.parentNode) document.body.appendChild(traka);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { traka.classList.add('vidljiv'); }); });
+  }
+  function sakrij() {
+    if (!traka) return;
+    traka.classList.remove('vidljiv');
+    setTimeout(function () { if (traka && traka.parentNode) traka.parentNode.removeChild(traka); }, 350);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  window.proxyOpenConsent = function () { prikazi(); };
+  window.addEventListener('proxy:open-cookie-banner', prikazi);
+
+  function init() {
+    var p = procitaj();
+    if (p && p.status === 'accepted') ucitajAnalitiku();
+    else if (p) obrisiAnalitiku();
+    else prikazi();
   }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();
