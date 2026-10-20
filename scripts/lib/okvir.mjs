@@ -18,13 +18,13 @@ export const KONTAKTI = {
     { uloga: 'Uprava, novi partneri', ime: 'Robert Raič', email: 'robert@proxy1.hr' },
     { uloga: 'Komercijala, Novalja do Dubrovnika s otocima', tel: '+385 98 704 043', email: 'komercijala@proxy1.hr' },
     { uloga: 'Komercijala, Rab, Istra i ostatak Hrvatske', tel: '+385 99 467 0564', email: 'komercijala2@proxy1.hr' },
-    { uloga: 'Otirači s logotipom', ime: 'Neda Raič', tel: '+385 99 435 30 40', email: 'info@proxy1.hr' },
+    { uloga: 'Uprava, otirači s logotipom', ime: 'Neda Raič', tel: '+385 99 435 30 40', email: 'info@proxy1.hr' },
   ],
   en: [
     { uloga: 'Management, new partners', ime: 'Robert Raič', email: 'robert@proxy1.hr' },
     { uloga: 'Sales, Novalja to Dubrovnik and islands', tel: '+385 98 704 043', email: 'komercijala@proxy1.hr' },
     { uloga: 'Sales, Rab, Istria and the rest of Croatia', tel: '+385 99 467 0564', email: 'komercijala2@proxy1.hr' },
-    { uloga: 'Logo doormats', ime: 'Neda Raič', tel: '+385 99 435 30 40', email: 'info@proxy1.hr' },
+    { uloga: 'Management, logo doormats', ime: 'Neda Raič', tel: '+385 99 435 30 40', email: 'info@proxy1.hr' },
   ],
 }
 
@@ -148,7 +148,7 @@ ${ld}
 <a class="skok" href="#sadrzaj">${esc(t.skok)}</a>
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="hdr-logo" href="${lang === 'en' ? '/en/' : '/'}"><img src="/images/proxy-logo-zlatni.png" alt="Proxy d.o.o." width="870" height="474"><span class="hdr-slogan">Sve što dom treba</span></a>
+    <a class="hdr-logo" href="${lang === 'en' ? '/en/' : '/'}"><img src="/images/proxy-logo-zlatni.png" alt="Proxy d.o.o." width="870" height="474"></a>
     <nav class="hdr-nav" aria-label="${lang === 'en' ? 'Main' : 'Glavni izbornik'}">${nav}</nav>
     <a class="hdr-jezik" href="${t.jezik[0]}" hreflang="${lang === 'en' ? 'hr' : 'en'}">${t.jezik[1]}</a>
     <a class="btn btn-gold btn-sm hdr-prijava" href="${VELEPRODAJA}/">${esc(t.prijava)}</a>
@@ -166,7 +166,6 @@ ${o.tijelo}
     <div class="ftr-in">
       <div>
         <img src="/images/proxy-logo-zlatni.png" alt="Proxy d.o.o." width="870" height="474" loading="lazy">
-        <p style="margin-top:6px;font-weight:700;color:var(--gold)">Sve što dom treba</p>
         <p style="margin-top:14px;max-width:40ch">${esc(t.ftrOpis)}</p>
       </div>
       <div><h2>${esc(t.ftrKanali)}</h2><ul>${t.ftrKanaliL.map(([h, l]) => `<li><a href="${h}">${esc(l)}</a></li>`).join('')}</ul></div>

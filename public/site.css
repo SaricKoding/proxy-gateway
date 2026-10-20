@@ -104,7 +104,6 @@ h3 { font-size: 1.375rem; font-weight: 700; letter-spacing: -0.01em; line-height
 .hdr { position: sticky; top: 0; z-index: 50; background: var(--navy); color: var(--white); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 .hdr-in { display: flex; align-items: center; gap: 28px; min-height: 76px; }
 .hdr-logo { display: flex; flex-direction: column; align-items: center; gap: 2px; flex-shrink: 0; text-decoration: none; }
-.hdr-slogan { font-size: 14px; font-weight: 700; color: var(--gold); white-space: nowrap; line-height: 1.1; }
 .hdr-logo img { height: 46px; width: auto; }
 .hdr-nav { display: flex; gap: 4px; margin-left: auto; }
 .hdr-nav a { padding: 10px 12px; font-size: 16px; font-weight: 700; color: rgba(255, 255, 255, 0.82); text-decoration: none; transition: color 200ms var(--ease); }
